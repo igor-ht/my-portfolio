@@ -1,3 +1,5 @@
+import style from './layout.module.scss';
+
 export const metadata = {
 	title: 'Igor Hamburger portfolio',
 };
