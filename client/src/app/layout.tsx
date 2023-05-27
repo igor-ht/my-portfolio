@@ -1,13 +1,14 @@
-import style from './layout.module.scss';
+import './globals.css';
 
 export const metadata = {
-	title: 'Igor Hamburger portfolio',
+	title: 'Portfolio',
+	description: 'My FullStack Developer Portfolio',
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
 	return (
 		<html lang="en">
-			<body>{children}</body>
+			<body id="app">{children}</body>
 		</html>
 	);
 }
