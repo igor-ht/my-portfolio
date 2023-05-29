@@ -1,0 +1,47 @@
+@keyframes topline {
+  from {
+    margin-right: 10dvw;
+    margin-left: 90dvw;
+    width: 0;
+  }
+  to {
+    margin-right: 10dvw;
+    margin-left: 0dvw;
+    width: 90dvw;
+  }
+}
+@keyframes bottomline {
+  from {
+    margin-right: 90dvw;
+    margin-left: 10dvw;
+    width: 0;
+  }
+  to {
+    margin-right: 0dvw;
+    margin-left: 10dvw;
+    width: 90dvw;
+  }
+}
+
+nav {
+  margin-top: 5px;
+  .line {
+    height: 0.3rem;
+    width: 90dvw;
+    background-color: black;
+    border-radius: 0 35% 35% 0;
+  }
+  .top-line {
+    margin-right: 10dvw;
+    animation-name: topline;
+    animation-duration: 2s;
+    animation-delay: 0.5s;
+  }
+  .bottom-line {
+    margin-left: 10dvw;
+    margin-bottom: 5px;
+    transform: rotateY(180deg);
+    animation-name: bottomline;
+    animation-duration: 2s;
+  }
+}
