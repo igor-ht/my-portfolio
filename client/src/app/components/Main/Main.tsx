@@ -8,8 +8,8 @@ export default function Main({ children }: { children: React.ReactNode }) {
 					<Image
 						src={'/logo_animated.gif'}
 						alt="logo"
-						width={450}
-						height={450}
+						width={320}
+						height={320}
 						unoptimized={true}
 					/>
 				</div>

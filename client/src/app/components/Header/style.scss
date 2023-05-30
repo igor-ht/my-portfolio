@@ -23,8 +23,9 @@
   }
 }
 
-nav {
+header {
   margin-top: 5px;
+  margin-bottom: 5px;
   .line {
     height: 0.3rem;
     width: 90dvw;
@@ -35,7 +36,6 @@ nav {
     margin-right: 10dvw;
     animation-name: topline;
     animation-duration: 2s;
-    animation-delay: 0.5s;
   }
   .bottom-line {
     margin-left: 10dvw;
@@ -43,5 +43,50 @@ nav {
     transform: rotateY(180deg);
     animation-name: bottomline;
     animation-duration: 2s;
+  }
+  nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    .logo {
+      img {
+        user-select: none;
+      }
+    }
+    .links {
+      display: flex;
+      flex-direction: row;
+      a {
+        margin: 1.3rem;
+        color: black;
+        p {
+          font-size: 1.7rem;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 700px) {
+  header {
+    nav {
+      flex-direction: column;
+      .logo {
+        img {
+          height: 70px;
+          margin-top: 5px;
+        }
+      }
+      .links {
+        a {
+          margin: 0.4rem;
+          margin-top: 0;
+          p {
+            font-size: 1.3rem;
+            margin-top: 0;
+          }
+        }
+      }
+    }
   }
 }

@@ -1,9 +1,15 @@
 html {
   all: unset;
+  width: 100dvw;
+  height: 100dvh;
+  overflow-x: hidden;
+  overflow-y: scroll;
 }
 
 body {
   all: unset;
+  width: 100dvw;
+  height: 100dvh;
 }
 
 #app {
@@ -11,4 +17,23 @@ body {
   width: 100dvw;
   display: flex;
   flex-direction: column;
+}
+
+@media (max-widht: 700px) {
+  html {
+    width: 100dvw;
+    height: 100dhv;
+    overflow-x: hidden;
+    overflow-y: scroll;
+  }
+  body {
+    width: 100dvw;
+    height: 100dvh;
+  }
+  #app {
+    width: 100dvw;
+    height: 100dvh;
+    overflow-x: hidden;
+    overflow-y: scroll;
+  }
 }
