@@ -7,7 +7,7 @@ import './layout.scss';
 export const metadata = {
 	title: 'IDHT Portfolio',
 	description: 'My FullStack Developer Portfolio',
-  icons: {
+	icons: {
 		icon: '/logo_icon.svg',
 	},
 };
@@ -15,7 +15,9 @@ export const metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
 	return (
 		<html lang="en">
-			<body id="app">
+			<body
+				id="app"
+				data-theme="light">
 				<Header />
 				<Main>{children}</Main>
 				<Footer />

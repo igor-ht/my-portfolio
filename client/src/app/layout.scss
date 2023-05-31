@@ -1,20 +1,19 @@
 html {
   all: unset;
   width: 100dvw;
-  height: 100dvh;
+  background-color: var(--background-color);
 }
 
 body {
   all: unset;
   width: 100dvw;
-  height: 100dvh;
 }
 
 #app {
-  height: 100dvh;
   width: 100dvw;
   display: flex;
   flex-direction: column;
   overflow-x: hidden;
   overflow-y: auto;
+  background-color: var(--background-color);
 }

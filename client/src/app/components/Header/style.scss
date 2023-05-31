@@ -1,44 +1,45 @@
 @keyframes topline {
   from {
+    width: 0;
     margin-right: 10dvw;
     margin-left: 90dvw;
-    width: 0;
   }
   to {
+    width: 90dvw;
     margin-right: 10dvw;
     margin-left: 0dvw;
-    width: 90dvw;
   }
 }
 @keyframes bottomline {
   from {
-    margin-right: 90dvw;
-    margin-left: 10dvw;
     width: 0;
+    margin-left: 10dvw;
+    margin-right: 90dvw;
   }
   to {
-    margin-right: 0dvw;
-    margin-left: 10dvw;
     width: 90dvw;
+    margin-left: 10dvw;
+    margin-right: 0dvw;
   }
 }
 
 header {
-  margin-top: 5px;
-  margin-bottom: 5px;
+  background-color: white;
   .line {
     height: 0.3rem;
     width: 90dvw;
     background-color: black;
-    border-radius: 0 35% 35% 0;
+    border-radius: 0 50% 50% 0;
   }
   .top-line {
     margin-right: 10dvw;
+    margin-top: 0.3rem;
     animation-name: topline;
     animation-duration: 2s;
   }
   .bottom-line {
     margin-left: 10dvw;
+    margin-bottom: 0.3rem;
     transform: rotateY(180deg);
     animation-name: bottomline;
     animation-duration: 2s;
@@ -49,7 +50,10 @@ header {
     grid-template-rows: 1fr;
     .logo {
       justify-self: start;
+      margin-left: 1.5rem;
       img {
+        width: 8rem;
+        height: 8rem;
         user-select: none;
       }
     }
@@ -63,6 +67,10 @@ header {
       a {
         margin: 1.3rem;
         color: black;
+
+        &:visited {
+          color: black;
+        }
         p {
           font-size: 1.7rem;
         }
@@ -79,8 +87,9 @@ header {
 
       .logo {
         justify-self: center;
+        margin: 0;
         img {
-          height: 70px;
+          height: 4rem;
           margin-top: 5px;
         }
       }

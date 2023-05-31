@@ -1,11 +1,12 @@
 import './style.scss';
 import Link from 'next/link';
 import Image from 'next/image';
+import { indie_flower } from '@/libs/fonts';
 
 export default function Header() {
 	return (
 		<header>
-			<div className="line top-line"></div>
+			<div className="line top-line" />
 			<nav>
 				<div className="logo">
 					<Image
@@ -15,8 +16,8 @@ export default function Header() {
 						height={120}
 					/>
 				</div>
-				<div className="links">
-					<Link href={'/'}>
+				<div className={`links ${indie_flower.className}`}>
+					<Link href={'#home'}>
 						<p>Home</p>
 					</Link>
 					<Link href={'/'}>
@@ -30,7 +31,7 @@ export default function Header() {
 					</Link>
 				</div>
 			</nav>
-			<div className="line bottom-line"></div>
+			<div className="line bottom-line" />
 		</header>
 	);
 }

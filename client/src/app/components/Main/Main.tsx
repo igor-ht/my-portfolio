@@ -1,10 +1,11 @@
+import './style.scss';
 import Image from 'next/image';
 
 export default function Main({ children }: { children: React.ReactNode }) {
 	return (
 		<main>
-			<div>
-				<div>
+			<div id="home">
+				<div className="intro-banner">
 					<Image
 						src={'/logo_animated.gif'}
 						alt="logo"
@@ -13,8 +14,8 @@ export default function Main({ children }: { children: React.ReactNode }) {
 						unoptimized={true}
 					/>
 				</div>
-				{children}
 			</div>
+			{children}
 		</main>
 	);
 }
