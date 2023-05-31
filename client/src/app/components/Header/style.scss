@@ -39,23 +39,27 @@ header {
   }
   .bottom-line {
     margin-left: 10dvw;
-    margin-bottom: 5px;
     transform: rotateY(180deg);
     animation-name: bottomline;
     animation-duration: 2s;
   }
   nav {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+    display: grid;
+    grid-template-columns: 10% 90%;
+    grid-template-rows: 1fr;
     .logo {
+      justify-self: start;
       img {
         user-select: none;
       }
     }
     .links {
+      width: 100%;
+      justify-self: center;
       display: flex;
       flex-direction: row;
+      justify-content: space-evenly;
+
       a {
         margin: 1.3rem;
         color: black;
@@ -70,8 +74,11 @@ header {
 @media (max-width: 700px) {
   header {
     nav {
-      flex-direction: column;
+      grid-template-columns: 1fr;
+      grid-template-rows: 65% 35%;
+
       .logo {
+        justify-self: center;
         img {
           height: 70px;
           margin-top: 5px;
@@ -80,10 +87,9 @@ header {
       .links {
         a {
           margin: 0.4rem;
-          margin-top: 0;
           p {
             font-size: 1.3rem;
-            margin-top: 0;
+            margin: 0;
           }
         }
       }
