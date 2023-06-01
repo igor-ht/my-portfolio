@@ -1,7 +1,22 @@
 #home {
-  .intro-banner {
-    .background-letters {
-      position: relative;
+  .intro {
+    margin: 1rem;
+    position: relative;
+    .intro-background {
+      height: 380px;
+      background-image: url("/home-background.svg");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      opacity: 0.15;
+      filter: invert(var(--filter));
+    }
+    .intro-text {
+      position: absolute;
+      top: 0;
+      margin: 1rem;
+      color: var(--color);
+      font-size: 1.5rem;
     }
   }
 }

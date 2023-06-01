@@ -1,5 +1,5 @@
-import Home from '@/app/page';
 import './style.scss';
+import Home from './components/Home/Home';
 
 export default function Main({ children }: { children: React.ReactNode }) {
 	return (
