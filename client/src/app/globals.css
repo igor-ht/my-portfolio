@@ -1,9 +1,11 @@
 :root {
 	--background-color: white;
 	--color: black;
+	--filter: 0;
 }
 
 [data-theme='dark'] {
 	--background-color: black;
 	--color: white;
+	--filter: 1;
 }

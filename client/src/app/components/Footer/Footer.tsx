@@ -1,7 +1,7 @@
-
-
-export default function Footer () {
-  return (
-    <footer><div>FOOTER SECTION</div></footer>
-  )
+export default function Footer() {
+	return (
+		<footer>
+			<div></div>
+		</footer>
+	);
 }

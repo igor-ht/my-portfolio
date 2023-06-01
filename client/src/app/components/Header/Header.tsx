@@ -20,13 +20,13 @@ export default function Header() {
 					<Link href={'#home'}>
 						<p>Home</p>
 					</Link>
-					<Link href={'/'}>
+					<Link href={'#about-me'}>
 						<p>About Me</p>
 					</Link>
-					<Link href={'/'}>
+					<Link href={'#projects'}>
 						<p>Projects</p>
 					</Link>
-					<Link href={'/'}>
+					<Link href={'#contact-me'}>
 						<p>Contact Me</p>
 					</Link>
 				</div>

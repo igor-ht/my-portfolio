@@ -24,11 +24,11 @@
 }
 
 header {
-  background-color: white;
+  background-color: var(--background-color);
   .line {
     height: 0.3rem;
     width: 90dvw;
-    background-color: black;
+    background-color: var(--color);
     border-radius: 0 50% 50% 0;
   }
   .top-line {
@@ -55,6 +55,7 @@ header {
         width: 8rem;
         height: 8rem;
         user-select: none;
+        filter: invert(var(--filter));
       }
     }
     .links {
@@ -66,10 +67,10 @@ header {
 
       a {
         margin: 1.3rem;
-        color: black;
+        color: var(--color);
 
         &:visited {
-          color: black;
+          color: var(--color);
         }
         p {
           font-size: 1.7rem;
