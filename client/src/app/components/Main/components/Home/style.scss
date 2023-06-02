@@ -23,61 +23,14 @@
     background-color: var(--background-color);
     color: var(--color);
     display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    margin: 5rem;
-    .intro-avatar {
-      height: 20rem;
-      width: 20rem;
-      background-image: url("../../../../../../public/mr.svg");
-      background-position: center;
-      background-size: cover;
-      background-repeat: no-repeat;
-      animation-name: ChangeAvatar;
-      animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
-      animation-duration: 7s;
-      animation-delay: 1.5s;
-      animation-fill-mode: forwards;
-      filter: invert(var(--filter));
-    }
-    .intro-text {
-      height: 30rem;
-      width: 45rem;
-      color: var(--color);
-      font-size: 1.6rem;
-      line-height: 170%;
-      span {
-        display: flex;
-        &:nth-child(1) {
-          width: 0;
-          animation-name: ChangeText;
-          animation-duration: 1.6s;
-          animation-delay: 0.5s;
-          animation-fill-mode: forwards;
-          animation-timing-function: linear;
-        }
-        &:nth-child(2) {
-          width: 0;
-          animation-name: ChangeText;
-          animation-duration: 2s;
-          animation-delay: 2.5s;
-          animation-fill-mode: forwards;
-          animation-timing-function: linear;
-        }
-        &:nth-child(3) {
-          width: 0;
-          animation-name: ChangeText;
-          animation-duration: 2s;
-          animation-delay: 4.5s;
-          animation-fill-mode: forwards;
-          animation-timing-function: linear;
-        }
-        p {
-          overflow: hidden;
-          white-space: nowrap;
-          color: var(--color);
-        }
-      }
+    justify-content: center;
+    margin: 1.5rem;
+
+    img {
+      width: 75dvw;
+      height: 65dvh;
+      object-fit: cover;
+      user-select: none;
     }
   }
 }
