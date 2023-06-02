@@ -1,9 +1,23 @@
-@keyframes AvatarChange {
+@keyframes ChangeAvatar {
   0% {
+    background-image: url("../../../../../../public/mr.svg");
   }
   50% {
+    background-image: url("../../../../../../public/mr-burger.svg");
   }
   100% {
+    background-image: url("../../../../../../public/mr-burger-developer.svg");
+  }
+}
+@keyframes ChangeText {
+  0% {
+
+  }
+  50% {
+
+  }
+  100% {
+    
   }
 }
 
@@ -15,24 +29,20 @@
     flex-direction: row;
     .intro-avatar {
       margin: 1rem;
-      // background-image: url("/client/public/mr.svg"), url("/client/public/mr-burger.svg"),
-      //   url("/client/public/mr-burger-developer.svg");
-      // background-position: center;
-      // background-repeat: no-repeat;
-      // background-size: cover;
-      img {
-        position: absolute;
-        left: 5rem;
-        height: 20rem;
-        width: 20rem;
-        user-select: none;
-        &:nth-child(1) {
-          z-index: 1;
-        }
-      }
+      height: 20rem;
+      width: 20rem;
+      background-image: url("../../../../../../public/mr.svg");
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      animation-name: ChangeAvatar;
+      animation-timing-function: linear;
+      animation-duration: 7s;
+      animation-delay: 1s;
+      animation-fill-mode: forwards;
+      animation-iteration-count: infinite;
     }
     .intro-text {
-      margin-left: 23rem;
       height: 30rem;
       color: var(--color);
       font-size: 1.6rem;
