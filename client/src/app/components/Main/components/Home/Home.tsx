@@ -12,6 +12,7 @@ export default function Home() {
 					height={500}
 					width={500}
 					unoptimized={true}
+					priority
 				/>
 			</div>
 		</div>
