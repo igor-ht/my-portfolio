@@ -10,25 +10,23 @@
   }
 }
 @keyframes ChangeText {
-  0% {
-
+  from {
+    width: 0;
   }
-  50% {
-
-  }
-  100% {
-    
+  to {
+    width: 100%;
   }
 }
 
 #home {
   .intro {
-    background-color: #fbfbfb;
-    margin: 1rem;
+    background-color: var(--background-color);
+    color: var(--color);
     display: flex;
     flex-direction: row;
+    justify-content: space-evenly;
+    margin: 5rem;
     .intro-avatar {
-      margin: 1rem;
       height: 20rem;
       width: 20rem;
       background-image: url("../../../../../../public/mr.svg");
@@ -36,23 +34,48 @@
       background-size: cover;
       background-repeat: no-repeat;
       animation-name: ChangeAvatar;
-      animation-timing-function: linear;
+      animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
       animation-duration: 7s;
-      animation-delay: 1s;
+      animation-delay: 1.5s;
       animation-fill-mode: forwards;
-      animation-iteration-count: infinite;
+      filter: invert(var(--filter));
     }
     .intro-text {
       height: 30rem;
+      width: 45rem;
       color: var(--color);
       font-size: 1.6rem;
-      line-height: 200%;
-      p {
+      line-height: 170%;
+      span {
+        display: flex;
+        &:nth-child(1) {
+          width: 0;
+          animation-name: ChangeText;
+          animation-duration: 1.6s;
+          animation-delay: 0.5s;
+          animation-fill-mode: forwards;
+          animation-timing-function: linear;
+        }
         &:nth-child(2) {
-          display: none;
+          width: 0;
+          animation-name: ChangeText;
+          animation-duration: 2s;
+          animation-delay: 2.5s;
+          animation-fill-mode: forwards;
+          animation-timing-function: linear;
         }
         &:nth-child(3) {
-          display: none;
+          width: 0;
+          animation-name: ChangeText;
+          animation-duration: 2s;
+          animation-delay: 4.5s;
+          animation-fill-mode: forwards;
+          animation-timing-function: linear;
+        }
+        p {
+          overflow: hidden;
+          white-space: nowrap;
+          color: var(--color);
         }
       }
     }
