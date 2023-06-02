@@ -1,22 +1,50 @@
+@keyframes AvatarChange {
+  0% {
+  }
+  50% {
+  }
+  100% {
+  }
+}
+
 #home {
   .intro {
+    background-color: #fbfbfb;
     margin: 1rem;
-    position: relative;
-    .intro-background {
-      height: 380px;
-      background-image: url("/home-background.svg");
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: cover;
-      opacity: 0.15;
-      filter: invert(var(--filter));
+    display: flex;
+    flex-direction: row;
+    .intro-avatar {
+      margin: 1rem;
+      // background-image: url("/client/public/mr.svg"), url("/client/public/mr-burger.svg"),
+      //   url("/client/public/mr-burger-developer.svg");
+      // background-position: center;
+      // background-repeat: no-repeat;
+      // background-size: cover;
+      img {
+        position: absolute;
+        left: 5rem;
+        height: 20rem;
+        width: 20rem;
+        user-select: none;
+        &:nth-child(1) {
+          z-index: 1;
+        }
+      }
     }
     .intro-text {
-      position: absolute;
-      top: 0;
-      margin: 1rem;
+      margin-left: 23rem;
+      height: 30rem;
       color: var(--color);
-      font-size: 1.5rem;
+      font-size: 1.6rem;
+      line-height: 200%;
+      p {
+        &:nth-child(2) {
+          display: none;
+        }
+        &:nth-child(3) {
+          display: none;
+        }
+      }
     }
   }
 }
