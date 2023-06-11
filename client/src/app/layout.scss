@@ -3,8 +3,8 @@ html {
   width: 100dvw;
   background-color: var(--background-color);
   scroll-behavior: smooth;
-  // scroll-padding: var(--scroll-padding, 5rem);
-  
+  scroll-padding: var(--scroll-padding, 10rem);
+
   ::-webkit-scrollbar {
     width: 1px;
   }

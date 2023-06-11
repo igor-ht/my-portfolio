@@ -1,4 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Bagel+Fat+One&display=swap');
+
 :root {
+	--bagel-font:'Bagel Fat One', cursive;
 	--background-color: #fbfbfb;
 	--color: black;
 	--filter: 0;
