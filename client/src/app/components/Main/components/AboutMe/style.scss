@@ -1,8 +1,17 @@
+@keyframes iconAnimation {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-100% * 14));
+  }
+}
+
 #about-me {
   margin: 1rem;
   .title {
     font-family: var(--bagel-font);
-    font-size: 5rem;
+    font-size: 5.5rem;
     text-align: center;
     text-decoration: underline;
     color: var(--color);
@@ -12,13 +21,31 @@
     font-size: 1.8rem;
     p {
       color: var(--color);
-      margin: 1rem;
       font-weight: 600;
       text-align: justify;
+      margin: 1rem;
+      margin-top: 0;
     }
     .skills {
       h1 {
-        font-size: 2.2rem;
+        font-family: var(--bagel-font);
+        font-size: 3rem;
+        text-align: center;
+        text-decoration: underline;
+      }
+      .icons {
+        display: flex;
+        flex-wrap: nowrap;
+        animation-name: iconAnimation;
+        animation-duration: 20s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+        img {
+          height: 6rem;
+          width: 6rem;
+          object-fit: cover;
+          margin: 1rem;
+        }
       }
     }
   }
