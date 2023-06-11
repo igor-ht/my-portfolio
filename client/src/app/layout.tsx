@@ -1,8 +1,8 @@
+import './globals.css';
+import './layout.scss';
 import Header from './components/Header/Header';
 import Main from './components/Main/Main';
 import Footer from './components/Footer/Footer';
-import './globals.css';
-import './layout.scss';
 
 export const metadata = {
 	title: 'IDHT Portfolio',

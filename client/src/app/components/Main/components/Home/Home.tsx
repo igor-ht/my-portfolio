@@ -1,6 +1,5 @@
 import './style.scss';
 import Image from 'next/image';
-import { roboto_mono } from '@/libs/fonts';
 
 export default function Home() {
 	return (

@@ -1,5 +1,4 @@
 import './style.scss';
-import Link from 'next/link';
 import Image from 'next/image';
 import { indie_flower } from '@/libs/fonts';
 
@@ -17,18 +16,18 @@ export default function Header() {
 					/>
 				</div>
 				<div className={`links ${indie_flower.className}`}>
-					<Link href={'#home'}>
+					<a href={'#home'}>
 						<p>Home</p>
-					</Link>
-					<Link href={'#about-me'}>
+					</a>
+					<a href={'#about-me'}>
 						<p>About Me</p>
-					</Link>
-					<Link href={'#projects'}>
+					</a>
+					<a href={'#projects'}>
 						<p>Projects</p>
-					</Link>
-					<Link href={'#contact-me'}>
+					</a>
+					<a href={'#contact-me'}>
 						<p>Contact Me</p>
-					</Link>
+					</a>
 				</div>
 			</nav>
 			<div className="line bottom-line" />

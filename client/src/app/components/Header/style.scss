@@ -24,7 +24,11 @@
 }
 
 header {
+  position: fixed;
   background-color: var(--background-color);
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
   .line {
     height: 0.3rem;
     width: 90dvw;
@@ -54,6 +58,7 @@ header {
       img {
         width: 8rem;
         height: 8rem;
+        object-fit: contain;
         user-select: none;
         filter: invert(var(--filter));
       }
@@ -66,14 +71,14 @@ header {
       justify-content: space-evenly;
 
       a {
-        margin: 1.3rem;
+        margin: 1rem;
         color: var(--color);
 
         &:visited {
           color: var(--color);
         }
         p {
-          font-size: 1.7rem;
+          font-size: 2rem;
         }
       }
     }

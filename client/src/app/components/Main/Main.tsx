@@ -1,13 +1,16 @@
 import './style.scss';
 import Home from './components/Home/Home';
+import AboutMe from './components/AboutMe/AboutMe';
+import Projects from './components/Projects/Projects';
+import ContactMe from './components/ContactMe/ContactMe';
 
 export default function Main({ children }: { children: React.ReactNode }) {
 	return (
-		<main>
+		<main id="main">
 			<Home />
-			<div id="about-me"></div>
-			<div id="projects"></div>
-			<div id="contact-me"></div>
+			<AboutMe />
+			<Projects />
+			<ContactMe />
 		</main>
 	);
 }
