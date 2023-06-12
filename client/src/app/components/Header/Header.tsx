@@ -2,29 +2,20 @@
 
 import './style.scss';
 import Image from 'next/image';
+import { useEffect } from 'react';
 import { indie_flower } from '@/libs/fonts';
-import { useEffect, useState } from 'react';
-import debounce from '@/libs/debounce';
+import useScrollDirection from '@/libs/hooks/useScrollDirection';
 
 export default function Header() {
-	// const [prevScrollPos, setPrevScrollPos] = useState(0);
-	// const [visible, setVisible] = useState(true);
+	const scrollDirection = useScrollDirection();
 
-	// const handleScroll = debounce(() => {
-	// 	const currentScrollPos = window.scrollY;
+	useEffect(() => {
+		const navbar = document?.getElementById('navbar');
+		if (navbar && scrollDirection) {
+			scrollDirection === 'up' ? (navbar.style.top = '0') : (navbar.style.top = '-22dvh');
+		}
+	}, [scrollDirection]);
 
-	// 	// set state based on location
-	// 	setVisible((prevScrollPos > currentScrollPos && prevScrollPos - currentScrollPos > 70) || currentScrollPos < 10);
-
-	// 	// set state to new scroll position
-	// 	setPrevScrollPos(currentScrollPos);
-	// });
-
-	// useEffect(() => {
-	// 	window?.addEventListener('scroll', handleScroll);
-
-	// 	return () => window?.removeEventListener('scroll', handleScroll);
-	// });
 	return (
 		<header id="navbar">
 			<div className="line top-line" />
