@@ -23,8 +23,9 @@
   }
 }
 
-header {
-  position: fixed;
+#navbar {
+  height: 22dvh;
+  position: sticky;
   background-color: var(--background-color);
   display: flex;
   flex-direction: column;
@@ -87,7 +88,7 @@ header {
 }
 
 @media (max-width: 700px) {
-  header {
+  #navbar {
     nav {
       grid-template-columns: 1fr;
       grid-template-rows: 65% 35%;

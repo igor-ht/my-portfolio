@@ -8,44 +8,42 @@
 }
 
 #about-me {
+  height: 78dvh;
   margin: 1rem;
+  margin-top: 0;
   .title {
     font-family: var(--bagel-font);
     font-size: 5.5rem;
     text-align: center;
     text-decoration: underline;
     color: var(--color);
+    margin-bottom: 1.5rem;
   }
 
   .resume {
     font-size: 1.8rem;
-    p {
-      color: var(--color);
-      font-weight: 600;
-      text-align: justify;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    img {
+      height: 75dvh;
+      width: 40dvw;
+      object-fit: cover;
+      border-radius: 50%;
+      user-select: none;
+    }
+    div {
+      width: 60dvw;
       margin: 1rem;
       margin-top: 0;
-    }
-    .skills {
-      h1 {
-        font-family: var(--bagel-font);
-        font-size: 3rem;
-        text-align: center;
-        text-decoration: underline;
-      }
-      .icons {
-        display: flex;
-        flex-wrap: nowrap;
-        animation-name: iconAnimation;
-        animation-duration: 20s;
-        animation-timing-function: linear;
-        animation-iteration-count: infinite;
-        img {
-          height: 6rem;
-          width: 6rem;
-          object-fit: cover;
-          margin: 1rem;
-        }
+      display: flex;
+      justify-content: center;
+      p {
+        color: var(--color);
+        font-weight: 600;
+        text-align: justify;
+        max-width: 50dvw;
       }
     }
   }

@@ -15,11 +15,12 @@ export default function useScrollDirection() {
 			}
 			lastScrollY = scrollY > 0 ? scrollY : 0;
 		}, 500);
-		window.addEventListener('scroll', updateScrollDirection); // add event listener
+
+		window.addEventListener('scroll', updateScrollDirection);
 		return () => {
-			window.removeEventListener('scroll', updateScrollDirection); // clean up
+			window.removeEventListener('scroll', updateScrollDirection);
 		};
 	}, [scrollDirection]);
 
-	return scrollDirection;
+	return [scrollDirection, setScrollDirection];
 }

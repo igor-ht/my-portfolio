@@ -1,9 +1,11 @@
 html {
   all: unset;
   width: 100dvw;
+  height: 100dvh;
   background-color: var(--background-color);
+  scroll-snap-type: y proximity;
   scroll-behavior: smooth;
-  scroll-padding: var(--scroll-padding, 10rem);
+  scroll-padding: var(--scroll-padding, 24dvh);
 
   ::-webkit-scrollbar {
     width: 1px;

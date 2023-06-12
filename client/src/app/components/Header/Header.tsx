@@ -7,7 +7,7 @@ import { indie_flower } from '@/libs/fonts';
 import useScrollDirection from '@/libs/hooks/useScrollDirection';
 
 export default function Header() {
-	const scrollDirection = useScrollDirection();
+	const [scrollDirection] = useScrollDirection();
 
 	useEffect(() => {
 		const navbar = document?.getElementById('navbar');

@@ -1,5 +1,14 @@
 #main {
-  margin-top: 22dvh;
   margin-left: 0.5rem;
   margin-right: 0.5rem;
+  margin-top: 0.2rem;
+  display: grid;
+  grid-template-columns: 1fr;
+
+  #home,
+  #about-me,
+  #projects,
+  #contact-me {
+    scroll-snap-align: start;
+  }
 }
