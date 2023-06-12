@@ -1,10 +1,32 @@
+'use client';
+
 import './style.scss';
 import Image from 'next/image';
 import { indie_flower } from '@/libs/fonts';
+import { useEffect, useState } from 'react';
+import debounce from '@/libs/debounce';
 
 export default function Header() {
+	// const [prevScrollPos, setPrevScrollPos] = useState(0);
+	// const [visible, setVisible] = useState(true);
+
+	// const handleScroll = debounce(() => {
+	// 	const currentScrollPos = window.scrollY;
+
+	// 	// set state based on location
+	// 	setVisible((prevScrollPos > currentScrollPos && prevScrollPos - currentScrollPos > 70) || currentScrollPos < 10);
+
+	// 	// set state to new scroll position
+	// 	setPrevScrollPos(currentScrollPos);
+	// });
+
+	// useEffect(() => {
+	// 	window?.addEventListener('scroll', handleScroll);
+
+	// 	return () => window?.removeEventListener('scroll', handleScroll);
+	// });
 	return (
-		<header>
+		<header id="navbar">
 			<div className="line top-line" />
 			<nav>
 				<div className="logo">
