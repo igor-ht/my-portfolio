@@ -8,7 +8,6 @@
 }
 
 #about-me {
-  height: 78dvh;
   margin: 1rem;
   margin-top: 0;
   .title {
@@ -27,11 +26,12 @@
     justify-content: center;
 
     img {
-      height: 75dvh;
-      width: 40dvw;
+      height: 60dvh;
+      width: 25dvw;
       object-fit: cover;
-      border-radius: 50%;
+      border-radius: 20px;
       user-select: none;
+      border: 5px solid black;
     }
     div {
       width: 60dvw;
@@ -41,7 +41,9 @@
       justify-content: center;
       p {
         color: var(--color);
-        font-weight: 600;
+        font-family: var(--diphy-font);
+        font-size: 2rem;
+        font-weight: 500;
         text-align: justify;
         max-width: 50dvw;
       }

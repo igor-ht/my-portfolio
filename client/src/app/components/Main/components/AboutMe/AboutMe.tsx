@@ -8,18 +8,12 @@ export default function AboutMe() {
 			<h1 className="title">About Me:</h1>
 			<div className="resume">
 				<div>
-					<p className={`${cormorant_garamond.className}`}>
-						A passionate FullStack Developer with main focus in Web Development.
+					<p className={''}>
+						A passionate Full-Stack Developer with main focus in Web Development.
 						<br />
 						<br />
 						With almost a year of hands-on experience in creating websites and web applications, my goal is to leverage my skills and
 						knowledge to contribute to innovative projects and continuously grow as a developer.
-						<br />
-						<br />
-						During my journey as a Junior FullStack Web Developer, I have had the opportunity to work on various projects that involved
-						implementing responsive designs, optimizing website performance, integrating APIs and more. This experience has equipped me with
-						a solid foundation in web development principles and best practices.
-						<br />
 					</p>
 				</div>
 				<Image
@@ -33,7 +27,11 @@ export default function AboutMe() {
 	);
 }
 
-				{/* <section className="skills">
+{
+	/* <section className="skills">
+					During my journey as a Junior FullStack Web Developer, I have had the opportunity to work on various projects that involved
+					implementing responsive designs, optimizing website performance, integrating APIs and more. This experience has equipped me with
+					a solid foundation in web development principles and best practices.
 					As a lifelong learner, I am committed to staying up-to-date with the latest technologies and industry trends. I aim to continually
 					enhance my skills by exploring new frameworks and tools that empower me to create cutting-edge web solutions. My goal is to
 					contribute to a collaborative team where I can apply my knowledge and grow professionally.
@@ -124,4 +122,5 @@ export default function AboutMe() {
 							width="48"
 						/>
 					</section>
-				</section> */}
+				</section> */
+}
