@@ -4,8 +4,10 @@
 :root {
 	--diphy-font: 'Diphylleia', serif;
 	--bagel-font: 'Bagel Fat One', cursive;
-	--background-color: #fbfbfb;
-	--color: black;
+	--color: #050505;
+	--background-color: #e6e5e5;
+	--accent: #404444;
+	--sec-color: #dfdddd;
 	--filter: 0;
 }
 

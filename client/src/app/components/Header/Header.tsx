@@ -3,7 +3,7 @@
 import './style.scss';
 import Image from 'next/image';
 import { useEffect } from 'react';
-import { indie_flower } from '@/libs/fonts';
+import { poiret_one } from '@/libs/fonts';
 import useScrollDirection from '@/libs/hooks/useScrollDirection';
 
 export default function Header() {
@@ -28,7 +28,7 @@ export default function Header() {
 						height={120}
 					/>
 				</div>
-				<div className={`links ${indie_flower.className}`}>
+				<div className={`links ${poiret_one.className}`}>
 					<a href={'#home'}>
 						<p>Home</p>
 					</a>

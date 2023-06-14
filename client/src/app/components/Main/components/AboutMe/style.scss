@@ -8,13 +8,15 @@
 }
 
 #about-me {
-  margin: 1rem;
+  width: 100dvw;
   margin-top: 0;
+  background-image: url("/about-me-background.svg");
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
   .title {
-    font-family: var(--bagel-font);
     font-size: 5.5rem;
     text-align: center;
-    text-decoration: underline;
     color: var(--color);
     margin-bottom: 1.5rem;
   }
@@ -31,7 +33,7 @@
       object-fit: cover;
       border-radius: 20px;
       user-select: none;
-      border: 5px solid black;
+      border: 5px solid var(--accent);
     }
     div {
       width: 60dvw;
@@ -41,7 +43,6 @@
       justify-content: center;
       p {
         color: var(--color);
-        font-family: var(--diphy-font);
         font-size: 2rem;
         font-weight: 500;
         text-align: justify;

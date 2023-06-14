@@ -1,19 +1,19 @@
 import './style.scss';
-import { cormorant_garamond } from '@/libs/fonts';
+import { montserrat, poiret_one } from '@/libs/fonts';
 import Image from 'next/image';
 
 export default function AboutMe() {
 	return (
 		<div id="about-me">
-			<h1 className="title">About Me:</h1>
+			<h1 className={`title ${poiret_one.className}`}>About Me:</h1>
 			<div className="resume">
 				<div>
-					<p className={''}>
+					<p className={`${montserrat.className}`}>
 						A passionate Full-Stack Developer with main focus in Web Development.
 						<br />
 						<br />
 						With almost a year of hands-on experience in creating websites and web applications, my goal is to leverage my skills and
-						knowledge to contribute to innovative projects and continuously grow as a developer.
+						knowledge to contribute to innovative projects and continuously grow professionally.
 					</p>
 				</div>
 				<Image
