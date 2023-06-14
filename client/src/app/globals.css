@@ -1,9 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Bagel+Fat+One&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Diphylleia&display=swap');
 
 :root {
-	--diphy-font: 'Diphylleia', serif;
-	--bagel-font: 'Bagel Fat One', cursive;
 	--color: #050505;
 	--background-color: #e6e5e5;
 	--accent: #404444;
@@ -12,7 +8,9 @@
 }
 
 [data-theme='dark'] {
-	--background-color: black;
-	--color: white;
+	--color: rgb(234, 234, 234);
+	--background-color: rgb(25 26 26);
+	--accent: #acacac;
+	--sec-color: #5e5e5e;
 	--filter: 1;
 }

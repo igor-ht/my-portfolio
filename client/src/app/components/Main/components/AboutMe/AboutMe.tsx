@@ -1,27 +1,19 @@
 import './style.scss';
 import { montserrat, poiret_one } from '@/libs/fonts';
-import Image from 'next/image';
 
 export default function AboutMe() {
 	return (
 		<div id="about-me">
 			<h1 className={`title ${poiret_one.className}`}>About Me:</h1>
 			<div className="resume">
-				<div>
-					<p className={`${montserrat.className}`}>
-						A passionate Full-Stack Developer with main focus in Web Development.
-						<br />
-						<br />
-						With almost a year of hands-on experience in creating websites and web applications, my goal is to leverage my skills and
-						knowledge to contribute to innovative projects and continuously grow professionally.
-					</p>
-				</div>
-				<Image
-					src={'/me.svg'}
-					height={300}
-					width={300}
-					alt="me"
-				/>
+				<p className={`${montserrat.className}`}>
+					<br />I am a versatile full stack developer with almost a year of hands-on experience on web development. With expertise in
+					Python, JavaScript, TypeScript, Node.js, HTML, CSS/SCSS, React.js, Next.js and other technologies, I bring your digital projects
+					to life from end to end. I excel in creating robust and scalable applications, implementing secure authentication, responsible
+					design and ensuring others best practices.
+					<br />
+					Let's collaborate and turn your ideas into exceptional web experiences!
+				</p>
 			</div>
 		</div>
 	);

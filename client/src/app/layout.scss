@@ -8,7 +8,7 @@ html {
   scroll-padding: var(--scroll-padding, 24dvh);
 
   ::-webkit-scrollbar {
-    width: 10px;
+    width: 0.6rem;
     background-color: #888;
   }
   ::-webkit-scrollbar-thumb {
@@ -21,11 +21,10 @@ body {
 }
 
 #app {
-  min-height: 100dvh;
   width: 100dvw;
+  background-color: var(--background-color);
   display: flex;
   flex-direction: column;
+  overflow-y: scroll;
   overflow-x: hidden;
-  overflow-y: auto;
-  background-color: var(--background-color);
 }

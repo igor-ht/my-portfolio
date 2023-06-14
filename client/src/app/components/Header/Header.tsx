@@ -2,22 +2,16 @@
 
 import './style.scss';
 import Image from 'next/image';
-import { useEffect } from 'react';
 import { poiret_one } from '@/libs/fonts';
 import useScrollDirection from '@/libs/hooks/useScrollDirection';
 
 export default function Header() {
 	const [scrollDirection] = useScrollDirection();
 
-	useEffect(() => {
-		const navbar = document?.getElementById('navbar');
-		if (navbar && scrollDirection) {
-			scrollDirection === 'up' ? (navbar.style.top = '0') : (navbar.style.top = '-22dvh');
-		}
-	}, [scrollDirection]);
-
 	return (
-		<header id="navbar">
+		<header
+			id="navbar"
+			style={{ top: scrollDirection && scrollDirection === 'up' ? '0' : '-25dvh' }}>
 			<div className="line top-line" />
 			<nav>
 				<div className="logo">
