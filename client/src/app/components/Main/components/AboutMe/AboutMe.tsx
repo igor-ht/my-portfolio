@@ -1,4 +1,5 @@
 import './style.scss';
+import Image from 'next/image';
 import { montserrat, poiret_one } from '@/libs/fonts';
 
 export default function AboutMe() {
@@ -12,107 +13,193 @@ export default function AboutMe() {
 					to life from end to end. I excel in creating robust and scalable applications, implementing secure authentication, responsible
 					design and ensuring others best practices.
 					<br />
-					Let's collaborate and turn your ideas into exceptional web experiences!
+					Let&apos;s collaborate and turn your ideas into exceptional web experiences!
 				</p>
 			</div>
-		</div>
-	);
-}
-
-{
-	/* <section className="skills">
-					During my journey as a Junior FullStack Web Developer, I have had the opportunity to work on various projects that involved
-					implementing responsive designs, optimizing website performance, integrating APIs and more. This experience has equipped me with
-					a solid foundation in web development principles and best practices.
-					As a lifelong learner, I am committed to staying up-to-date with the latest technologies and industry trends. I aim to continually
-					enhance my skills by exploring new frameworks and tools that empower me to create cutting-edge web solutions. My goal is to
-					contribute to a collaborative team where I can apply my knowledge and grow professionally.
-					<h1>Technologies:</h1>
-					<section className="icons">
+			<div className="skills">
+				<section className={`${montserrat.className} icons`}>
+					<span>
 						<Image
 							src="/techs/python.svg"
 							alt="Python Programming Language"
 							height="48"
 							width="48"
+							title="Python"
 						/>
+						<p>Python</p>
+					</span>
+					<span>
 						<Image
 							src="/techs/html.svg"
 							alt="HTML"
 							height="48"
 							width="48"
+							title="HTML"
 						/>
+						<p>HTML</p>
+					</span>
+					<span>
 						<Image
 							src="/techs/css.svg"
 							alt="CSS"
 							height="48"
 							width="48"
+							title="CSS"
 						/>
+						<p>CSS</p>
+					</span>
+					<span>
 						<Image
 							src="/techs/scss.svg"
 							alt="SCSS"
 							height="48"
 							width="48"
+							title="SCSS"
 						/>
+						<p>SCSS</p>
+					</span>
+					<span>
 						<Image
 							src="/techs/nodejs.svg"
 							alt="Node.js"
 							height="48"
 							width="48"
+							title="Node.js"
 						/>
+						<p>Node.js</p>
+					</span>
+					<span>
 						<Image
 							src="/techs/javascript.svg"
 							alt="JavaScript Programming Language"
 							height="48"
 							width="48"
+							title="JavaScript"
 						/>
+						<p>JavaScript</p>
+					</span>
+					<span>
 						<Image
 							src="/techs/typescript.svg"
 							alt="TypeScript"
 							height="48"
 							width="48"
+							title="TypeScript"
 						/>
-						<Image
-							src="/techs/react-js.svg"
-							alt="React.js"
-							height="48"
-							width="48"
-						/>
-						<Image
-							src="/techs/next-js.svg"
-							alt="Next.js"
-							height="48"
-							width="48"
-						/>
+						<p>TypeScript</p>
+					</span>
+					<span>
 						<Image
 							src="/techs/express-js.svg"
 							alt="Express.js"
 							height="48"
 							width="48"
+							title="Express.js"
 						/>
+						<p>Express.js</p>
+					</span>
+					<span>
 						<Image
-							src="/techs/jwt.svg"
-							alt="JSON Web Token"
+							src="/techs/react-js.svg"
+							alt="React.js"
 							height="48"
 							width="48"
+							title="React.js"
 						/>
+						<p>React.js</p>
+					</span>
+					<span>
+						<Image
+							src="/techs/next-js.svg"
+							alt="Next.js"
+							height="48"
+							width="48"
+							title="Next.js"
+						/>
+						<p>Next.js</p>
+					</span>
+					<span>
 						<Image
 							src="/techs/postgresql.svg"
 							alt="PostgreSQL"
 							height="48"
 							width="48"
+							title="PostgreSQL"
 						/>
+						<p>PostgreSQL</p>
+					</span>
+					<span>
 						<Image
 							src="/techs/mongodb.svg"
 							alt="MongoDB"
 							height="48"
 							width="48"
+							title="MongoDB"
 						/>
+						<p>MongoDB</p>
+					</span>
+					<span>
 						<Image
 							src="/techs/prisma.svg"
 							alt="Prisma ORM"
 							height="48"
 							width="48"
+							title="Prisma ORM"
 						/>
-					</section>
-				</section> */
+						<p>Prisma ORM</p>
+					</span>
+					<span>
+						<Image
+							src="/techs/jwt.svg"
+							alt="JSON Web Token"
+							height="48"
+							width="48"
+							title="JSON Web Token"
+						/>
+						<p>JWT</p>
+					</span>
+					<span>
+						<Image
+							src="/techs/git.svg"
+							alt="Git"
+							height="48"
+							width="48"
+							title="Git"
+						/>
+						<p>Git</p>
+					</span>
+					<span>
+						<Image
+							src="/techs/docker.svg"
+							alt="Docker"
+							height="48"
+							width="48"
+							title="Docker"
+						/>
+						<p>Docker</p>
+					</span>
+					<span>
+						<Image
+							src="/techs/github.svg"
+							alt="GitHub"
+							height="48"
+							width="48"
+							title="GitHub"
+						/>
+						<p>GitHub</p>
+					</span>
+					<span>
+						<Image
+							src="/techs/bootstrap.svg"
+							alt="Bootstrap"
+							height="48"
+							width="48"
+							title="Bootstrap"
+						/>
+						<p>Bootstrap</p>
+					</span>
+				</section>
+			</div>
+		</div>
+	);
 }

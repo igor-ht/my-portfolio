@@ -1,9 +1,9 @@
 @keyframes iconAnimation {
   0% {
-    transform: translateX(0);
+    transform: translateX(50%);
   }
   100% {
-    transform: translateX(calc(-100% * 14));
+    transform: translateX(calc(-150%));
   }
 }
 
@@ -22,23 +22,51 @@
     text-align: center;
     color: var(--color);
     margin-bottom: 0;
-    text-shadow: 0px 0px 10px black;
+    filter: invert(var(--filter));
   }
 
   .resume {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     display: flex;
     flex-direction: row;
     justify-content: center;
 
     p {
       color: var(--color);
-      font-size: 1.4rem;
+      filter: invert(var(--filter));
+      font-size: 1.3rem;
       font-weight: 500;
       text-align: justify;
       max-width: 55dvw;
       margin: 0;
-      text-shadow: 0px 0px 10px black;
+    }
+  }
+  .skills {
+    width: 70dvw;
+    overflow: hidden;
+    margin: auto;
+
+    .icons {
+      animation: iconAnimation 10s linear infinite;
+      animation-direction: alternate;
+      display: flex;
+
+      &:hover {
+        animation-play-state: paused;
+      }
+
+      span {
+        margin: 2rem;
+        text-align: center;
+        img {
+          width: 48px;
+          height: 48px;
+          object-fit: cover;
+        }
+        p {
+          font-size: small;
+        }
+      }
     }
   }
 }

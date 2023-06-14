@@ -3,9 +3,9 @@ html {
   width: 100dvw;
   height: 100dvh;
   background-color: var(--background-color);
-  scroll-snap-type: y proximity;
+  scroll-snap-type: y mandatory;
   scroll-behavior: smooth;
-  scroll-padding: var(--scroll-padding, 24dvh);
+  scroll-padding: var(--scroll-padding, 25dvh);
 
   ::-webkit-scrollbar {
     width: 0.6rem;

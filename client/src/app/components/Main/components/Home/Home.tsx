@@ -1,5 +1,5 @@
-import { montserrat, poiret_one } from '@/libs/fonts';
 import './style.scss';
+import { montserrat, poiret_one } from '@/libs/fonts';
 import Image from 'next/image';
 
 export default function Home() {
@@ -7,7 +7,7 @@ export default function Home() {
 		<div id="home">
 			<div className="intro">
 				<section className="greet">
-					<h1 className={`${poiret_one.className}`}>I'm Igor Hamburger Tambellini.</h1>
+					<h1 className={`${poiret_one.className}`}>I&apos;m Igor Hamburger Tambellini.</h1>
 					<Image
 						src={'/me.svg'}
 						height={300}
