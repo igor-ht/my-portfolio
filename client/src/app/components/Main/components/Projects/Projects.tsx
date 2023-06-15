@@ -1,7 +1,7 @@
 'use client';
 
 import './style.scss';
-import { poiret_one } from '@/libs/fonts';
+import { montserrat, poiret_one } from '@/libs/fonts';
 import { useRef } from 'react';
 import WordleWorld from './Project/WordleWorld';
 import Orquia from './Project/Orquia';
@@ -43,10 +43,10 @@ export default function Projects() {
 			<div className="projects-album">
 				<button
 					type="button"
-					className="left"
 					onClick={handleClickLeft}>
-					&lt;
+					<p className={poiret_one.className}>&lt;</p>
 				</button>
+
 				<span>
 					<div
 						ref={currentProjectRef}
@@ -63,9 +63,8 @@ export default function Projects() {
 
 				<button
 					type="button"
-					className="right"
 					onClick={handleClickRight}>
-					&gt;
+					<p className={poiret_one.className}>&gt;</p>
 				</button>
 			</div>
 		</div>
