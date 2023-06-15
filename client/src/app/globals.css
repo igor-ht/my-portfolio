@@ -4,6 +4,7 @@
 	--accent: #404444;
 	--sec-color: #dfdddd;
 	--filter: 0;
+	--z-index: 1;
 }
 
 [data-theme='dark'] {

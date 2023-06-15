@@ -1,0 +1,15 @@
+#contact-me {
+  height: 75dvh;
+  width: 100dvw;
+  margin-top: 0;
+  background-color: #3c3c3c;
+  filter: invert(var(--filter));
+
+  .title {
+    font-size: 3rem;
+    text-align: center;
+    color: var(--color);
+    margin-bottom: 0;
+    filter: invert(var(--filter));
+  }
+}

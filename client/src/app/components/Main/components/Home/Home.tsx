@@ -16,10 +16,9 @@ export default function Home() {
 					/>
 				</section>
 				<p className={`${montserrat.className}`}>
-					A <mark>Full-Stack Developer</mark> based in Israel.
+					A <mark>Full-Stack Developer</mark> with a passion for <mark>Web Development</mark>.
 					<br />
-					With main focus in <mark>Web Development</mark>, my goal is to leverage my skills and knowledge to contribute to innovative
-					projects and continuously grow professionally.
+					My main goal is to leverage my skills and knowledge to contribute to innovative projects and continuously grow professionally.
 				</p>
 			</div>
 		</div>
