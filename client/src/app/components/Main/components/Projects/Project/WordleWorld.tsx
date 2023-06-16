@@ -1,14 +1,10 @@
-import './style.scss';
-import { karla } from '@/libs/fonts';
+import Project, { ProjectPropsType } from './Project';
 
-export default function WordleWorld() {
-	return (
-		<div className="project-display">
-			<h1 className={`${karla.className} title`}>WordleWorld</h1>
-			<div className="content">
-				<section className="video-stack"></section>
-				<section className="description-links"></section>
-			</div>
-		</div>
-	);
+export const WordleWorldProps: ProjectPropsType = {
+	name: 'WordleWorld',
+	ref: null,
+};
+
+export default function WordleWorld({ props }: { props: ProjectPropsType }) {
+	return <Project props={props} />;
 }

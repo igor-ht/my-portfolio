@@ -1,10 +1,10 @@
-import './style.scss';
-import { karla } from '@/libs/fonts';
+import Project, { ProjectPropsType } from './Project';
 
-export default function Orquia() {
-	return (
-		<div className='project-display'>
-			<h1 className={`${karla.className} title`}>Orquia</h1>
-		</div>
-	);
+export const OrquiaProps: ProjectPropsType = {
+	name: 'Orquia',
+	ref: null,
+};
+
+export default function Orquia({ props }: { props: ProjectPropsType }) {
+	return <Project props={props} />;
 }
