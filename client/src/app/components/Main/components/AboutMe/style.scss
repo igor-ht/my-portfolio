@@ -3,7 +3,7 @@
     transform: translateX(50%);
   }
   100% {
-    transform: translateX(calc(-150%));
+    transform: translateX(calc(-50% * 3));
   }
 }
 @keyframes mobileIconAnimation {
@@ -16,7 +16,7 @@
 }
 
 #about-me {
-  height: 75dvh;
+  min-height: 75dvh;
   width: 100dvw;
   margin-top: 0;
   background-image: url("/about-me-background.svg");
