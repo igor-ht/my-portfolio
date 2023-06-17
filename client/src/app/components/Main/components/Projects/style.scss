@@ -1,5 +1,5 @@
 #projects {
-  height: 120dvh;
+  min-height: 120dvh;
   width: 100dvw;
   background-image: url("/projects-background.svg");
   background-repeat: no-repeat;
@@ -50,9 +50,10 @@
 
 @media (max-width: 700px) {
   #projects {
-    height: 85dvh;
+    min-height: 85dvh;
+
     .projects-album {
-      width: 95dvw;
+      width: 100dvw;
 
       span {
         .project {

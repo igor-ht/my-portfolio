@@ -1,5 +1,5 @@
 #contact-me {
-  height: 75dvh;
+  min-height: 75dvh;
   width: 100dvw;
   margin-top: 0;
   background-color: #3c3c3c;
@@ -12,10 +12,48 @@
     margin: 0;
     filter: invert(var(--filter));
   }
+  .resume {
+    width: 100dvw;
+    margin: auto;
+    margin-top: 1rem;
+
+    p {
+      font-size: 1.3rem;
+      max-width: 55dvw;
+      margin: auto;
+      color: var(--color);
+      filter: invert(var(--filter));
+    }
+  }
+  .links {
+    width: 100dvw;
+    margin: auto;
+    margin-top: 1rem;
+    text-align: center;
+    a {
+      img {
+        margin: 1rem;
+        border-radius: 50%;
+        box-shadow: 0px 0px 5px 1px white;
+        transition: box-shadow 0.5s;
+        filter: invert(var(--filter));
+        &:hover {
+          box-shadow: 0px 0px 10px 3px white;
+        }
+      }
+    }
+  }
 }
 
 @media (max-width: 700px) {
   #contact-me {
-    height: 80dvh;
+    min-height: 80dvh;
+
+    .resume {
+      P {
+        font-size: 1.1rem;
+        max-width: 80dvw;
+      }
+    }
   }
 }

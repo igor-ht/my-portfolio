@@ -15,10 +15,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 	return (
 		<html
 			id="root"
-			lang="en">
-			<body
-				id="app"
-				data-theme="light">
+			lang="en"
+			data-theme="light">
+			<body id="app">
 				<Header />
 				<Main>{children}</Main>
 			</body>
