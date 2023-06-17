@@ -8,11 +8,18 @@ html {
   overflow-x: hidden;
   overflow-y: auto;
 
-  ::-webkit-scrollbar {
+  &::-webkit-scrollbar {
+    width: 0.01px;
+  }
+}
+
+.on-scrollbar {
+  overflow-y: auto;
+  &::-webkit-scrollbar {
     width: 0.6rem;
     background-color: #888;
   }
-  ::-webkit-scrollbar-thumb {
+  &::-webkit-scrollbar-thumb {
     background-color: var(--accent);
   }
 }

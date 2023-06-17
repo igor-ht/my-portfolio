@@ -3,10 +3,11 @@
 import './style.scss';
 import Image from 'next/image';
 import { poiret_one } from '@/libs/fonts';
-import useScrollDirection from '@/libs/hooks/useScrollDirection';
+
+import useScrollInteraction from '@/libs/hooks/useScrollInteraction';
 
 export default function Header() {
-	const [scrollDirection] = useScrollDirection();
+	const [scrollDirection] = useScrollInteraction();
 
 	return (
 		<header
