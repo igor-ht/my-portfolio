@@ -5,6 +5,7 @@
   background-position: bottom center;
   background-size: cover;
   filter: invert(var(--filter));
+  border: 0;
 
   .intro {
     margin-top: 1rem;
@@ -54,6 +55,7 @@
 
 @media (max-width: 700px) {
   #home {
+    height: 80dvh;
     .intro {
       flex-direction: column;
       .greet {

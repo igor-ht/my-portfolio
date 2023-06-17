@@ -16,20 +16,21 @@
 }
 
 #about-me {
-  min-height: 75dvh;
+  height: 75dvh;
   width: 100dvw;
-  margin-top: 0;
   background-image: url("/about-me-background.svg");
   background-repeat: no-repeat;
   background-position: top center;
   background-size: cover;
   filter: invert(var(--filter));
+  border: 0;
 
   .title {
     font-size: 3rem;
     text-align: center;
     color: var(--color);
     margin-bottom: 0;
+    margin-top: 1.5rem;
     filter: invert(var(--filter));
   }
 
@@ -81,6 +82,7 @@
 
 @media (max-width: 700px) {
   #about-me {
+    height: 80dvh;
     .resume {
       p {
         max-width: 95dvw;

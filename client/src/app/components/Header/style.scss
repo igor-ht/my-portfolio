@@ -26,6 +26,7 @@
 }
 
 #navbar {
+  width: 100dvw;
   position: sticky;
   z-index: 1;
   display: flex;
@@ -114,11 +115,14 @@
         }
       }
       .links {
+        justify-content: normal;
+
         a {
-          margin: 0.4rem;
+          margin: auto;
+
           p {
-            font-size: 1.3rem;
-            margin: 0;
+            font-size: 1.1rem;
+            margin: 0.2rem;
           }
         }
       }
