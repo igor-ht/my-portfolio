@@ -9,7 +9,17 @@ html {
   overflow-y: auto;
 
   &::-webkit-scrollbar {
-    width: 0.01px;
+    border: 0;
+    width: 0.063rem;
+    background-color: var(--accent);
+
+    &:hover {
+      width: 0.6rem;
+      background-color: #888;
+    }
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: var(--accent);
   }
 }
 

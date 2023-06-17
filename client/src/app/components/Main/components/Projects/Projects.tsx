@@ -9,7 +9,7 @@ import Orquia, { OrquiaProps } from './Project/Orquia';
 export default function Projects() {
 	const currentProjectRef = useRef<HTMLDivElement | null>(null);
 
-	const handleClick = (direction: 'left' | 'right') => {
+	const handleChangeProject = (direction: 'left' | 'right') => {
 		if (!currentProjectRef || !currentProjectRef.current) {
 			currentProjectRef.current = document.querySelector('.project') as HTMLDivElement;
 		}
@@ -38,7 +38,7 @@ export default function Projects() {
 			<div className="projects-album">
 				<button
 					type="button"
-					onClick={() => handleClick('left')}>
+					onClick={() => handleChangeProject('left')}>
 					<p className={poiret_one.className}>&lt;</p>
 				</button>
 
@@ -49,7 +49,7 @@ export default function Projects() {
 
 				<button
 					type="button"
-					onClick={() => handleClick('right')}>
+					onClick={() => handleChangeProject('right')}>
 					<p className={poiret_one.className}>&gt;</p>
 				</button>
 			</div>
