@@ -1,10 +1,12 @@
 'use client';
 
 import './style.scss';
-import { poiret_one } from '@/libs/fonts';
+import { montserrat, poiret_one } from '@/libs/fonts';
 import { useRef } from 'react';
 import WordleWorld, { WordleWorldProps } from './Project/WordleWorld';
 import Orquia, { OrquiaProps } from './Project/Orquia';
+import Link from 'next/link';
+import Image from 'next/image';
 
 export default function Projects() {
 	const currentProjectRef = useRef<HTMLDivElement | null>(null);
@@ -52,6 +54,21 @@ export default function Projects() {
 					onClick={() => handleChangeProject('right')}>
 					<p className={poiret_one.className}>&gt;</p>
 				</button>
+			</div>
+			<div className="download-cv">
+				<Link
+					href={'/documents/igor_hamburger_cv.pdf'}
+					download="igor_hamburger_cv.pdf"
+					target="_blank"
+					rel="noreferrer">
+					<Image
+						src={'/pdf-icon.svg'}
+						height={40}
+						width={40}
+						alt="pdf icon"
+					/>
+					<p className={montserrat.className}>DOWNLOAD CV </p>
+				</Link>
 			</div>
 		</div>
 	);

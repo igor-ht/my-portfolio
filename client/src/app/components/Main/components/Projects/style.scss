@@ -7,7 +7,6 @@
   background-size: cover;
   aspect-ratio: 900/450;
   filter: invert(var(--filter));
-  
 
   .title {
     font-size: 3.5rem;
@@ -23,7 +22,7 @@
     margin: auto;
     display: grid;
     grid-template-columns: 0.5fr 2fr 0.5fr;
-    margin-bottom: 8rem;
+    margin-bottom: 3rem;
 
     span {
       display: grid;
@@ -47,6 +46,28 @@
 
       &:active {
         font-size: 5.5rem;
+      }
+    }
+  }
+
+  .download-cv {
+    a {
+      color: var(--color);
+      text-decoration: underline;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      gap: 1rem;
+      p {
+        text-align: center;
+        color: var(--color);
+        font-size: 1.5rem;
+      }
+      &:hover {
+        p {
+          font-size: 1.6rem;
+        }
       }
     }
   }
