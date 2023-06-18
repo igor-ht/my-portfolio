@@ -16,15 +16,13 @@
 }
 
 #about-me {
-  min-height: 75dvh;
+  min-height: 35rem;
   width: 100dvw;
-  margin-bottom: 2rem;
-  background-image: url("/about-me-background.svg");
+  background-image: url("/second-background.svg");
+  background-position: top;
   background-repeat: no-repeat;
-  background-position: top center;
   background-size: cover;
   filter: invert(var(--filter));
-  border: 0;
 
   .title {
     font-size: 3.5rem;

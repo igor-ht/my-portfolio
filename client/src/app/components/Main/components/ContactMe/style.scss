@@ -1,8 +1,10 @@
 #contact-me {
-  min-height: 75dvh;
+  min-height: 30rem;
   width: 100dvw;
-  margin-top: 0;
-  background-color: #3c3c3c;
+  background-image: url("/fourth-background.svg");
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
   filter: invert(var(--filter));
 
   .title {
@@ -10,6 +12,7 @@
     text-align: center;
     color: var(--color);
     margin: 0;
+    margin-top: 5rem;
   }
   .resume {
     width: 100dvw;
@@ -20,7 +23,6 @@
       font-size: 1.2rem;
       max-width: 55dvw;
       margin: auto;
-      color: rgb(210, 210, 210);
     }
   }
   .links {

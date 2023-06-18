@@ -1,10 +1,9 @@
 #projects {
-  min-height: 115dvh;
+  min-height: 35rem;
   width: 100dvw;
-  margin-top: 0rem;
-  background-image: url("/projects-background.svg");
+  background-image: url("/third-background.svg");
+  background-position: bottom;
   background-repeat: no-repeat;
-  background-position: bottom center;
   background-size: cover;
   filter: invert(var(--filter));
 
@@ -37,6 +36,7 @@
       cursor: pointer;
       opacity: 0.7;
       z-index: 1;
+      user-select: none;
 
       &:hover {
         opacity: 1;

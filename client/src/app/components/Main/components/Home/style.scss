@@ -1,11 +1,11 @@
 #home {
-  min-height: 78dvh;
-  background-image: url("/home-background.svg");
+  min-height: 35rem;
+  background-image: url("/first-background.svg");
+  background-position: center;
   background-repeat: no-repeat;
-  background-position: bottom center;
   background-size: cover;
   filter: invert(var(--filter));
-  border: 0;
+
   .intro {
     margin-top: 1rem;
     display: flex;
@@ -92,4 +92,7 @@
       }
     }
   }
+}
+
+@media (min-width: 1800px) {
 }
