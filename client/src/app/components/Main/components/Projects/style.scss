@@ -1,6 +1,7 @@
 #projects {
-  min-height: 120dvh;
+  min-height: 115dvh;
   width: 100dvw;
+  margin-top: 0rem;
   background-image: url("/projects-background.svg");
   background-repeat: no-repeat;
   background-position: bottom center;
@@ -8,8 +9,8 @@
   filter: invert(var(--filter));
 
   .title {
-    font-size: 3rem;
-    margin-top: 1rem;
+    font-size: 3.5rem;
+    margin-top: 0;
     text-align: center;
     color: var(--color);
     filter: invert(var(--filter));
@@ -50,7 +51,7 @@
 
 @media (max-width: 700px) {
   #projects {
-    min-height: 85dvh;
+    min-height: 90dvh;
 
     .projects-album {
       width: 100dvw;

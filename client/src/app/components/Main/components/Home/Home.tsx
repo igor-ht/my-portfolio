@@ -21,8 +21,6 @@ export default function Home() {
 				<section className="greet">
 					<p className={`${montserrat.className}`}>
 						A <mark>Junior Full-Stack Developer</mark> with a passion for <mark>Web Development</mark>.
-						<br />
-						My main goal is to leverage my skills and knowledge to contribute to innovative projects and continuously grow professionally.
 					</p>
 				</section>
 			</div>
