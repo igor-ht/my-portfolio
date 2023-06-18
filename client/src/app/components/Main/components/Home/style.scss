@@ -1,9 +1,10 @@
 #home {
-  min-height: 35rem;
+  min-height: 30rem;
   background-image: url("/first-background.svg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  aspect-ratio: 900/450;
   filter: invert(var(--filter));
 
   .intro {

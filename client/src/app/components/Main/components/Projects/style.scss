@@ -1,11 +1,13 @@
 #projects {
-  min-height: 35rem;
+  min-height: 30rem;
   width: 100dvw;
   background-image: url("/third-background.svg");
-  background-position: bottom;
+  background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  aspect-ratio: 900/450;
   filter: invert(var(--filter));
+  
 
   .title {
     font-size: 3.5rem;
@@ -21,6 +23,7 @@
     margin: auto;
     display: grid;
     grid-template-columns: 0.5fr 2fr 0.5fr;
+    margin-bottom: 8rem;
 
     span {
       display: grid;
