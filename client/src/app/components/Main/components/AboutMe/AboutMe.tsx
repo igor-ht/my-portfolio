@@ -8,12 +8,11 @@ export default function AboutMe() {
 			<h1 className={`title ${poiret_one.className}`}>About Me:</h1>
 			<div className="resume">
 				<p className={`${montserrat.className}`}>
-					<br />I am a versatile full stack developer with almost a year of hands-on experience on web development. With expertise in
-					Python, JavaScript, TypeScript, Node.js, HTML, CSS/SCSS, React.js, Next.js and other technologies, I bring your digital projects
-					to life from end to end. I excel in creating robust and scalable applications, implementing secure authentication, responsible
-					design and ensuring others best practices.
+					I&apos;m a versatile Junior Developer with nearly a year of hands-on experience in Web Development. My stack includes Python,
+					JavaScript, TypeScript, Node.js, HTML, CSS/SCSS, React.js, Next.js, Postgres, Jest, Cypress, and more. I build robust and scalable
+					applications, prioritize secure authentication, responsible design, and adhere industry best practices into my projects.
 					<br />
-					Let&apos;s collaborate and turn your ideas into exceptional web experiences!
+					Let&apos;s create something extraordinary together!
 				</p>
 			</div>
 			<div className="skills">
@@ -60,16 +59,6 @@ export default function AboutMe() {
 					</span>
 					<span>
 						<Image
-							src="/techs/nodejs.svg"
-							alt="Node.js"
-							height="48"
-							width="48"
-							title="Node.js"
-						/>
-						<p>Node.js</p>
-					</span>
-					<span>
-						<Image
 							src="/techs/javascript.svg"
 							alt="JavaScript Programming Language"
 							height="48"
@@ -87,6 +76,16 @@ export default function AboutMe() {
 							title="TypeScript"
 						/>
 						<p>TypeScript</p>
+					</span>
+					<span>
+						<Image
+							src="/techs/nodejs.svg"
+							alt="Node.js"
+							height="48"
+							width="48"
+							title="Node.js"
+						/>
+						<p>Node.js</p>
 					</span>
 					<span>
 						<Image
@@ -146,7 +145,7 @@ export default function AboutMe() {
 							width="48"
 							title="Prisma ORM"
 						/>
-						<p>Prisma ORM</p>
+						<p>Prisma</p>
 					</span>
 					<span>
 						<Image
@@ -167,16 +166,6 @@ export default function AboutMe() {
 							title="Git"
 						/>
 						<p>Git</p>
-					</span>
-					<span>
-						<Image
-							src="/techs/docker.svg"
-							alt="Docker"
-							height="48"
-							width="48"
-							title="Docker"
-						/>
-						<p>Docker</p>
 					</span>
 					<span>
 						<Image

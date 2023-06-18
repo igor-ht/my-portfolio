@@ -9,8 +9,8 @@ export default function ContactMe() {
 			<h1 className={`title ${poiret_one.className}`}>Contact Me</h1>
 			<div className="resume">
 				<p className={montserrat.className}>
-					If you'd like to get in touch with me or have any inquiries, feel free to reach out! I'm always excited to connect and discuss new
-					opportunities, collaborations, or simply have a chat about anything related to full-stack development.
+					If you&apos;d like to get in touch with me or have any inquiries, feel free to reach out! I&apos;m always excited to connect and
+					discuss new opportunities, collaborations, or simply have a chat about anything related to full-stack development.
 				</p>
 			</div>
 			<div className="links">
