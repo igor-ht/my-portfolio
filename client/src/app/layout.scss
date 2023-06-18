@@ -2,7 +2,6 @@ html {
   all: unset;
   width: 100dvw;
   background-color: var(--background-color);
-  // filter: invert(var(--filter));
   scroll-snap-type: y mandatory;
   scroll-behavior: smooth;
   scroll-padding: var(--scroll-padding, 9rem);

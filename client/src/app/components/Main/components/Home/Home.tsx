@@ -7,19 +7,24 @@ export default function Home() {
 		<div id="home">
 			<div className="intro">
 				<section className="greet">
-					<h1 className={`${poiret_one.className}`}>I&apos;m Igor Hamburger Tambellini.</h1>
+					<span>
+						<p className={`${montserrat.className}`}>Nice to meet you,</p>
+						<h1 className={`${poiret_one.className}`}>I&apos;m Igor Hamburger,</h1>
+					</span>
 					<Image
-						src={'/me.svg'}
+						src={'/avatar.svg'}
 						height={300}
 						width={300}
-						alt="me"
+						alt="avatar"
 					/>
 				</section>
-				<p className={`${montserrat.className}`}>
-					A <mark>Full-Stack Developer</mark> with a passion for <mark>Web Development</mark>.
-					<br />
-					My main goal is to leverage my skills and knowledge to contribute to innovative projects and continuously grow professionally.
-				</p>
+				<section className="greet">
+					<p className={`${montserrat.className}`}>
+						A <mark>Junior Full-Stack Developer</mark> with a passion for <mark>Web Development</mark>.
+						<br />
+						My main goal is to leverage my skills and knowledge to contribute to innovative projects and continuously grow professionally.
+					</p>
+				</section>
 			</div>
 		</div>
 	);

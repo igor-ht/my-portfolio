@@ -15,38 +15,43 @@
     .greet {
       display: flex;
       flex-direction: row;
-      align-items: center;
+      align-items: end;
+      margin: auto;
+      width: 40rem;
 
-      h1 {
-        color: var(--color);
-        font-size: 2.5rem;
-        margin-bottom: 0.3rem;
-        align-self: end;
-        filter: invert(var(--filter));
+      span {
+        display: flex;
+        flex-direction: column;
+
+        h1 {
+          color: var(--color);
+          font-size: 2.5rem;
+          margin-top: 0.3rem;
+          margin-bottom: 0.3rem;
+          align-self: end;
+          filter: invert(var(--filter));
+        }
+        img {
+          height: 20rem;
+          width: 20rem;
+          object-fit: cover;
+          user-select: none;
+          filter: invert(var(--filter));
+        }
       }
-      img {
-        height: 40dvh;
-        width: 18dvw;
-        object-fit: cover;
-        border-radius: 100%;
-        user-select: none;
-        border: 2px solid var(--accent);
-        filter: invert(var(--filter));
-      }
-    }
-
-    p {
-      font-size: 1.1rem;
-      font-weight: 500;
-      max-width: 55dvw;
-      color: var(--color);
-      filter: invert(var(--filter));
-      line-height: 1.5;
-
-      mark {
+      p {
+        font-size: 1.1rem;
+        font-weight: 500;
         color: var(--color);
-        background-color: var(--sec-color);
         filter: invert(var(--filter));
+        line-height: 1.5;
+        margin: 0;
+
+        mark {
+          color: var(--color);
+          background-color: var(--sec-color);
+          filter: invert(var(--filter));
+        }
       }
     }
   }
@@ -65,17 +70,16 @@
           margin-left: 1.5rem;
         }
         img {
-          height: 22dvh;
-          width: 35dvw;
+          height: 10rem;
+          width: 10rem;
           margin-right: 1rem;
         }
-      }
+        p {
+          max-width: 80dvw;
 
-      p {
-        max-width: 80dvw;
-
-        mark {
-          background-color: var(--sec-color);
+          mark {
+            background-color: var(--sec-color);
+          }
         }
       }
     }
