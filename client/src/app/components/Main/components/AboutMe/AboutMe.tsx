@@ -8,11 +8,12 @@ export default function AboutMe() {
 			<h1 className={`title ${poiret_one.className}`}>About Me:</h1>
 			<div className="resume">
 				<p className={`${montserrat.className}`}>
-					I&apos;m a versatile Junior Developer with nearly a year of hands-on experience in Web Development. My stack includes Python,
-					JavaScript, TypeScript, Node.js, HTML, CSS/SCSS, React.js, Next.js, Postgres, Jest, Cypress, and more. I build robust and scalable
-					applications, prioritize secure authentication, responsible design, and adhere industry best practices into my projects.
+					I&apos;m a versatile Junior Developer with nearly a year of hands-on experience in Web Development. My skill set includes Python,
+					Node.js, JavaScript, TypeScript, HTML, CSS/SCSS, React.js, Next.js, Postgres, Jest, Cypress, and more. I create robust and
+					scalable E2E applications while prioritizing secure authentication, responsible design, and adhering to industry best practices.
 					<br />
-					Let&apos;s create something extraordinary together!
+					With my main focus on delivering high-quality results, I am actively seeking new opportunities and inquiries. Let&apos;s collaborate
+					and build something amazing together!
 				</p>
 			</div>
 			<div className="skills">

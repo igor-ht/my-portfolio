@@ -7,7 +7,7 @@ export const metadata = {
 	title: `Igor's Portfolio`,
 	description: 'My FullStack Developer Portfolio',
 	icons: {
-		icon: '/logo_icon.svg',
+		icon: '/logo-icon.svg',
 	},
 };
 

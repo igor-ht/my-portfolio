@@ -9,14 +9,15 @@ export default function ContactMe() {
 			<h1 className={`title ${poiret_one.className}`}>Contact Me</h1>
 			<div className="resume">
 				<p className={montserrat.className}>
-					If you&apos;d like to get in touch with me or have any inquiries, feel free to reach out! I&apos;m always excited to connect and
-					discuss new opportunities, collaborations, or simply have a chat about anything related to full-stack development.
+					I appreciate any contact or inquiries you may have! Whether you&apos;re interested in connecting, exploring new opportunities, or
+					engaging in conversations about full-stack development, I&apos;m thrilled to hear from you. Don&apos;t hesitate to reach out, as
+					I&apos;m eager to connect and discuss potential collaborations.
 				</p>
 			</div>
 			<div className="links">
 				<Link href="mailto: idht07@gmail.com">
 					<Image
-						src={'/email.svg'}
+						src={'/email-icon.svg'}
 						height={48}
 						width={48}
 						title="Email Me"
@@ -27,7 +28,7 @@ export default function ContactMe() {
 					href="https://www.linkedin.com/in/igor-hamburger/"
 					target="_blank">
 					<Image
-						src={'/linkedin.svg'}
+						src={'/linkedin-icon.svg'}
 						height={48}
 						width={48}
 						alt="LinkedIn"
