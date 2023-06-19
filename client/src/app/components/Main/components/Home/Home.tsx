@@ -16,6 +16,7 @@ export default function Home() {
 						height={300}
 						width={300}
 						alt="avatar"
+						priority
 					/>
 				</section>
 				<section className="greet">

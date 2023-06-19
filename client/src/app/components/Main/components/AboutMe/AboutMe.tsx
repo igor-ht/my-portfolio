@@ -12,8 +12,8 @@ export default function AboutMe() {
 					Node.js, JavaScript, TypeScript, HTML, CSS/SCSS, React.js, Next.js, Postgres, Jest, Cypress, and more. I create robust and
 					scalable E2E applications while prioritizing secure authentication, responsible design, and adhering to industry best practices.
 					<br />
-					With my main focus on delivering high-quality results, I am actively seeking new opportunities and inquiries. Let&apos;s collaborate
-					and build something amazing together!
+					With a main focus on delivering high-quality results, I am actively seeking new opportunities and inquiries. Let&apos;s
+					collaborate and build something amazing together!
 				</p>
 			</div>
 			<div className="skills">

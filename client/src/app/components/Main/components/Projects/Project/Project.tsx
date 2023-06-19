@@ -10,6 +10,7 @@ export type ProjectPropsType = {
 	name: string;
 	ref?: MutableRefObject<HTMLDivElement | null> | null;
 	videoUrl: string;
+	picUrl: string;
 	techTags: string[];
 	text: string;
 	linksUrl: { live: string; repo: string };
@@ -25,7 +26,10 @@ export default function Project({ props }: { props: ProjectPropsType }) {
 				<h1 className={`${karla.className} project-title`}>{props.name}</h1>
 				<div className="content">
 					<div className="video-stack">
-						<VideoPlayer url={props.videoUrl} />
+						<VideoPlayer
+							videoUrl={props.videoUrl}
+							picUrl={props.picUrl}
+						/>
 						<TechTag tags={props.techTags} />
 					</div>
 					<div className="description-links">

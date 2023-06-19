@@ -1,4 +1,4 @@
-import { montserrat } from "@/libs/fonts";
+import { montserrat } from '@/libs/fonts';
 
 export default function Description(props: { text: string }) {
 	return (
