@@ -60,7 +60,7 @@
 
 @media (max-width: 700px) {
   #home {
-    height: 80dvh;
+    min-height: 40rem;
     .intro {
       margin-top: 6rem;
       flex-direction: column;
@@ -93,7 +93,4 @@
       }
     }
   }
-}
-
-@media (min-width: 1800px) {
 }

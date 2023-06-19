@@ -1,7 +1,6 @@
 html {
   all: unset;
   width: 100dvw;
-  height: 2400px;
   background-color: var(--background-color);
   scroll-snap-type: y mandatory;
   scroll-behavior: smooth;
@@ -47,6 +46,7 @@ body {
 
 @media (max-width: 700px) {
   html {
+    scroll-padding: var(--scroll-padding, 3rem);
     ::-webkit-scrollbar {
       width: 0;
       background-color: transparent;
