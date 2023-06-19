@@ -38,7 +38,7 @@ export default function Projects() {
 			<h1 className={`${poiret_one.className} title`}>Projects</h1>
 
 			<div className="projects-album">
-				<button
+				<button className='album-button'
 					type="button"
 					onClick={() => handleChangeProject('left')}>
 					<p className={poiret_one.className}>&lt;</p>
@@ -49,7 +49,7 @@ export default function Projects() {
 					<Orquia props={{ ...OrquiaProps }} />
 				</span>
 
-				<button
+				<button className='album-button'
 					type="button"
 					onClick={() => handleChangeProject('right')}>
 					<p className={poiret_one.className}>&gt;</p>

@@ -31,7 +31,7 @@
       position: relative;
     }
 
-    button {
+    .album-button {
       font-size: 5rem;
       font-weight: 600;
       background-color: transparent;
@@ -52,6 +52,10 @@
   }
 
   .download-cv {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
     a {
       color: var(--color);
       text-decoration: underline;
@@ -60,6 +64,7 @@
       justify-content: center;
       align-items: center;
       gap: 1rem;
+
       p {
         text-align: center;
         color: var(--color);
@@ -82,7 +87,7 @@
       align-items: center;
       justify-content: center;
 
-      button {
+      .album-button {
         width: 2rem;
       }
     }
