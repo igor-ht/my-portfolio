@@ -11,7 +11,7 @@ export const metadata = {
 	},
 };
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout() {
 	return (
 		<html
 			id="root"
@@ -19,7 +19,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 			data-theme="light">
 			<body id="app">
 				<Header />
-				<Main>{children}</Main>
+				<Main />
 			</body>
 		</html>
 	);

@@ -50,10 +50,15 @@
           height: 13rem;
           width: 95%;
 
-          img {
-            height: 100%;
-            width: 100%;
-            object-fit: cover;
+          .react-player {
+            transition: height 0.5s linear, width 05s linear, position 0.5s linear;
+
+            .thumbnail {
+              height: 100%;
+              width: 100%;
+              aspect-ratio: 1366/728;
+              object-fit: cover;
+            }
           }
         }
         .tech-tags {
@@ -145,16 +150,21 @@
     .project-display {
       overflow: auto;
       .content {
-        overflow: auto;
         flex-direction: column;
         gap: 1rem;
         .video-stack {
           width: 95%;
           margin: auto;
+          .react-player {
+            position: relative;
+          }
         }
         .description-links {
           width: 95%;
           margin: auto;
+          .links {
+            margin-bottom: 1rem;
+          }
         }
       }
     }

@@ -4,7 +4,7 @@ import AboutMe from './components/AboutMe/AboutMe';
 import Projects from './components/Projects/Projects';
 import ContactMe from './components/ContactMe/ContactMe';
 
-export default function Main({ children }: { children: React.ReactNode }) {
+export default function Main() {
 	return (
 		<main id="main">
 			<Home />
