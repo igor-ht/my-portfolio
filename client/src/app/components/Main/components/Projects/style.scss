@@ -38,8 +38,10 @@
       border: 0;
       cursor: pointer;
       opacity: 0.7;
-      z-index: 1;
       user-select: none;
+      text-align: center;
+      padding: 0;
+      margin: auto;
 
       &:hover {
         opacity: 1;
@@ -86,9 +88,10 @@
       width: 100dvw;
       align-items: center;
       justify-content: center;
+      grid-template-columns: 0.5fr 2.5fr 0.5fr;
 
       .album-button {
-        width: 2rem;
+        font-size: 4rem;
       }
     }
   }
