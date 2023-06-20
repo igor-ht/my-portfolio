@@ -6,7 +6,7 @@ import { useReducer, CSSProperties } from 'react';
 
 const ReactPlayer = dynamic(() => import('react-player/lazy'), { ssr: false });
 
-type stateType = Pick<CSSProperties, 'height' | 'width' | 'position'> & {
+type stateType = Pick<CSSProperties, ('height' & 'width') | 'position' | 'top' | 'left'> & {
 	height: string;
 	width: string;
 	position?: string;
