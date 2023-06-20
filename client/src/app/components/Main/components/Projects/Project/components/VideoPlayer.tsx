@@ -2,7 +2,7 @@
 
 import dynamic from 'next/dynamic';
 import Image from 'next/image';
-import { useReducer, CSSProperties } from 'react';
+import { useReducer, CSSProperties, useRef } from 'react';
 
 const ReactPlayer = dynamic(() => import('react-player/lazy'), { ssr: false });
 
@@ -19,14 +19,17 @@ type actionType = {
 };
 
 const initialStyle: stateType = {
-	height: '100%',
-	width: '100%',
+	height: '13rem',
+	width: '95%',
+	position: 'unset',
+	top: 'none',
+	left: 'none',
 };
 
 const dispatchStyle = (state: stateType, action: actionType): stateType => {
 	switch (action.type) {
 		case true:
-			return { height: '50rem', width: '40rem', position: 'absolute', top: '-1rem', left: '1px' };
+			return { height: '32rem', width: '40rem', position: 'absolute', top: '-4rem', left: '1px' };
 		case false:
 			return initialStyle;
 		default:
@@ -36,15 +39,18 @@ const dispatchStyle = (state: stateType, action: actionType): stateType => {
 
 export default function VideoPlayer(props: { videoUrl: string; picUrl: string }) {
 	const [currentStyle, dispatchCurrentStyle] = useReducer(dispatchStyle, initialStyle);
+	const videoWrapper = useRef<HTMLDivElement | null>(null);
 
 	return (
-		<div className="videoplayer">
+		<div
+			className="videoplayer"
+			style={currentStyle}
+			ref={videoWrapper}>
 			<ReactPlayer
 				className="react-player"
 				url={props.videoUrl}
 				height={'100%'}
 				width={'100%'}
-				style={currentStyle}
 				controls
 				muted
 				light={
