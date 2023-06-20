@@ -156,8 +156,13 @@
         .video-stack {
           width: 95%;
           margin: auto;
-          .react-player {
-            position: relative;
+          .videoplayer {
+            height: 13rem !important;
+            width: 95% !important;
+            position: unset !important;
+            .react-player {
+              position: relative;
+            }
           }
         }
         .description-links {
