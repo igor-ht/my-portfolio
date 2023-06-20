@@ -21,9 +21,6 @@ type actionType = {
 const initialStyle: stateType = {
 	height: '100%',
 	width: '100%',
-	position: 'relative',
-	top: '0',
-	left: '0',
 };
 
 const dispatchStyle = (state: stateType, action: actionType): stateType => {
@@ -59,8 +56,8 @@ export default function VideoPlayer(props: { videoUrl: string; picUrl: string })
 						alt={'thumbnail'}
 					/>
 				}
-				onPlay={() => dispatchCurrentStyle({ type: true })}
 				onPause={() => dispatchCurrentStyle({ type: false })}
+				onStart={() => dispatchCurrentStyle({ type: true })}
 			/>
 		</div>
 	);
