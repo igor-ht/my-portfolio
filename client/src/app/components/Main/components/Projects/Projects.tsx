@@ -1,12 +1,10 @@
 'use client';
 
 import './style.scss';
-import { montserrat, poiret_one } from '@/libs/fonts';
+import { poiret_one } from '@/libs/fonts';
 import { useRef } from 'react';
 import WordleWorld, { WordleWorldProps } from './Project/WordleWorld';
 import Orquia, { OrquiaProps } from './Project/Orquia';
-import Link from 'next/link';
-import Image from 'next/image';
 
 export default function Projects() {
 	const currentProjectRef = useRef<HTMLDivElement | null>(null);
@@ -38,7 +36,8 @@ export default function Projects() {
 			<h1 className={`${poiret_one.className} title`}>Projects</h1>
 
 			<div className="projects-album">
-				<button className='album-button'
+				<button
+					className="album-button"
 					type="button"
 					onClick={() => handleChangeProject('left')}>
 					<p className={poiret_one.className}>&lt;</p>
@@ -49,27 +48,13 @@ export default function Projects() {
 					<Orquia props={{ ...OrquiaProps }} />
 				</span>
 
-				<button className='album-button'
+				<button
+					className="album-button"
 					type="button"
 					onClick={() => handleChangeProject('right')}>
 					<p className={poiret_one.className}>&gt;</p>
 				</button>
 			</div>
-			{/* <div className="download-cv">
-				<Link
-					href={'/documents/igor_hamburger_cv.pdf'}
-					download="igor_hamburger_cv.pdf"
-					target="_blank"
-					rel="noreferrer">
-					<Image
-						src={'/pdf-icon.svg'}
-						height={40}
-						width={40}
-						alt="pdf icon"
-					/>
-					<p className={montserrat.className}>DOWNLOAD CV </p>
-				</Link>
-			</div> */}
 		</div>
 	);
 }

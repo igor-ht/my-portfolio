@@ -10,8 +10,9 @@ export default function ContactMe() {
 			<div className="resume">
 				<p className={montserrat.className}>
 					I appreciate any contact or inquiries you may have! Whether you&apos;re interested in connecting, exploring new opportunities, or
-					engaging in conversations about full-stack development, I&apos;m thrilled to hear from you. Don&apos;t hesitate to reach out, as
-					I&apos;m eager to connect and discuss potential collaborations.
+					engaging in conversations about full-stack development, I&apos;m thrilled to hear from you.
+					<br />
+					Don&apos;t hesitate to reach out, as I&apos;m eager to connect and discuss potential collaborations.
 				</p>
 			</div>
 			<div className="links">
@@ -43,6 +44,21 @@ export default function ContactMe() {
 						width={48}
 						alt="GitHub"
 					/>
+				</Link>
+			</div>
+			<div className="download-cv">
+				<Link
+					href={'/documents/igor_hamburger_cv.pdf'}
+					download="igor_hamburger_cv.pdf"
+					target="_blank"
+					rel="noreferrer">
+					<Image
+						src={'/pdf-icon.svg'}
+						height={40}
+						width={40}
+						alt="pdf icon"
+					/>
+					<p className={montserrat.className}>DOWNLOAD CV</p>
 				</Link>
 			</div>
 		</div>
