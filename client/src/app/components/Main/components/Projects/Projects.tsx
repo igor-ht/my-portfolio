@@ -55,7 +55,7 @@ export default function Projects() {
 					<p className={poiret_one.className}>&gt;</p>
 				</button>
 			</div>
-			<div className="download-cv">
+			{/* <div className="download-cv">
 				<Link
 					href={'/documents/igor_hamburger_cv.pdf'}
 					download="igor_hamburger_cv.pdf"
@@ -69,7 +69,7 @@ export default function Projects() {
 					/>
 					<p className={montserrat.className}>DOWNLOAD CV </p>
 				</Link>
-			</div>
+			</div> */}
 		</div>
 	);
 }

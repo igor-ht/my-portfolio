@@ -1,24 +1,24 @@
 #home {
-  min-height: 30rem;
+  height: 100dvh;
+  width: 100dvw;
   background-image: url("/first-background.svg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  aspect-ratio: 900/450;
+  aspect-ratio: 2/1;
   filter: invert(var(--filter));
+  display: flex;
+  justify-content: center;
 
   .intro {
-    margin-top: 1rem;
+    margin-top: 2rem;
     display: flex;
     flex-direction: column;
-    align-items: center;
 
     .greet {
       display: flex;
       flex-direction: row;
       align-items: flex-end;
-      margin: auto;
-      width: 43rem;
 
       span {
         display: flex;
@@ -58,13 +58,12 @@
   }
 }
 
-@media (max-width: 700px) {
+@media (max-width: 780px) {
   #home {
-    min-height: 40rem;
+    height: calc(100dvh - 6rem);
     .intro {
-      margin-top: 6rem;
-      flex-direction: column;
       .greet {
+        max-width: 85dvw;
         margin-left: 0.2rem;
         display: flex;
         flex-direction: row;

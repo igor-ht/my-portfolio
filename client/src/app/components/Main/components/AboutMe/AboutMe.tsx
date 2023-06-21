@@ -9,8 +9,12 @@ export default function AboutMe() {
 			<div className="resume">
 				<p className={`${montserrat.className}`}>
 					I&apos;m a versatile Junior Developer with nearly a year of hands-on experience in Web Development. My skill set includes Python,
-					Node.js, JavaScript, TypeScript, HTML, CSS/SCSS, React.js, Next.js, Postgres, Jest, Cypress, and more. I create robust and
-					scalable E2E applications while prioritizing secure authentication, responsible design, and adhering to industry best practices.
+					Node.js, JavaScript, TypeScript, HTML, CSS/SCSS, React.js, Next.js, Postgres, Jest, Cypress, and more.
+					<br />
+					<br />
+					I create robust and scalable E2E applications while prioritizing secure authentication, responsible design, and adhering to
+					industry best practices.
+					<br />
 					<br />
 					With a main focus on delivering high-quality results, I am actively seeking new opportunities and inquiries. Let&apos;s
 					collaborate and build something amazing together!

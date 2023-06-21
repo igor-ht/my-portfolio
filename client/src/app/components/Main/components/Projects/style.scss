@@ -1,17 +1,20 @@
 #projects {
-  min-height: 30rem;
+  height: 100dvh;
   width: 100dvw;
   background-image: url("/third-background.svg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  aspect-ratio: 900/450;
+  aspect-ratio: 2/1;
   filter: invert(var(--filter));
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
   .title {
     font-size: 3.5rem;
-    margin-top: 0;
     margin-bottom: 1rem;
+    margin-top: 0;
     text-align: center;
     color: var(--color);
     filter: invert(var(--filter));
@@ -20,7 +23,6 @@
   .projects-album {
     height: 25rem;
     width: 50rem;
-    margin: auto;
     display: grid;
     grid-template-columns: 0.5fr 2fr 0.5fr;
     margin-bottom: 3rem;
@@ -82,7 +84,7 @@
   }
 }
 
-@media (max-width: 700px) {
+@media (max-width: 780px) {
   #projects {
     min-height: 40rem;
     .projects-album {
