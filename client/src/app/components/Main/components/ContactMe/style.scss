@@ -73,7 +73,7 @@
       p {
         text-align: center;
         color: var(--color);
-        font-size: 1.5rem;
+        font-size: 1.4rem;
       }
       &:hover {
         p {
@@ -96,6 +96,7 @@
 
 @media (max-width: 780px) {
   #contact-me {
+    max-height: 100vh;
     .resume {
       P {
         font-size: 1.1rem;

@@ -19,7 +19,7 @@ type actionType = {
 };
 
 const initialStyle: stateType = {
-	height: '13rem',
+	height: '70%',
 	width: '95%',
 	position: 'unset',
 	top: 'none',
