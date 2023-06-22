@@ -21,7 +21,7 @@
   }
 
   .projects-album {
-    height: 65%;
+    height: 60%;
     width: 60%;
     display: grid;
     grid-template-columns: 0.25fr 2.5fr 0.25fr;
@@ -67,7 +67,7 @@
     }
     .projects-album {
       width: 100dvw;
-      height: 70vh;
+      height: 70dvh;
       align-items: center;
       justify-content: center;
       grid-template-columns: 0.5fr 2.5fr 0.5fr;
