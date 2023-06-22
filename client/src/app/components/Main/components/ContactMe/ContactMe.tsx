@@ -1,5 +1,5 @@
-import { montserrat, poiret_one } from '@/libs/fonts';
 import './style.scss';
+import { montserrat, poiret_one } from '@/libs/fonts';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -60,6 +60,15 @@ export default function ContactMe() {
 					/>
 					<p className={montserrat.className}>DOWNLOAD CV</p>
 				</Link>
+			</div>
+			<div className="footer">
+				<Image
+					src={'/burger-icon.svg'}
+					alt="burger"
+					height={35}
+					width={35}
+				/>
+				<p className={montserrat.className}>Ⓒiht 2023</p>
 			</div>
 		</div>
 	);

@@ -4,7 +4,6 @@ import './style.scss';
 import Image from 'next/image';
 import { poiret_one } from '@/libs/fonts';
 import { useEffect } from 'react';
-
 import useScrollInteraction from '@/libs/hooks/useScrollInteraction';
 
 export default function Header() {
