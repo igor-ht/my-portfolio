@@ -62,12 +62,6 @@ export default function ContactMe() {
 				</Link>
 			</div>
 			<div className="footer">
-				<Image
-					src={'/burger-icon.svg'}
-					alt="burger"
-					height={35}
-					width={35}
-				/>
 				<p className={montserrat.className}>Ⓒiht 2023</p>
 			</div>
 		</div>
