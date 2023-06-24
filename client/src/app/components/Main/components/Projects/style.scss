@@ -1,7 +1,7 @@
 #projects {
   height: 100dvh;
   width: 100dvw;
-  background-image: url("/third-background.svg");
+  background-image: url("/background/third-background-900x450.svg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -61,6 +61,7 @@
 
 @media (max-width: 780px) {
   #projects {
+    background-image: url("/background/third-background-675x900.svg");
     .title {
       margin: 0;
       margin-bottom: 0.2rem;

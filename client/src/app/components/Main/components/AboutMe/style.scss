@@ -18,7 +18,7 @@
 #about-me {
   height: 100dvh;
   width: 100dvw;
-  background-image: url("/second-background.svg");
+  background-image: url("/background/second-background-900x450.svg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -85,6 +85,7 @@
 
 @media (max-width: 780px) {
   #about-me {
+    background-image: url("/background/second-background-675x900.svg");
     .resume {
       p {
         font-size: 1rem;

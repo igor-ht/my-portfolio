@@ -3,8 +3,8 @@ import Project, { ProjectPropsType } from './Project';
 export const WordleWorldProps: ProjectPropsType = {
 	name: 'WordleWorld',
 	ref: null,
-	videoUrl: '/wordleworld-video.mp4',
-	picUrl: '/wordleworld-pic.png',
+	videoUrl: '/projects/wordleworld-video.mp4',
+	picUrl: '/projects/wordleworld-pic.png',
 	techTags: [
 		'typescript',
 		'react.js',

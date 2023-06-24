@@ -1,7 +1,7 @@
 #contact-me {
   height: 100dvh;
   width: 100dvw;
-  background-image: url("/fourth-background.svg");
+  background-image: url("/background/fourth-background-900x450.svg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -96,6 +96,8 @@
 
 @media (max-width: 780px) {
   #contact-me {
+    background-image: url("/background/fourth-background-675x900.svg");
+
     .resume {
       P {
         font-size: 1.1rem;
