@@ -3,6 +3,8 @@ import Project, { ProjectPropsType } from './Project';
 export const WordleWorldProps: ProjectPropsType = {
 	name: 'WordleWorld',
 	ref: null,
+	cardUrl: '/projects/wordleworld-card.png',
+	cardText: 'WordleWorld is an interactive word-guessing game built as an end-to-end project with Next.js and Node.js. ',
 	videoUrl: '/projects/wordleworld-video.mp4',
 	picUrl: '/projects/wordleworld-pic.png',
 	techTags: [

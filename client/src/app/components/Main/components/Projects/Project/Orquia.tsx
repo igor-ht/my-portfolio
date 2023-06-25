@@ -3,6 +3,8 @@ import Project, { ProjectPropsType } from './Project';
 export const OrquiaProps: ProjectPropsType = {
 	name: 'Orquia',
 	ref: null,
+	cardUrl: '/projects/orquia-card.png',
+	cardText: 'Orquia is a portfolio website built with React.js showcasing a cosmetic brand from Brazil. ',
 	videoUrl: '/projects/orquia-video.mp4',
 	picUrl: '/projects/orquia-pic.png',
 	techTags: ['vite', 'typescript', 'react.js', 'sass', 'bootstrap', 'react-bootstrap', 'formspree'],

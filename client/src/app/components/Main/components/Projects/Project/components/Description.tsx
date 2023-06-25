@@ -1,9 +1,9 @@
-import { montserrat } from '@/libs/fonts';
+import { inconsolata } from '@/libs/fonts';
 
 export default function Description(props: { text: string }) {
 	return (
 		<div className="description">
-			<p className={montserrat.className}>{props.text}</p>
+			<p className={inconsolata.className}>{props.text}</p>
 		</div>
 	);
 }
