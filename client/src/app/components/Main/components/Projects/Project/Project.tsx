@@ -32,18 +32,18 @@ export default function Project({ props }: { props: ProjectPropsType }) {
 				<Image
 					src={props.cardUrl}
 					alt="project"
-					height={500}
-					width={500}
+					height={400}
+					width={400}
 				/>
 				<div className="card-intro">
 					<h1 className={karla.className}>{props.name}</h1>
 					<p className={inconsolata.className}>
 						{props.cardText}
-						<a
+						<span
 							className="read-more"
 							onClick={() => setShowDialog(true)}>
 							{'Read More...'}
-						</a>
+						</span>
 					</p>
 				</div>
 			</div>
