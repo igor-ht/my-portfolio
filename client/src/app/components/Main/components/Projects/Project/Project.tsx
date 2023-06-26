@@ -1,7 +1,7 @@
 'use client';
 
 import './style.scss';
-import { MutableRefObject, useEffect, useState } from 'react';
+import { MutableRefObject, useEffect, useRef, useState } from 'react';
 import { inconsolata, karla } from '@/libs/fonts';
 import VideoPlayer from './components/VideoPlayer';
 import TechTag from './components/TechTag';
@@ -23,32 +23,33 @@ export type ProjectPropsType = {
 
 export default function Project({ props }: { props: ProjectPropsType }) {
 	const [showDialog, setShowDialog] = useState(false);
+	const dialogRef = useRef<HTMLDialogElement | null>(null);
 
 	useEffect(() => {
 		const root = document.getElementById('root') as HTMLHtmlElement;
+		const navbar = document.getElementById('navbar') as HTMLElement;
 
-		const disableScroll = () => {
+		const setModalOpened = () => {
 			root.style.overflowY = 'hidden';
-			const navbar = document.getElementById('navbar') as HTMLElement;
 			navbar.style.top = '-25dvh';
-			const navbarHeight = navbar?.offsetHeight;
-			const dialog = document.getElementById('dialog') as HTMLDialogElement;
-			dialog.style.top = `-${navbarHeight}px`;
+			dialogRef.current ? (dialogRef.current.style.top = `-${navbar?.offsetHeight || 0}px`) : null;
 		};
 
-		const enableScroll = () => {
+		const setModalClosed = () => {
 			root.style.overflowY = 'auto';
+			navbar.style.top = '0';
+			dialogRef.current ? (dialogRef.current.style.top = '0') : null;
 		};
 
-		if (showDialog) return disableScroll();
+		if (showDialog) return setModalOpened();
 
-		return enableScroll();
+		return setModalClosed();
 	}, [showDialog]);
 
 	return (
 		<div
 			className="project"
-			ref={props.ref || null}
+			ref={props.ref}
 			onAnimationEnd={(event) => (event.currentTarget.style.animation = '')}>
 			<div className="project-card">
 				<Image
@@ -64,18 +65,24 @@ export default function Project({ props }: { props: ProjectPropsType }) {
 						<a
 							href="#projects"
 							className="read-more"
-							onClick={() => setShowDialog(true)}>
-							{'Read More...'}
+							onClick={() => {
+								setShowDialog(true);
+								dialogRef.current!.style.animation = 'FillScreen 0.7s linear';
+							}}>
+							Read More...
 						</a>
 					</p>
 				</div>
 			</div>
 			<dialog
-				id="dialog"
+				ref={dialogRef}
 				open={showDialog}>
 				<button
 					type="button"
-					onClick={() => setShowDialog(false)}>
+					onClick={() => {
+						dialogRef.current!.style.animation = 'ExitScreen 0.7s linear';
+						setTimeout(() => setShowDialog(false), 700);
+					}}>
 					X
 				</button>
 				<div className="project-display">

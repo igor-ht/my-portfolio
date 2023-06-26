@@ -8,6 +8,30 @@
     display: flex;
   }
 }
+@keyframes FillScreen {
+  from {
+    left: 100%;
+    width: 0%;
+    opacity: 0;
+  }
+  to {
+    left: 0;
+    width: 100%;
+    opacity: 1;
+  }
+}
+@keyframes ExitScreen {
+  from {
+    left: 0;
+    width: 100%;
+    opacity: 1;
+  }
+  to {
+    left: 100%;
+    width: 0%;
+    opacity: 0;
+  }
+}
 
 .project {
   background: linear-gradient(rgb(69 69 69), rgb(136 136 136)) padding-box,
@@ -54,12 +78,19 @@
         .read-more {
           text-decoration: underline;
           cursor: pointer;
+          color: black;
+          &:active {
+            color: black;
+          }
+          &:visited {
+            color: black;
+          }
         }
       }
     }
   }
 
-  dialog {
+  dialog[open] {
     position: fixed;
     top: 0;
     left: 0;
@@ -222,10 +253,7 @@
           font-size: 1rem;
           text-align: justify;
           margin: 0.5rem;
-          .read-more {
-            text-decoration: underline;
-            cursor: pointer;
-          }
+          color: black;
         }
       }
     }
