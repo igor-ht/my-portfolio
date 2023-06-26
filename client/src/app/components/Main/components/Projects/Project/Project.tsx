@@ -1,7 +1,7 @@
 'use client';
 
 import './style.scss';
-import { MutableRefObject, useState } from 'react';
+import { MutableRefObject, useEffect, useState } from 'react';
 import { inconsolata, karla } from '@/libs/fonts';
 import VideoPlayer from './components/VideoPlayer';
 import TechTag from './components/TechTag';
@@ -23,6 +23,25 @@ export type ProjectPropsType = {
 
 export default function Project({ props }: { props: ProjectPropsType }) {
 	const [showDialog, setShowDialog] = useState(false);
+
+	useEffect(() => {
+		const root = document.getElementById('root') as HTMLHtmlElement;
+
+		const disableScroll = () => {
+			root.style.overflowY = 'hidden';
+			const navbar = document.getElementById('navbar') as HTMLElement;
+			navbar.style.top = '-25dvh';
+		};
+
+		const enableScroll = () => {
+			root.style.overflowY = 'auto';
+		};
+
+		if (showDialog) return disableScroll();
+
+		return enableScroll();
+	}, [showDialog]);
+
 	return (
 		<div
 			className="project"
@@ -39,15 +58,21 @@ export default function Project({ props }: { props: ProjectPropsType }) {
 					<h1 className={karla.className}>{props.name}</h1>
 					<p className={inconsolata.className}>
 						{props.cardText}
-						<span
+						<a
+							href="#projects"
 							className="read-more"
 							onClick={() => setShowDialog(true)}>
 							{'Read More...'}
-						</span>
+						</a>
 					</p>
 				</div>
 			</div>
 			<dialog open={showDialog}>
+				<button
+					type="button"
+					onClick={() => setShowDialog(false)}>
+					X
+				</button>
 				<div className="project-display">
 					<h1 className={`${karla.className} project-title`}>{props.name}</h1>
 					<div className="content">

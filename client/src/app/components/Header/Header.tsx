@@ -7,7 +7,7 @@ import { useEffect } from 'react';
 import useScrollInteraction from '@/libs/hooks/useScrollInteraction';
 
 export default function Header() {
-	const [scrollDirection] = useScrollInteraction();
+	const [scrollDirection, setScrollDirection] = useScrollInteraction();
 
 	useEffect(() => {
 		const navbar = document.getElementById('navbar');
