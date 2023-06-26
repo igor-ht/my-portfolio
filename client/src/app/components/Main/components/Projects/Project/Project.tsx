@@ -2,7 +2,7 @@
 
 import './style.scss';
 import { MutableRefObject, useEffect, useRef, useState } from 'react';
-import { inconsolata, karla } from '@/libs/fonts';
+import { inconsolata, karla, poiret_one } from '@/libs/fonts';
 import VideoPlayer from './components/VideoPlayer';
 import TechTag from './components/TechTag';
 import Description from './components/Description';
@@ -79,14 +79,20 @@ export default function Project({ props }: { props: ProjectPropsType }) {
 				open={showDialog}>
 				<button
 					type="button"
+					className="close-modal"
 					onClick={() => {
 						dialogRef.current!.style.animation = 'ExitScreen 0.7s linear';
 						setTimeout(() => setShowDialog(false), 700);
 					}}>
-					X
+					<Image
+						src={'/double-arrow-left.svg'}
+						alt="return"
+						height={50}
+						width={50}
+					/>
 				</button>
 				<div className="project-display">
-					<h1 className={`${karla.className} project-title`}>{props.name}</h1>
+					<h1 className={`${poiret_one.className} project-title`}>{props.name}</h1>
 					<div className="content">
 						<div className="video-stack">
 							<VideoPlayer
