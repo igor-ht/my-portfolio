@@ -31,6 +31,9 @@ export default function Project({ props }: { props: ProjectPropsType }) {
 			root.style.overflowY = 'hidden';
 			const navbar = document.getElementById('navbar') as HTMLElement;
 			navbar.style.top = '-25dvh';
+			const navbarHeight = navbar?.offsetHeight;
+			const dialog = document.getElementById('dialog') as HTMLDialogElement;
+			dialog.style.top = `-${navbarHeight}px`;
 		};
 
 		const enableScroll = () => {
@@ -67,7 +70,9 @@ export default function Project({ props }: { props: ProjectPropsType }) {
 					</p>
 				</div>
 			</div>
-			<dialog open={showDialog}>
+			<dialog
+				id="dialog"
+				open={showDialog}>
 				<button
 					type="button"
 					onClick={() => setShowDialog(false)}>
