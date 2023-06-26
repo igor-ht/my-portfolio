@@ -29,7 +29,8 @@ const initialStyle: stateType = {
 const dispatchStyle = (state: stateType, action: actionType): stateType => {
 	switch (action.type) {
 		case true:
-			return { height: '100%', width: '100%', position: 'absolute', left: '0.2rem', top: '-1rem' };
+			return initialStyle;
+			//return { height: '100%', width: '100%', position: 'absolute', left: '0', top: '0' };
 		case false:
 			return initialStyle;
 		default:
