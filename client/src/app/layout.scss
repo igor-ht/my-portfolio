@@ -6,7 +6,6 @@ html {
   scroll-behavior: smooth;
   scroll-padding: var(--scroll-padding, 8rem);
   overflow-x: hidden;
-  
 
   &::-webkit-scrollbar {
     border: 0;
@@ -42,6 +41,7 @@ body {
   width: 100dvw;
   display: flex;
   flex-direction: column;
+  position: relative;
 }
 
 @media (max-width: 780px) {
