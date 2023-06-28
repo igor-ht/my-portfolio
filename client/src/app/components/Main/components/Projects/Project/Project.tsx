@@ -39,7 +39,6 @@ export default function Project({ props }: { props: ProjectPropsType }) {
 		const setModalClosed = () => {
 			root.style.overflowY = 'auto';
 			dialogRef.current ? (dialogRef.current.style.top = '0') : null;
-			navbar.style.top = '0';
 		};
 
 		if (showDialog) setModalOpened();
