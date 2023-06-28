@@ -28,22 +28,22 @@ export default function Project({ props }: { props: ProjectPropsType }) {
 	useEffect(() => {
 		const root = document.firstElementChild as HTMLElement;
 		const navbar = document.getElementById('navbar') as HTMLElement;
+		navbar.style.top = '0';
 
 		const setModalOpened = () => {
 			root.style.overflowY = 'hidden';
-			navbar.style.top = '-25dvh';
 			dialogRef.current ? (dialogRef.current.style.top = `-${navbar?.offsetHeight || 0}px`) : null;
+			navbar.style.top = '-25dvh';
 		};
 
 		const setModalClosed = () => {
 			root.style.overflowY = 'auto';
-			navbar.style.top = '0';
 			dialogRef.current ? (dialogRef.current.style.top = '0') : null;
+			navbar.style.top = '0';
 		};
 
 		if (showDialog) setModalOpened();
 		else setModalClosed();
-		
 	}, [showDialog]);
 
 	return (
