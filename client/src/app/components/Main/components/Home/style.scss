@@ -9,7 +9,6 @@
   filter: invert(var(--filter));
   display: flex;
   justify-content: center;
-  scroll-snap-align: start;
   scroll-snap-stop: always;
 
   .intro {
