@@ -8,8 +8,9 @@ export default function useScrollInteraction() {
 		let lastScrollY = window.scrollY;
 
 		const onScroll = debounce(() => {
-			if (document.getElementById('root')?.style.overflowY === 'hidden') return;
+			
 			const htmlDocument = document.firstElementChild as HTMLElement;
+			if (htmlDocument.style.overflowY === 'hidden') return;
 			htmlDocument.classList.add('on-scrollbar');
 			const scrollY = window.scrollY;
 			const direction = scrollY > lastScrollY ? 'down' : 'up';
