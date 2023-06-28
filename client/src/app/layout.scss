@@ -1,11 +1,15 @@
-html {
+html,
+body {
   all: unset;
+}
+
+#root {
   width: 100dvw;
   background-color: var(--background-color);
-  scroll-snap-type: y proximity;
+  overflow: hidden;
   scroll-behavior: smooth;
-  scroll-padding: var(--scroll-padding, 8rem);
-  overflow-x: hidden;
+  scroll-snap-type: y proximity;
+  scroll-padding: 0;
 
   &::-webkit-scrollbar {
     border: 0;
@@ -33,10 +37,6 @@ html {
   }
 }
 
-body {
-  all: unset;
-}
-
 #app {
   width: 100dvw;
   display: flex;
@@ -45,8 +45,7 @@ body {
 }
 
 @media (max-width: 780px) {
-  html {
-    scroll-padding: var(--scroll-padding, 6rem);
+  #root {
     ::-webkit-scrollbar {
       background-color: transparent;
     }

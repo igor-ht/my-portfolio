@@ -1,13 +1,6 @@
 #main {
   display: grid;
   grid-template-columns: 1fr;
-  overflow: hidden;
+  overflow-x: hidden;
   gap: 0;
-
-  #home,
-  #about-me,
-  #projects,
-  #contact-me {
-    scroll-snap-align: start;
-  }
 }

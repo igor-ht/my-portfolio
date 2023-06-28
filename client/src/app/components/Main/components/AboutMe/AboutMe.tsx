@@ -14,8 +14,8 @@ export default function AboutMe() {
 					<br />
 					I create robust and scalable E2E applications while prioritizing secure authentication, responsible design, and adhering to
 					industry best practices, always focusing on delivering high-quality results.
-					<br />
-					<br />I am actively seeking new opportunities and inquiries. Let&apos;s collaborate and build something amazing together!
+					{/* <br />
+					<br />I am actively seeking new opportunities and inquiries. Let&apos;s collaborate and build something amazing together! */}
 				</p>
 			</div>
 			<div className="skills">

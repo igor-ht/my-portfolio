@@ -26,13 +26,12 @@ export default function Project({ props }: { props: ProjectPropsType }) {
 	const dialogRef = useRef<HTMLDialogElement | null>(null);
 
 	useEffect(() => {
-		const root = document.getElementById('root') as HTMLHtmlElement;
+		const root = document.firstElementChild as HTMLElement;
 		const navbar = document.getElementById('navbar') as HTMLElement;
 
 		const setModalOpened = () => {
 			root.style.overflowY = 'hidden';
 			navbar.style.top = '-25dvh';
-			if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) return;
 			dialogRef.current ? (dialogRef.current.style.top = `-${navbar?.offsetHeight || 0}px`) : null;
 		};
 
@@ -42,9 +41,9 @@ export default function Project({ props }: { props: ProjectPropsType }) {
 			dialogRef.current ? (dialogRef.current.style.top = '0') : null;
 		};
 
-		if (showDialog) return setModalOpened();
-
-		return setModalClosed();
+		if (showDialog) setModalOpened();
+		else setModalClosed();
+		
 	}, [showDialog]);
 
 	return (
