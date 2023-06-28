@@ -95,7 +95,7 @@
   }
 
   dialog[open] {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     height: 100dvh;
@@ -106,7 +106,6 @@
     padding: 0;
     display: flex;
     flex-direction: column;
-    overflow: hidden;
 
     button.close-modal {
       border: 0;
