@@ -276,6 +276,7 @@
       }
     }
     dialog[open] {
+      top: 0 !important;
       .project-display {
         overflow-y: auto;
         &::-webkit-scrollbar {
