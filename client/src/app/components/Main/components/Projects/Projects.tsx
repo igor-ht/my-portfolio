@@ -3,8 +3,9 @@
 import './style.scss';
 import { poiret_one } from '@/libs/fonts';
 import { useRef } from 'react';
-import WordleWorld, { WordleWorldProps } from './Project/WordleWorld';
-import Orquia, { OrquiaProps } from './Project/Orquia';
+import WordleWorld, { WordleWorldProps } from './Project/MyProjects/WordleWorld';
+import Orquia, { OrquiaProps } from './Project/MyProjects/Orquia';
+import Portfolio, { PortfolioProps } from './Project/MyProjects/Portfolio';
 
 export default function Projects() {
 	const currentProjectRef = useRef<HTMLDivElement | null>(null);
@@ -46,6 +47,7 @@ export default function Projects() {
 				<span>
 					<WordleWorld props={{ ...WordleWorldProps, ref: currentProjectRef }} />
 					<Orquia props={{ ...OrquiaProps }} />
+					<Portfolio props={{ ...PortfolioProps }} />
 				</span>
 
 				<button
