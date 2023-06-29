@@ -11,11 +11,8 @@ export default function AboutMe() {
 					I&apos;m a very motivated Junior Developer with nearly a year of hands-on experience in Web Development. My skill set includes
 					Python, Node.js, JavaScript, TypeScript, HTML, CSS/SCSS, React.js, Next.js, Postgres, Jest, Cypress, and more.
 					<br />
-					<br />
-					I create robust and scalable E2E applications while prioritizing secure authentication, responsible design, and adhering to
+					<br />I create robust and scalable E2E applications while prioritizing secure authentication, responsible design, and adhering to
 					industry best practices, always focusing on delivering high-quality results.
-					{/* <br />
-					<br />I am actively seeking new opportunities and inquiries. Let&apos;s collaborate and build something amazing together! */}
 				</p>
 			</div>
 			<div className="skills">

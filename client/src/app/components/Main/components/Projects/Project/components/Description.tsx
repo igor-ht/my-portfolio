@@ -1,9 +1,19 @@
-import { inconsolata, montserrat } from '@/libs/fonts';
+import { montserrat } from '@/libs/fonts';
+import { Fragment } from 'react';
 
 export default function Description(props: { text: string }) {
 	return (
 		<div className="description">
-			<p className={montserrat.className}>{props.text}</p>
+			<p className={montserrat.className}>
+				{props.text.split(`\n`).map((section) => {
+					return (
+						<Fragment key={Math.random() + ''}>
+							{section}
+							<br />
+						</Fragment>
+					);
+				})}
+			</p>
 		</div>
 	);
 }
