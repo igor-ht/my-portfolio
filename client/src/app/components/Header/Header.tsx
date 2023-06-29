@@ -13,8 +13,8 @@ export default function Header() {
 		const navbar = document.getElementById('navbar');
 		const navbarHeight = navbar?.offsetHeight;
 		const htmlDocument = document.firstElementChild as HTMLElement;
-		if (navbar && navbarHeight) htmlDocument.style.scrollPadding = navbarHeight + 'px';
-	}, []);
+		htmlDocument.style.scrollPadding = navbar && navbarHeight ? navbarHeight + 'px' : '0px';
+	}, [scrollDirection]);
 
 	return (
 		<header

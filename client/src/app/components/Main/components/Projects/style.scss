@@ -63,6 +63,7 @@
 @media (max-width: 780px) {
   #projects {
     background-image: url("/background/third-background-675x900.svg");
+    scroll-snap-align: start !important;
     .title {
       margin: 0;
       margin-bottom: 0.2rem;
