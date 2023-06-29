@@ -25,6 +25,19 @@ export default function Project({ props }: { props: ProjectPropsType }) {
 	const [showDialog, setShowDialog] = useState(false);
 	const dialogRef = useRef<HTMLDialogElement | null>(null);
 
+	let dialogTimeoutId: NodeJS.Timeout | null = null;
+	const handleReadMore = () => {
+		if (dialogTimeoutId !== null) {
+			return;
+		}
+		dialogTimeoutId = setTimeout(() => {
+			setShowDialog(true);
+			dialogRef.current!.style.animation = 'FillScreen 0.7s linear';
+			dialogTimeoutId ? clearTimeout(dialogTimeoutId) : null;
+			dialogTimeoutId = null;
+		}, 500);
+	};
+
 	useEffect(() => {
 		const htmlDocument = document.firstElementChild as HTMLElement;
 		const navbar = document.getElementById('navbar') as HTMLElement;
@@ -64,10 +77,7 @@ export default function Project({ props }: { props: ProjectPropsType }) {
 						<a
 							href="#projects"
 							className="read-more"
-							onClick={() => {
-								setShowDialog(true);
-								dialogRef.current!.style.animation = 'FillScreen 0.7s linear';
-							}}>
+							onClick={handleReadMore}>
 							Read More...
 						</a>
 					</p>

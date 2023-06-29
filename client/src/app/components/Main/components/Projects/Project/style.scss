@@ -126,6 +126,8 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
+      overflow: hidden;
+      overflow-y: auto;
 
       .project-title {
         font-size: 4rem;
@@ -287,11 +289,10 @@
     dialog[open] {
       top: 0 !important;
       button.close-modal {
-        position: initial;
+        position: static;
         align-self: flex-start;
       }
       .project-display {
-        overflow-y: auto;
         justify-content: normal;
         &::-webkit-scrollbar {
           width: 0;

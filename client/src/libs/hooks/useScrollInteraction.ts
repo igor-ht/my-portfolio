@@ -9,24 +9,25 @@ export default function useScrollInteraction() {
 		let lastScrollY = window.scrollY;
 
 		const onScroll = debounce(() => {
+			if (anchorTrigger) return;
 			const htmlDocument = document.firstElementChild as HTMLElement;
 			if (htmlDocument.style.overflowY === 'hidden') return;
 			htmlDocument.classList.add('on-scrollbar');
 			const scrollY = window.scrollY;
-			const direction = anchorTrigger === false && scrollY > lastScrollY ? 'down' : 'up';
+			const direction = scrollY > lastScrollY ? 'down' : 'up';
 			if (direction !== scrollDirection && (scrollY - lastScrollY > 10 || scrollY - lastScrollY < -10)) setScrollDirection(direction);
 			lastScrollY = scrollY > 0 ? scrollY : 0;
 			debounce(() => setTimeout(() => htmlDocument.classList.remove('on-scrollbar'), 2000), 2000)();
 		}, 2000);
 
-		let anchorTimeoutId: string | number | NodeJS.Timeout | null | undefined = null;
+		let anchorTimeoutId: NodeJS.Timeout | null = null;
 		const onAnchorTrigger = () => {
 			if (anchorTimeoutId !== null) {
 				clearTimeout(anchorTimeoutId);
 				anchorTimeoutId = null;
 			}
 			setAnchorTrigger(true);
-			anchorTimeoutId = setTimeout(() => setAnchorTrigger(false), 1000);
+			anchorTimeoutId = setTimeout(() => setAnchorTrigger(false), 1200);
 		};
 
 		window.addEventListener('scroll', onScroll);

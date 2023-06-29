@@ -19,7 +19,7 @@ export default function Header() {
 	return (
 		<header
 			id="navbar"
-			style={{ top: scrollDirection === 'up' ? '0' : '-25dvh' }}>
+			style={{ top: scrollDirection === 'down' ? '-25dvh' : '0' }}>
 			<div className="line top-line" />
 			<nav>
 				<div className="logo">
