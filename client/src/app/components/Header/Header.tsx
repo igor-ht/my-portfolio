@@ -14,7 +14,7 @@ export default function Header() {
 		const navbarHeight = navbar?.offsetHeight;
 		const htmlDocument = document.firstElementChild as HTMLElement;
 		htmlDocument.style.scrollPadding = navbar && navbarHeight ? navbarHeight + 'px' : '0px';
-	}, [scrollDirection]);
+	}, []);
 
 	return (
 		<header

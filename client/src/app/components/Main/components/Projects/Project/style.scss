@@ -82,6 +82,7 @@
         text-align: justify;
         margin: 0.5rem;
         margin-top: 0;
+        overflow-anchor: none;
         .read-more {
           text-decoration: underline;
           cursor: pointer;
@@ -287,7 +288,6 @@
       }
     }
     dialog[open] {
-      top: 0 !important;
       button.close-modal {
         position: static;
         align-self: flex-start;

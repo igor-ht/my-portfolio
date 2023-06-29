@@ -25,37 +25,32 @@ export default function Project({ props }: { props: ProjectPropsType }) {
 	const [showDialog, setShowDialog] = useState(false);
 	const dialogRef = useRef<HTMLDialogElement | null>(null);
 
-	let dialogTimeoutId: NodeJS.Timeout | null = null;
 	const handleReadMore = () => {
-		if (dialogTimeoutId !== null) {
-			return;
-		}
-		dialogTimeoutId = setTimeout(() => {
-			setShowDialog(true);
-			dialogRef.current!.style.animation = 'FillScreen 0.7s linear';
-			dialogTimeoutId ? clearTimeout(dialogTimeoutId) : null;
-			dialogTimeoutId = null;
-		}, 500);
+		if (showDialog) return;
+
+		const projectsSection = document.getElementById('projects') as HTMLDivElement;
+		const offset = projectsSection.getBoundingClientRect().top + window.scrollY;
+		window.scrollTo({
+			top: offset,
+			behavior: 'smooth',
+		});
+
+		setShowDialog(true);
+		dialogRef.current!.style.animation = 'FillScreen 0.7s linear';
 	};
 
 	useEffect(() => {
 		const htmlDocument = document.firstElementChild as HTMLElement;
 		const navbar = document.getElementById('navbar') as HTMLElement;
+		htmlDocument.style.overflowY = 'auto';
 		navbar.style.top = '0';
 
 		const setModalOpened = () => {
 			htmlDocument.style.overflowY = 'hidden';
-			dialogRef.current ? (dialogRef.current.style.top = `-${navbar?.offsetHeight + 1 || 0}px`) : null;
 			navbar.style.top = '-25dvh';
 		};
 
-		const setModalClosed = () => {
-			htmlDocument.style.overflowY = 'auto';
-			dialogRef.current ? (dialogRef.current.style.top = '0') : null;
-		};
-
 		if (showDialog) setModalOpened();
-		else setModalClosed();
 	}, [showDialog]);
 
 	return (
@@ -75,7 +70,6 @@ export default function Project({ props }: { props: ProjectPropsType }) {
 					<p className={inconsolata.className}>
 						{props.cardText}
 						<a
-							href="#projects"
 							className="read-more"
 							onClick={handleReadMore}>
 							Read More...

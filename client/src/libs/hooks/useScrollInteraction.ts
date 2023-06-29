@@ -6,11 +6,11 @@ export default function useScrollInteraction() {
 	const [anchorTrigger, setAnchorTrigger] = useState(false);
 
 	useEffect(() => {
+		const htmlDocument = document.firstElementChild as HTMLElement;
 		let lastScrollY = window.scrollY;
 
 		const onScroll = debounce(() => {
 			if (anchorTrigger) return;
-			const htmlDocument = document.firstElementChild as HTMLElement;
 			if (htmlDocument.style.overflowY === 'hidden') return;
 			htmlDocument.classList.add('on-scrollbar');
 			const scrollY = window.scrollY;
