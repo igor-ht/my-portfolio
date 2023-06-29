@@ -26,18 +26,18 @@ export default function Project({ props }: { props: ProjectPropsType }) {
 	const dialogRef = useRef<HTMLDialogElement | null>(null);
 
 	useEffect(() => {
-		const root = document.firstElementChild as HTMLElement;
+		const htmlDocument = document.firstElementChild as HTMLElement;
 		const navbar = document.getElementById('navbar') as HTMLElement;
 		navbar.style.top = '0';
 
 		const setModalOpened = () => {
-			root.style.overflowY = 'hidden';
+			htmlDocument.style.overflowY = 'hidden';
 			dialogRef.current ? (dialogRef.current.style.top = `-${navbar?.offsetHeight || 0}px`) : null;
 			navbar.style.top = '-25dvh';
 		};
 
 		const setModalClosed = () => {
-			root.style.overflowY = 'auto';
+			htmlDocument.style.overflowY = 'auto';
 			dialogRef.current ? (dialogRef.current.style.top = '0') : null;
 		};
 

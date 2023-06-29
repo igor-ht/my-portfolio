@@ -33,7 +33,7 @@ export default function useScrollInteraction() {
 			window.removeEventListener('scroll', onScroll);
 			anchorTags.forEach((anchor) => anchor.removeEventListener('click', onAnchorTrigger));
 		};
-	});
+	}, [anchorTrigger, scrollDirection]);
 
 	return [scrollDirection];
 }

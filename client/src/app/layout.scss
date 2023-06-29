@@ -29,11 +29,11 @@ body {
 .on-scrollbar {
   overflow-y: auto;
   &::-webkit-scrollbar {
-    width: 0.6rem;
-    background-color: #888;
+    width: 0.6rem !important;
+    background-color: #888 !important;
   }
   &::-webkit-scrollbar-thumb {
-    background-color: var(--accent);
+    background-color: var(--accent) !important;
   }
 }
 
@@ -49,5 +49,8 @@ body {
     ::-webkit-scrollbar {
       background-color: transparent;
     }
+  }
+  #app {
+    min-height: -webkit-fill-available;
   }
 }

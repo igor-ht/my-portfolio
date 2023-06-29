@@ -12,7 +12,8 @@ export default function Header() {
 	useEffect(() => {
 		const navbar = document.getElementById('navbar');
 		const navbarHeight = navbar?.offsetHeight;
-		if (navbar && navbarHeight) document.documentElement.style.scrollPadding = navbarHeight + 'px';
+		const htmlDocument = document.firstElementChild as HTMLElement;
+		if (navbar && navbarHeight) htmlDocument.style.scrollPadding = navbarHeight + 'px';
 	}, []);
 
 	return (
