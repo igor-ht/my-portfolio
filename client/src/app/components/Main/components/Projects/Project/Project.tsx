@@ -50,7 +50,13 @@ export default function Project({ props }: { props: ProjectPropsType }) {
 			navbar.style.top = '-25dvh';
 		};
 
+		const setModalClosed = () => {
+			htmlDocument.style.overflowY = 'auto';
+			navbar.style.top = '0';
+		};
+
 		if (showDialog) setModalOpened();
+		else setModalClosed();
 	}, [showDialog]);
 
 	return (
