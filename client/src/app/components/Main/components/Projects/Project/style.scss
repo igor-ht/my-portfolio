@@ -115,6 +115,9 @@
     .project-display {
       height: 100dvh;
       width: 100dvw;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
 
       .project-title {
         font-size: 4rem;
@@ -276,11 +279,15 @@
       }
     }
     dialog[open] {
-      // top: 0 !important;
       .project-display {
         overflow-y: auto;
         &::-webkit-scrollbar {
           width: 0;
+        }
+        .project-title {
+          font-size: 3.7rem;
+          text-align: center;
+          margin: 0.5rem;
         }
         .content {
           display: flex;

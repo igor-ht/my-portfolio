@@ -9,21 +9,13 @@ export const metadata = {
 	icons: {
 		icon: '/logo-icon.svg',
 	},
-	viewport: {
-		width: 'device-width',
-		height: 'device-height',
-		initialScale: 1,
-		maximumScale: 1,
-		userScalable: 'no',
-	},
 };
 
 export default function RootLayout() {
 	return (
 		<html
 			id="root"
-			lang="en"
-			data-theme="light">
+			lang="en">
 			<body id="app">
 				<Header />
 				<Main />

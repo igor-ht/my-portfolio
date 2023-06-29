@@ -19,9 +19,14 @@ export default function useScrollInteraction() {
 			debounce(() => setTimeout(() => htmlDocument.classList.remove('on-scrollbar'), 2000), 2000)();
 		}, 2000);
 
+		let anchorTimeoutId: string | number | NodeJS.Timeout | null | undefined = null;
 		const onAnchorTrigger = () => {
+			if (anchorTimeoutId !== null) {
+				clearTimeout(anchorTimeoutId);
+				anchorTimeoutId = null;
+			}
 			setAnchorTrigger(true);
-			setTimeout(() => setAnchorTrigger(false), 1000);
+			anchorTimeoutId = setTimeout(() => setAnchorTrigger(false), 1000);
 		};
 
 		window.addEventListener('scroll', onScroll);
@@ -33,7 +38,7 @@ export default function useScrollInteraction() {
 			window.removeEventListener('scroll', onScroll);
 			anchorTags.forEach((anchor) => anchor.removeEventListener('click', onAnchorTrigger));
 		};
-	}, [anchorTrigger, scrollDirection]);
+	}, [scrollDirection, anchorTrigger]);
 
 	return [scrollDirection];
 }

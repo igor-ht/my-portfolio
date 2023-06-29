@@ -32,7 +32,7 @@ export default function Project({ props }: { props: ProjectPropsType }) {
 
 		const setModalOpened = () => {
 			htmlDocument.style.overflowY = 'hidden';
-			dialogRef.current ? (dialogRef.current.style.top = `-${navbar?.offsetHeight || 0}px`) : null;
+			dialogRef.current ? (dialogRef.current.style.top = `-${navbar?.offsetHeight + 1 || 0}px`) : null;
 			navbar.style.top = '-25dvh';
 		};
 

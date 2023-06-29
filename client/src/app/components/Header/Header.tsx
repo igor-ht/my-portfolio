@@ -14,6 +14,20 @@ export default function Header() {
 		const navbarHeight = navbar?.offsetHeight;
 		const htmlDocument = document.firstElementChild as HTMLElement;
 		if (navbar && navbarHeight) htmlDocument.style.scrollPadding = navbarHeight + 'px';
+
+		// hide the address bar
+		window.addEventListener('load', () => {
+			setTimeout(() => {
+				window.scrollTo(0, 1);
+			}, 0);
+		});
+		return () => {
+			window.removeEventListener('load', () => {
+				setTimeout(() => {
+					window.scrollTo(0, 1);
+				}, 0);
+			});
+		};
 	}, []);
 
 	return (
