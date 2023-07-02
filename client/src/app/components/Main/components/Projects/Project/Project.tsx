@@ -39,6 +39,15 @@ export default function Project({ props }: { props: ProjectPropsType }) {
 		dialogRef.current!.style.animation = 'FillScreen 0.7s linear';
 	};
 
+	const handleWindowResizeToFixDialogDisplay = () => {
+		const projectsSection = document.getElementById('projects') as HTMLDivElement;
+		const offset = projectsSection.getBoundingClientRect().top + window.scrollY;
+		window.scrollTo({
+			top: offset,
+			behavior: 'smooth',
+		});
+	};
+
 	useEffect(() => {
 		const htmlDocument = document.firstElementChild as HTMLElement;
 		const navbar = document.getElementById('navbar') as HTMLElement;
@@ -55,8 +64,11 @@ export default function Project({ props }: { props: ProjectPropsType }) {
 			navbar.style.top = '0';
 		};
 
-		if (showDialog) setModalOpened();
-		else setModalClosed();
+		if (showDialog) {
+			setModalOpened();
+			window.addEventListener('resize', handleWindowResizeToFixDialogDisplay);
+			return () => window.removeEventListener('resize', handleWindowResizeToFixDialogDisplay);
+		} else setModalClosed();
 	}, [showDialog]);
 
 	return (
