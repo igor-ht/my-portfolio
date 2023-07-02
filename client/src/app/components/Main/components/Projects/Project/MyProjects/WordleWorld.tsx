@@ -8,7 +8,11 @@ At the backend development, I utilized Node.js and Express.js to create a scalab
 
 The integration of Prisma, a modern database toolkit, along with PostgreSQL, enables efficient data interactions, ensuring the integrity and security of player information.
 
-Authentication is a crucial aspect of WordleWorld, and I implemented a robust authentication system using next-auth and JWT. These technologies ensure secure user account management, allowing players to register, log in, and maintain their profiles.`;
+Authentication is a crucial aspect of WordleWorld, and I implemented a robust authentication system using next-auth and JWT. These technologies ensure secure user account management, allowing players to register, log in, and maintain their profiles.
+
+** Try with a demo account **
+📩 test@wordleworld.com
+🔑 test123`;
 
 export const WordleWorldProps: ProjectPropsType = {
 	name: 'WordleWorld',
