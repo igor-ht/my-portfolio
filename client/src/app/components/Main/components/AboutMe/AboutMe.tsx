@@ -24,6 +24,7 @@ export default function AboutMe() {
 							height="48"
 							width="48"
 							title="Python"
+							priority
 						/>
 						<p>Python</p>
 					</span>
@@ -33,6 +34,8 @@ export default function AboutMe() {
 							alt="HTML"
 							height="48"
 							width="48"
+							priority
+							quality={50}
 							title="HTML"
 						/>
 						<p>HTML</p>
@@ -43,6 +46,8 @@ export default function AboutMe() {
 							alt="CSS"
 							height="48"
 							width="48"
+							priority
+							quality={50}
 							title="CSS"
 						/>
 						<p>CSS</p>
@@ -53,6 +58,8 @@ export default function AboutMe() {
 							alt="SCSS"
 							height="48"
 							width="48"
+							priority
+							quality={50}
 							title="SCSS"
 						/>
 						<p>SCSS</p>
@@ -63,6 +70,8 @@ export default function AboutMe() {
 							alt="JavaScript Programming Language"
 							height="48"
 							width="48"
+							priority
+							quality={50}
 							title="JavaScript"
 						/>
 						<p>JavaScript</p>
@@ -73,6 +82,8 @@ export default function AboutMe() {
 							alt="TypeScript"
 							height="48"
 							width="48"
+							priority
+							quality={50}
 							title="TypeScript"
 						/>
 						<p>TypeScript</p>
@@ -83,6 +94,8 @@ export default function AboutMe() {
 							alt="Node.js"
 							height="48"
 							width="48"
+							priority
+							quality={50}
 							title="Node.js"
 						/>
 						<p>Node.js</p>
@@ -93,6 +106,8 @@ export default function AboutMe() {
 							alt="Express.js"
 							height="48"
 							width="48"
+							priority
+							quality={50}
 							title="Express.js"
 						/>
 						<p>Express.js</p>
@@ -103,6 +118,8 @@ export default function AboutMe() {
 							alt="React.js"
 							height="48"
 							width="48"
+							priority
+							quality={50}
 							title="React.js"
 						/>
 						<p>React.js</p>
@@ -113,6 +130,8 @@ export default function AboutMe() {
 							alt="Next.js"
 							height="48"
 							width="48"
+							priority
+							quality={50}
 							title="Next.js"
 						/>
 						<p>Next.js</p>
@@ -123,6 +142,8 @@ export default function AboutMe() {
 							alt="PostgreSQL"
 							height="48"
 							width="48"
+							priority
+							quality={50}
 							title="PostgreSQL"
 						/>
 						<p>PostgreSQL</p>
@@ -133,6 +154,8 @@ export default function AboutMe() {
 							alt="MongoDB"
 							height="48"
 							width="48"
+							priority
+							quality={50}
 							title="MongoDB"
 						/>
 						<p>MongoDB</p>
@@ -143,6 +166,8 @@ export default function AboutMe() {
 							alt="Prisma ORM"
 							height="48"
 							width="48"
+							priority
+							quality={50}
 							title="Prisma ORM"
 						/>
 						<p>Prisma</p>
@@ -153,6 +178,8 @@ export default function AboutMe() {
 							alt="JSON Web Token"
 							height="48"
 							width="48"
+							priority
+							quality={50}
 							title="JSON Web Token"
 						/>
 						<p>JWT</p>
@@ -163,6 +190,8 @@ export default function AboutMe() {
 							alt="Git"
 							height="48"
 							width="48"
+							priority
+							quality={50}
 							title="Git"
 						/>
 						<p>Git</p>
@@ -173,6 +202,8 @@ export default function AboutMe() {
 							alt="GitHub"
 							height="48"
 							width="48"
+							priority
+							quality={50}
 							title="GitHub"
 						/>
 						<p>GitHub</p>
@@ -183,6 +214,8 @@ export default function AboutMe() {
 							alt="Bootstrap"
 							height="48"
 							width="48"
+							priority
+							quality={50}
 							title="Bootstrap"
 						/>
 						<p>Bootstrap</p>
