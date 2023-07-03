@@ -131,6 +131,19 @@
       overflow: hidden;
       overflow-y: auto;
 
+      &::-webkit-scrollbar {
+        border: 0;
+        width: 0.5rem;
+        background-color: #888;
+
+        &:hover {
+          width: 0.6rem;
+        }
+      }
+      &::-webkit-scrollbar-thumb {
+        background-color: var(--accent);
+      }
+
       .project-title {
         font-size: 4rem;
         text-align: center;
@@ -254,13 +267,12 @@
   }
 }
 
-@media (max-width: 780px) {
+@media (max-width: 1000px) {
   .project {
     .project-card {
       display: flex;
       flex-direction: column;
       align-items: center;
-      width: 19rem;
 
       img {
         height: 70%;

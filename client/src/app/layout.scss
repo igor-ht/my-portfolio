@@ -43,11 +43,3 @@ body {
   flex-direction: column;
   position: relative;
 }
-
-@media (max-width: 780px) {
-  #root {
-    ::-webkit-scrollbar {
-      background-color: transparent;
-    }
-  }
-}
