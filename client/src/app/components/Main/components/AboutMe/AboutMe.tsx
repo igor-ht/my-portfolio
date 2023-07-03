@@ -8,11 +8,12 @@ export default function AboutMe() {
 			<h1 className={`title ${poiret_one.className}`}>About Me:</h1>
 			<div className="resume">
 				<p className={`${montserrat.className}`}>
-					I&apos;m a very motivated Junior Developer with nearly a year of hands-on experience in Web Development. My skill set includes
-					Python, Node.js, JavaScript, TypeScript, HTML, CSS/SCSS, React.js, Next.js, Postgres, Jest, Cypress, and more.
+					I&apos;m a very motivated Junior Developer with nearly a year of hands-on experience in Full-Stack Development. My skill set
+					includes Python, Node.js, JavaScript, TypeScript, HTML5, CSS/SCSS, React.js, Next.js, Postgres, MongoDB, Prisma, Jest, Cypress,
+					and more.
 					<br />
-					<br />I create robust and scalable E2E applications while prioritizing secure authentication, responsible design, and adhering to
-					industry best practices, always focusing on delivering high-quality results.
+					<br />I create from simple SPA to robust and scalable E2E applications. Prioritizing responsible design, secure authentication,
+					and adhering to industry best practices, with the best focus on delivering high-quality results.
 				</p>
 			</div>
 			<div className="skills">
@@ -25,6 +26,7 @@ export default function AboutMe() {
 							width="48"
 							title="Python"
 							priority
+							quality={1}
 						/>
 						<p>Python</p>
 					</span>
@@ -35,7 +37,7 @@ export default function AboutMe() {
 							height="48"
 							width="48"
 							priority
-							quality={50}
+							quality={1}
 							title="HTML"
 						/>
 						<p>HTML</p>
@@ -47,7 +49,7 @@ export default function AboutMe() {
 							height="48"
 							width="48"
 							priority
-							quality={50}
+							quality={1}
 							title="CSS"
 						/>
 						<p>CSS</p>
@@ -59,7 +61,7 @@ export default function AboutMe() {
 							height="48"
 							width="48"
 							priority
-							quality={50}
+							quality={1}
 							title="SCSS"
 						/>
 						<p>SCSS</p>
@@ -71,7 +73,7 @@ export default function AboutMe() {
 							height="48"
 							width="48"
 							priority
-							quality={50}
+							quality={1}
 							title="JavaScript"
 						/>
 						<p>JavaScript</p>
@@ -83,7 +85,7 @@ export default function AboutMe() {
 							height="48"
 							width="48"
 							priority
-							quality={50}
+							quality={1}
 							title="TypeScript"
 						/>
 						<p>TypeScript</p>
@@ -95,7 +97,7 @@ export default function AboutMe() {
 							height="48"
 							width="48"
 							priority
-							quality={50}
+							quality={1}
 							title="Node.js"
 						/>
 						<p>Node.js</p>
@@ -107,7 +109,7 @@ export default function AboutMe() {
 							height="48"
 							width="48"
 							priority
-							quality={50}
+							quality={1}
 							title="Express.js"
 						/>
 						<p>Express.js</p>
@@ -119,7 +121,7 @@ export default function AboutMe() {
 							height="48"
 							width="48"
 							priority
-							quality={50}
+							quality={1}
 							title="React.js"
 						/>
 						<p>React.js</p>
@@ -131,7 +133,7 @@ export default function AboutMe() {
 							height="48"
 							width="48"
 							priority
-							quality={50}
+							quality={1}
 							title="Next.js"
 						/>
 						<p>Next.js</p>
@@ -143,7 +145,7 @@ export default function AboutMe() {
 							height="48"
 							width="48"
 							priority
-							quality={50}
+							quality={1}
 							title="PostgreSQL"
 						/>
 						<p>PostgreSQL</p>
@@ -155,7 +157,7 @@ export default function AboutMe() {
 							height="48"
 							width="48"
 							priority
-							quality={50}
+							quality={1}
 							title="MongoDB"
 						/>
 						<p>MongoDB</p>
@@ -167,7 +169,7 @@ export default function AboutMe() {
 							height="48"
 							width="48"
 							priority
-							quality={50}
+							quality={1}
 							title="Prisma ORM"
 						/>
 						<p>Prisma</p>
@@ -179,7 +181,7 @@ export default function AboutMe() {
 							height="48"
 							width="48"
 							priority
-							quality={50}
+							quality={1}
 							title="JSON Web Token"
 						/>
 						<p>JWT</p>
@@ -191,7 +193,7 @@ export default function AboutMe() {
 							height="48"
 							width="48"
 							priority
-							quality={50}
+							quality={1}
 							title="Git"
 						/>
 						<p>Git</p>
@@ -203,7 +205,7 @@ export default function AboutMe() {
 							height="48"
 							width="48"
 							priority
-							quality={50}
+							quality={1}
 							title="GitHub"
 						/>
 						<p>GitHub</p>
@@ -215,7 +217,7 @@ export default function AboutMe() {
 							height="48"
 							width="48"
 							priority
-							quality={50}
+							quality={1}
 							title="Bootstrap"
 						/>
 						<p>Bootstrap</p>
