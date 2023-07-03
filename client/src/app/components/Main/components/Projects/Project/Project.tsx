@@ -1,7 +1,7 @@
 'use client';
 
 import './style.scss';
-import { MutableRefObject, useEffect, useRef, useState } from 'react';
+import { MutableRefObject, useEffect, useLayoutEffect, useRef, useState } from 'react';
 import { inconsolata, karla, poiret_one } from '@/libs/fonts';
 import VideoPlayer from './components/VideoPlayer';
 import TechTag from './components/TechTag';
@@ -25,6 +25,21 @@ export default function Project({ props }: { props: ProjectPropsType }) {
 	const [showDialog, setShowDialog] = useState(false);
 	const dialogRef = useRef<HTMLDialogElement | null>(null);
 
+	const setModalClosed = () => {
+		dialogRef.current!.style.animation = 'ExitScreen 0.7s linear';
+		setTimeout(() => setShowDialog(false), 700);
+		const htmlDocument = document.firstElementChild as HTMLElement;
+		const navbar = document.getElementById('navbar') as HTMLElement;
+		htmlDocument.style.overflowY = 'auto';
+		navbar.style.top = '0';
+		const projectsSection = document.getElementById('projects') as HTMLDivElement;
+		const offset = projectsSection.getBoundingClientRect().top + window.scrollY;
+		window.scrollTo({
+			top: offset - navbar.offsetHeight,
+			behavior: 'smooth',
+		});
+	};
+
 	const handleReadMore = () => {
 		if (showDialog) return;
 
@@ -39,36 +54,30 @@ export default function Project({ props }: { props: ProjectPropsType }) {
 		dialogRef.current!.style.animation = 'FillScreen 0.7s linear';
 	};
 
-	const handleWindowResizeToFixDialogDisplay = () => {
-		const projectsSection = document.getElementById('projects') as HTMLDivElement;
-		const offset = projectsSection.getBoundingClientRect().top + window.scrollY;
-		window.scrollTo({
-			top: offset,
-			behavior: 'smooth',
-		});
-	};
+	useLayoutEffect(() => {
+		const handleWindowResizeToFixDialogDisplay = () => {
+			const projectsSection = document.getElementById('projects') as HTMLDivElement;
+			const offset = projectsSection.getBoundingClientRect().top + window.scrollY;
+			window.scrollTo({
+				top: offset,
+				behavior: 'smooth',
+			});
+		};
+
+		window.addEventListener('resize', handleWindowResizeToFixDialogDisplay);
+		return () => window.removeEventListener('resize', handleWindowResizeToFixDialogDisplay);
+	}, []);
 
 	useEffect(() => {
 		const htmlDocument = document.firstElementChild as HTMLElement;
 		const navbar = document.getElementById('navbar') as HTMLElement;
-		htmlDocument.style.overflowY = 'auto';
-		navbar.style.top = '0';
 
 		const setModalOpened = () => {
 			htmlDocument.style.overflowY = 'hidden';
 			navbar.style.top = '-25dvh';
 		};
 
-		const setModalClosed = () => {
-			htmlDocument.style.overflowY = 'auto';
-			navbar.style.top = '0';
-		};
-
-		if (showDialog) {
-			setModalOpened();
-			window.addEventListener('resize', handleWindowResizeToFixDialogDisplay);
-			return () => window.removeEventListener('resize', handleWindowResizeToFixDialogDisplay);
-		} else setModalClosed();
+		if (showDialog) return setModalOpened();
 	}, [showDialog]);
 
 	return (
@@ -101,10 +110,7 @@ export default function Project({ props }: { props: ProjectPropsType }) {
 				<button
 					type="button"
 					className="close-modal"
-					onClick={() => {
-						dialogRef.current!.style.animation = 'ExitScreen 0.7s linear';
-						setTimeout(() => setShowDialog(false), 700);
-					}}>
+					onClick={setModalClosed}>
 					<Image
 						src={'/double-arrow-left.svg'}
 						alt="return"

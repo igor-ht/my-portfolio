@@ -3,18 +3,10 @@
 import './style.scss';
 import Image from 'next/image';
 import { poiret_one } from '@/libs/fonts';
-import { useEffect } from 'react';
 import useScrollInteraction from '@/libs/hooks/useScrollInteraction';
 
 export default function Header() {
 	const [scrollDirection] = useScrollInteraction();
-
-	useEffect(() => {
-		const navbar = document.getElementById('navbar');
-		const navbarHeight = navbar?.offsetHeight;
-		const htmlDocument = document.firstElementChild as HTMLElement;
-		htmlDocument.style.scrollPadding = navbar && navbarHeight ? navbarHeight + 'px' : '0px';
-	}, []);
 
 	return (
 		<header
