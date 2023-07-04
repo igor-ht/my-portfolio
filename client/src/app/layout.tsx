@@ -5,7 +5,7 @@ import Main from './components/Main/Main';
 import { Analytics } from '@vercel/analytics/react';
 
 export const metadata = {
-	title: `Igor's Portfolio`,
+	title: `IHT's Portfolio`,
 	description: 'My FullStack Developer Portfolio',
 	icons: {
 		icon: '/logo-icon.svg',

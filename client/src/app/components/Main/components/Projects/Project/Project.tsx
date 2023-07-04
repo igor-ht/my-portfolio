@@ -56,6 +56,7 @@ export default function Project({ props }: { props: ProjectPropsType }) {
 
 	useLayoutEffect(() => {
 		const handleWindowResizeToFixDialogDisplay = () => {
+			if (!showDialog) return;
 			const projectsSection = document.getElementById('projects') as HTMLDivElement;
 			const offset = projectsSection.getBoundingClientRect().top + window.scrollY;
 			window.scrollTo({
@@ -66,7 +67,7 @@ export default function Project({ props }: { props: ProjectPropsType }) {
 
 		window.addEventListener('resize', handleWindowResizeToFixDialogDisplay);
 		return () => window.removeEventListener('resize', handleWindowResizeToFixDialogDisplay);
-	}, []);
+	}, [showDialog]);
 
 	useEffect(() => {
 		const htmlDocument = document.firstElementChild as HTMLElement;

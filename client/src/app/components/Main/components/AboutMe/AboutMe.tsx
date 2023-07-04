@@ -12,7 +12,7 @@ export default function AboutMe() {
 					includes Python, Node.js, JavaScript, TypeScript, HTML5, CSS/SCSS, React.js, Next.js, Postgres, MongoDB, Prisma, Jest, Cypress,
 					and more.
 					<br />
-					<br />I create from simple SPA to robust and scalable E2E applications. Prioritizing responsible design, secure authentication,
+					<br />I create from simple SPA to robust and scalable E2E Applications. Prioritizing responsible design, secure authentication,
 					and adhering to industry best practices, with the best focus on delivering high-quality results.
 				</p>
 			</div>

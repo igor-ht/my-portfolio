@@ -21,6 +21,7 @@ export default function Header() {
 						width={120}
 						height={120}
 						priority
+						quality={1}
 					/>
 				</div>
 				<div className={`links ${poiret_one.className}`}>
