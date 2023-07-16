@@ -1,12 +1,12 @@
 #home {
   height: 100dvh;
   width: 100dvw;
+  background: linear-gradient(#e6e5e5, #3c3c3c);
   background-image: url("/background/first-background-900x450.svg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   aspect-ratio: 2/1;
-  filter: invert(var(--filter));
   display: flex;
   justify-content: center;
   scroll-snap-stop: always;
@@ -64,8 +64,8 @@
 @media (max-width: 780px) {
   #home {
     background-image: url("/background/first-background-675x900.svg");
-
     align-items: center;
+    margin-bottom: -1px;
     .intro {
       margin: 0;
       .greet {

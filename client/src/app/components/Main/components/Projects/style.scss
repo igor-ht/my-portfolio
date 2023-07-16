@@ -1,12 +1,12 @@
 #projects {
   height: 100dvh;
   width: 100dvw;
+  background: linear-gradient(#e6e5e5, #3c3c3c);
   background-image: url("/background/third-background-900x450.svg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   aspect-ratio: 2/1;
-  filter: invert(var(--filter));
   display: flex;
   flex-direction: column;
   align-items: center;

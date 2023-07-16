@@ -4,3 +4,9 @@
   overflow: hidden;
   gap: 0;
 }
+#main > #home,
+#about-me,
+#projects,
+#contact-me {
+  margin-bottom: -1px;
+}
