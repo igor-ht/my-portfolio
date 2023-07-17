@@ -2,13 +2,11 @@
 
 import { poiret_one } from '@/libs/fonts';
 import { useRef } from 'react';
-import WordleWorld, { WordleWorldProps } from '../Project/MyProjects/WordleWorld';
-import Orquia, { OrquiaProps } from '../Project/MyProjects/Orquia';
-import Portfolio, { PortfolioProps } from '../Project/MyProjects/Portfolio';
+import { Projects } from '@prisma/client';
+import Project from '../Project/Project';
 
-export default function ProjectsAlbum() {
+export default function ProjectsAlbum({ projects }: { projects: Projects[] }) {
 	const currentProjectRef = useRef<HTMLDivElement | null>(null);
-
 	const handleChangeProject = (direction: 'left' | 'right') => {
 		if (!currentProjectRef || !currentProjectRef.current) {
 			currentProjectRef.current = document.querySelector('.project') as HTMLDivElement;
@@ -40,9 +38,27 @@ export default function ProjectsAlbum() {
 			</button>
 
 			<span>
-				<WordleWorld props={{ ...WordleWorldProps, ref: currentProjectRef }} />
-				<Orquia props={{ ...OrquiaProps }} />
-				<Portfolio props={{ ...PortfolioProps }} />
+				{projects.map((project, i) => {
+					return (
+						<Project
+							key={i}
+							props={{
+								name: project.name,
+								ref: i === 0 ? currentProjectRef : null,
+								cardUrl: project.cardUrl,
+								cardText: project.cardText,
+								videoUrl: project.videoUrl,
+								picUrl: project.picUrl,
+								techTags: project.techTags,
+								text: project.text,
+								linksUrl: {
+									live: project.liveUrl,
+									repo: project.repoUrl,
+								},
+							}}
+						/>
+					);
+				})}
 			</span>
 
 			<button

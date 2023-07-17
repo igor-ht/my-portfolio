@@ -16,7 +16,10 @@ export default function ContactMe() {
 				</p>
 			</div>
 			<div className="links">
-				<Link href="mailto: idht07@gmail.com">
+				<Link
+					href="mailto: idht07@gmail.com"
+					rel="nofollow"
+					target="_blank">
 					<Image
 						src={'/email-icon.svg'}
 						height={48}
@@ -39,7 +42,7 @@ export default function ContactMe() {
 					href="https://github.com/igor-ht"
 					target="_blank">
 					<Image
-						src={'/techs/github.svg'}
+						src="https://cjyntkhqgtdnmlhfkwab.supabase.co/storage/v1/object/sign/skills/github.svg?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJza2lsbHMvZ2l0aHViLnN2ZyIsImlhdCI6MTY4OTUwMTA2OSwiZXhwIjoxNzIxMDM3MDY5fQ.a3hgcDcnFKfJLg_1oS2DXZadLZZmBP-lOyI36c4Mpl0&t=2023-07-16T09%3A51%3A09.848Z"
 						height={48}
 						width={48}
 						alt="GitHub"

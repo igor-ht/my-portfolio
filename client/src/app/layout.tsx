@@ -1,7 +1,6 @@
 import './globals.css';
 import './layout.scss';
 import Header from './components/Header/Header';
-import Main from './components/Main/Main';
 import { Analytics } from '@vercel/analytics/react';
 
 export const metadata = {
@@ -12,14 +11,14 @@ export const metadata = {
 	},
 };
 
-export default function RootLayout() {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
 	return (
 		<html
 			id="root"
 			lang="en">
 			<body id="app">
 				<Header />
-				<Main />
+				{children}
 				<Analytics />
 			</body>
 		</html>
