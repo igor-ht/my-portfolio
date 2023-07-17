@@ -40,7 +40,8 @@
 .project {
   height: 60dvh;
   max-height: 60dvh;
-  background: linear-gradient(rgb(69 69 69), rgb(136 136 136)) padding-box,
+  background:
+    linear-gradient(rgb(69 69 69), rgb(136 136 136)) padding-box,
     linear-gradient(to left, rgb(83 69 69), rgb(49 45 45)) border-box;
   border-radius: 15px;
   border: 2px solid transparent;
@@ -166,8 +167,6 @@
             width: 95%;
 
             .react-player {
-              transition: height 0.5s linear, width 05s linear, position 0.5s linear;
-
               .thumbnail {
                 height: 100%;
                 width: 100%;
