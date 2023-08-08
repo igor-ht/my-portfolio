@@ -3,7 +3,6 @@ import Image from 'next/image';
 import { montserrat, poiret_one } from '@/libs/fonts';
 import { Skills } from '@prisma/client';
 
-
 export default function AboutMe({ skills }: { skills: Skills[] }) {
 	return (
 		<div id="about-me">
