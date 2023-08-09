@@ -1,6 +1,6 @@
 'use client';
 
-import './style.scss';
+import './Project.scss';
 import { MutableRefObject, useEffect, useLayoutEffect, useRef, useState } from 'react';
 import { inconsolata, karla, poiret_one } from '@/libs/fonts';
 import VideoPlayer from './components/VideoPlayer';

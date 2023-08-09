@@ -1,7 +1,7 @@
 @use "@/style/main" as *;
 
 #navbar {
-  @include general-properties(100dvw, auto, transparent);
+  @include general-properties(100dvw, auto);
   @include display-flex(column);
   position: sticky;
   z-index: 1;
@@ -57,6 +57,7 @@
       .logo {
         img {
           @include image(4rem, 100%, contain);
+          margin: 0.8rem 0 0.8rem 0;
         }
       }
       .links {

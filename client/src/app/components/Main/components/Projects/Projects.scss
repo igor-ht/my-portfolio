@@ -1,0 +1,66 @@
+@use "@/style/main" as *;
+
+#projects {
+  @include container-section($reversedBackground, "/background/third-background-900x450.svg");
+  @include display-flex(column);
+  align-items: center;
+  scroll-snap-stop: always;
+  scroll-snap-align: center;
+  position: relative;
+
+  .title {
+    @include font($fontPoiretOne, 3.5rem, $color, center);
+    margin: 0.5rem 0 1rem 0;
+  }
+
+  .projects-album {
+    @include general-properties(65%, auto, transparent);
+    @include display-flex(row);
+    gap: 0;
+    align-items: center;
+
+    span {
+      @include display-flex();
+      align-items: center;
+      margin: 0 0rem 0 0.2rem;
+    }
+
+    .album-button {
+      @include general-properties(auto, auto, transparent);
+      @include display-flex();
+      align-items: center;
+
+      p {
+        @include font($fontPoiretOne, 5rem, $color, center);
+        font-weight: 600;
+        opacity: 0.7;
+
+        &:hover {
+          opacity: 1;
+        }
+        &:active {
+          opacity: 0.5;
+        }
+      }
+    }
+  }
+
+  @include media-query($media-md) {
+    background-image: url("/background/third-background-675x900.svg");
+    align-items: stretch;
+    .title {
+      margin: 0 0 0 0.2rem;
+    }
+    .projects-album {
+      @include general-properties(100dvw, 70dvh);
+      align-items: center;
+      justify-content: center;
+
+      .album-button {
+        p {
+          font-size: 4rem;
+        }
+      }
+    }
+  }
+}

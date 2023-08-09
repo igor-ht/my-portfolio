@@ -1,6 +1,5 @@
 'use client';
 
-import { poiret_one } from '@/libs/fonts';
 import { useRef } from 'react';
 import { Projects } from '@prisma/client';
 import Project from '../Project/Project';
@@ -34,7 +33,7 @@ export default function ProjectsAlbum({ projects }: { projects: Projects[] }) {
 				className="album-button"
 				type="button"
 				onClick={() => handleChangeProject('left')}>
-				<p className={poiret_one.className}>&lt;</p>
+				<p>&lt;</p>
 			</button>
 
 			<span>
@@ -65,7 +64,7 @@ export default function ProjectsAlbum({ projects }: { projects: Projects[] }) {
 				className="album-button"
 				type="button"
 				onClick={() => handleChangeProject('right')}>
-				<p className={poiret_one.className}>&gt;</p>
+				<p>&gt;</p>
 			</button>
 		</div>
 	);

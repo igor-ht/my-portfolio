@@ -2,7 +2,6 @@
 
 #home {
   @include container-section($background, "/background/first-background-900x450.svg");
-  align-items: center;
   justify-content: center;
   scroll-snap-stop: always;
 
