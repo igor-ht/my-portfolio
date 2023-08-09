@@ -1,0 +1,72 @@
+@use "@/style/main" as *;
+
+#navbar {
+  @include general-properties(100dvw, auto, transparent);
+  @include display-flex(column);
+  position: sticky;
+  z-index: 1;
+  top: 0;
+  transition: transform 0.5s;
+  backdrop-filter: blur(15px);
+
+  .line {
+    @include general-properties(90dvw, 0.3rem, $accent);
+    position: absolute;
+    border-radius: 0 50% 50% 0;
+  }
+  .top-line {
+    margin-right: 10dvw;
+  }
+  .bottom-line {
+    margin-left: 10dvw;
+    top: 99%;
+    transform: rotateY(180deg);
+  }
+  nav {
+    @include general-properties(100%, auto);
+    @include display-flex(row);
+    align-items: center;
+    margin: 0.5rem;
+    .logo {
+      img {
+        @include image(6rem, 100%, contain);
+      }
+    }
+    .links {
+      @include general-properties(100%, auto);
+      @include display-flex(row);
+      align-items: center;
+      justify-content: space-around;
+
+      a {
+        p {
+          @include font($fontPoiretOne, 1.8rem, $color, center);
+          font-weight: 500;
+
+          &:hover,
+          :active {
+            font-weight: 600;
+          }
+        }
+      }
+    }
+
+    @include media-query($media-md) {
+      margin: 0.5rem 0 0.5rem 0;
+      justify-content: unset;
+      .logo {
+        img {
+          @include image(4rem, 100%, contain);
+        }
+      }
+      .links {
+        a {
+          margin: 0.4rem;
+          p {
+            @include font($fontPoiretOne, 1.1rem, $color, center);
+          }
+        }
+      }
+    }
+  }
+}
