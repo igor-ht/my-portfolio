@@ -2,11 +2,11 @@
 
 #home {
   @include container-section($background, "/background/first-background-900x450.svg");
+  align-items: center;
   justify-content: center;
-  scroll-snap-stop: always;
 
   .intro {
-    margin-top: 2rem;
+    margin-top: 15dvh;
     @include display-flex(column);
     align-items: center;
 
@@ -24,7 +24,7 @@
         }
       }
       img {
-        @include image(30dvw, auto, cover);
+        @include image(25dvw, auto, cover);
       }
       p {
         @include font($fontMontserrat, 1.2rem, $color);
@@ -39,7 +39,8 @@
   }
 
   @include media-query($media-md) {
-    @include container-section($background, "/background/first-background-675x900.svg");
+    background-image: url("/background/first-background-675x900.svg");
+    margin-bottom: -5px;
     align-items: center;
     .intro {
       margin: 0;

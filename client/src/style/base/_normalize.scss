@@ -1,1 +1,14 @@
+a {
+  text-decoration: none;
+  cursor: pointer;
+  &:active,
+  &:visited {
+    text-decoration: none;
+  }
+}
 
+button {
+  background-color: transparent;
+  user-select: none;
+  cursor: pointer;
+}

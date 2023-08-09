@@ -3,16 +3,6 @@
 #main {
   @include display-flex(column);
   overflow: hidden;
-
-  #home,
-  #projects {
-    background-color: $background;
-  }
-  #about-me,
-  #contact-me {
-    background-color: $reversedBackground;
-  }
-}
-
-@include media-query($media-md) {
+  position: absolute;
+  top: 0;
 }

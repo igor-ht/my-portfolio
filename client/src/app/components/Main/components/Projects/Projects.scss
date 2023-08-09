@@ -10,14 +10,15 @@
 
   .title {
     @include font($fontPoiretOne, 3.5rem, $color, center);
-    margin: 0.5rem 0 1rem 0;
+    margin: 15dvh 0 1rem 0;
   }
 
   .projects-album {
-    @include general-properties(65%, auto, transparent);
+    @include general-properties(42rem, 100%, transparent);
     @include display-flex(row);
-    gap: 0;
     align-items: center;
+    justify-content: center;
+    margin: 0.5rem;
 
     span {
       @include display-flex();
@@ -47,16 +48,15 @@
 
   @include media-query($media-md) {
     background-image: url("/background/third-background-675x900.svg");
-    align-items: stretch;
     .title {
-      margin: 0 0 0 0.2rem;
+      margin-bottom: 0.2rem;
     }
     .projects-album {
       @include general-properties(100dvw, 70dvh);
-      align-items: center;
-      justify-content: center;
+      margin: 0;
 
       .album-button {
+        margin: 0.2rem;
         p {
           font-size: 4rem;
         }

@@ -6,6 +6,7 @@
   scroll-behavior: smooth;
   scroll-snap-type: y proximity;
   scroll-padding: 0;
+  position: relative;
 
   &::-webkit-scrollbar {
     @include general-properties(0.063rem, auto, $accent);
@@ -30,7 +31,11 @@
 }
 
 #app {
-  @include general-properties(100dvw, auto);
+  @include general-properties(
+    100dvw,
+    calc(100dvh * 4)
+  ); // 100dvh * n => where n is the number of main sections (home, aboutme, projects, contactme)
   @include display-flex(column);
   position: relative;
+  overflow: hidden;
 }

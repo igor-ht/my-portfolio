@@ -1,7 +1,7 @@
 @use "@/style/main" as *;
 
 #navbar {
-  @include general-properties(100dvw, auto);
+  @include general-properties(100dvw, 15dvh);
   @include display-flex(column);
   position: sticky;
   z-index: 1;
@@ -23,7 +23,7 @@
     transform: rotateY(180deg);
   }
   nav {
-    @include general-properties(100%, auto);
+    @include general-properties(100%, 100%);
     @include display-flex(row);
     align-items: center;
     margin: 0.5rem;

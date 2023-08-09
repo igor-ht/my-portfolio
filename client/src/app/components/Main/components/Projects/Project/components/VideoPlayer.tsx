@@ -5,15 +5,7 @@ const ReactPlayer = dynamic(() => import('react-player/lazy'), { ssr: false });
 
 export default function VideoPlayer(props: { videoUrl: string; picUrl: string }) {
 	return (
-		<div
-			className="videoplayer"
-			style={{
-				height: '70%',
-				width: '95%',
-				position: 'unset',
-				top: 'none',
-				left: 'none',
-			}}>
+		<div className="videoplayer">
 			<ReactPlayer
 				className="react-player"
 				url={props.videoUrl}
@@ -28,6 +20,7 @@ export default function VideoPlayer(props: { videoUrl: string; picUrl: string })
 						height={700}
 						width={700}
 						alt={'thumbnail'}
+						quality={1}
 					/>
 				}
 			/>

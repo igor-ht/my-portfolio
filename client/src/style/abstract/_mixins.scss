@@ -13,12 +13,16 @@
 @mixin container-section($background, $url) {
   @include general-properties(100dvw, 100dvh);
   @include display-flex();
-  background: $background linear-gradient(#e6e5e5, #3c3c3c);
+  background: $background;
   background-image: url($url);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   aspect-ratio: 2/1;
+  scroll-snap-stop: always;
+  scroll-snap-align: start;
+  align-items: center;
+  justify-content: center;
 }
 
 // image

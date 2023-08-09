@@ -2,7 +2,6 @@
 
 import './Project.scss';
 import { MutableRefObject, useEffect, useLayoutEffect, useRef, useState } from 'react';
-import { inconsolata, karla, poiret_one } from '@/libs/fonts';
 import VideoPlayer from './components/VideoPlayer';
 import TechTag from './components/TechTag';
 import Description from './components/Description';
@@ -94,8 +93,8 @@ export default function Project({ props }: { props: ProjectPropsType }) {
 					width={400}
 				/>
 				<div className="card-intro">
-					<h1 className={karla.className}>{props.name}</h1>
-					<p className={inconsolata.className}>
+					<h1>{props.name}</h1>
+					<p>
 						{props.cardText}
 						<a
 							className="read-more"
@@ -108,20 +107,23 @@ export default function Project({ props }: { props: ProjectPropsType }) {
 			<dialog
 				ref={dialogRef}
 				open={showDialog}>
-				<button
-					type="button"
-					className="close-modal"
-					onClick={setModalClosed}>
-					<Image
-						src={'/double-arrow-left.svg'}
-						alt="return"
-						height={50}
-						width={50}
-					/>
-				</button>
+				<div className="dialog-header">
+					<button
+						type="button"
+						className="close-modal"
+						onClick={setModalClosed}>
+						<Image
+							src={'/double-arrow-left.svg'}
+							alt="return"
+							height={50}
+							width={50}
+							quality={1}
+						/>
+					</button>
+					<h1 className="project-title">{props.name}</h1>
+				</div>
 				<div className="project-display">
-					<h1 className={`${poiret_one.className} project-title`}>{props.name}</h1>
-					<div className="content">
+					<div className="project-wrapper">
 						<div className="video-stack">
 							<VideoPlayer
 								videoUrl={props.videoUrl}
