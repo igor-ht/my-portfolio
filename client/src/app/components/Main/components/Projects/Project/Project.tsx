@@ -25,18 +25,12 @@ export default function Project({ props }: { props: ProjectPropsType }) {
 	const dialogRef = useRef<HTMLDialogElement | null>(null);
 
 	const setModalClosed = () => {
-		dialogRef.current!.style.animation = 'ExitScreen 0.7s linear';
-		setTimeout(() => setShowDialog(false), 700);
+		dialogRef.current!.style.animation = 'ExitScreen 0.5s linear';
+		setTimeout(() => setShowDialog(false), 500);
 		const htmlDocument = document.firstElementChild as HTMLElement;
 		const navbar = document.getElementById('navbar') as HTMLElement;
 		htmlDocument.style.overflowY = 'auto';
-		navbar.style.top = '0';
-		const projectsSection = document.getElementById('projects') as HTMLDivElement;
-		const offset = projectsSection.getBoundingClientRect().top + window.scrollY;
-		window.scrollTo({
-			top: offset - navbar.offsetHeight,
-			behavior: 'smooth',
-		});
+		navbar.style.transform = 'translateY(0)';
 	};
 
 	const handleReadMore = () => {
@@ -50,7 +44,7 @@ export default function Project({ props }: { props: ProjectPropsType }) {
 		});
 
 		setShowDialog(true);
-		dialogRef.current!.style.animation = 'FillScreen 0.7s linear';
+		dialogRef.current!.style.animation = 'FillScreen 0.5s linear';
 	};
 
 	useLayoutEffect(() => {
@@ -74,7 +68,7 @@ export default function Project({ props }: { props: ProjectPropsType }) {
 
 		const setModalOpened = () => {
 			htmlDocument.style.overflowY = 'hidden';
-			navbar.style.top = '-25dvh';
+			navbar.style.transform = 'translateY(-25dvh)';
 		};
 
 		if (showDialog) return setModalOpened();

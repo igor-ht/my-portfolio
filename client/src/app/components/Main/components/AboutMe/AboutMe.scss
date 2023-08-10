@@ -5,12 +5,12 @@
     transform: translateX(50%);
   }
   100% {
-    transform: translateX(-150%);
+    transform: translateX(-100%);
   }
 }
 @keyframes mobileIconAnimation {
   0% {
-    transform: translateX(30%);
+    transform: translateX(50%);
   }
   100% {
     transform: translateX(-350%);

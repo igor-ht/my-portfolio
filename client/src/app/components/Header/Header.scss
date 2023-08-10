@@ -26,7 +26,7 @@
     align-items: center;
 
     .logo {
-      @include general-properties(12dvw, 100%);
+      @include general-properties(11dvw, 90%);
       @include display-flex();
       justify-content: center;
 
@@ -35,10 +35,11 @@
       }
     }
     .links {
-      @include general-properties(100%, auto);
+      @include general-properties(90%, 100%);
       @include display-flex(row);
       align-items: center;
       justify-content: space-around;
+      margin-right: 10dvw;
 
       a {
         p {
@@ -60,12 +61,14 @@
 
       .logo {
         width: auto;
+        margin: 0;
         img {
           @include image(5rem, 100%, contain);
           margin: 0.2rem 0 0.2rem 0;
         }
       }
       .links {
+        margin: 0;
         a {
           margin: 0.1rem;
           p {

@@ -1,4 +1,3 @@
-import { montserrat } from '@/libs/fonts';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -15,8 +14,9 @@ export default function Links(props: { urls: { live: string; repo: string } }) {
 						height={20}
 						width={20}
 						alt="website"
+						quality={1}
 					/>
-					<p className={montserrat.className}>Live</p>
+					<p>Live</p>
 				</button>
 			</Link>
 			<Link
@@ -29,8 +29,9 @@ export default function Links(props: { urls: { live: string; repo: string } }) {
 						height={20}
 						width={20}
 						alt="repo"
+						quality={1}
 					/>
-					<p className={montserrat.className}>Repo</p>
+					<p>Repo</p>
 				</button>
 			</Link>
 		</div>
