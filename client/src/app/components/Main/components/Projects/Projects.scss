@@ -10,7 +10,7 @@
 
   .title {
     @include font($fontPoiretOne, 3.5rem, $color, center);
-    margin: 15dvh 0 1rem 0;
+    margin: 17dvh 0 0 0;
   }
 
   .projects-album {
@@ -18,7 +18,7 @@
     @include display-flex(row);
     align-items: center;
     justify-content: center;
-    margin: 0.5rem;
+    margin: 0 0.5rem 0.5rem;
 
     span {
       @include display-flex();
