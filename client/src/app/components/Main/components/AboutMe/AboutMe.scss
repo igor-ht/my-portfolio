@@ -1,0 +1,94 @@
+@use "@/style/main" as *;
+
+@keyframes iconAnimation {
+  0% {
+    transform: translateX(50%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+@keyframes mobileIconAnimation {
+  0% {
+    transform: translateX(50%);
+  }
+  100% {
+    transform: translateX(-350%);
+  }
+}
+
+#about-me {
+  @include container-section($reversedBackground, "/background/second-background-900x450.svg");
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  .title {
+    @include font($fontPoiretOne, 3.5rem, $color, center);
+    margin: 15dvh 0 1rem 0;
+  }
+
+  .resume {
+    p {
+      @include font($fontMontserrat, 1.2rem, $color, justify);
+      font-weight: 500;
+      max-width: 55dvw;
+    }
+  }
+  .skills {
+    width: 70dvw;
+    margin-top: 1.5rem;
+    overflow: hidden;
+
+    .icons {
+      @include display-flex();
+      align-items: baseline;
+      animation: iconAnimation 10s linear infinite;
+      animation-direction: alternate;
+      &:hover {
+        animation-play-state: paused;
+      }
+
+      span {
+        @include display-flex(column);
+        min-width: 4rem;
+        max-width: 4rem;
+        margin-left: 1rem;
+        align-items: center;
+        justify-content: center;
+        --legendColor: transparent;
+
+        img {
+          @include image(2.5rem, 2.5rem, contain);
+        }
+        p {
+          @include font($fontMontserrat, 0.7rem, var(--legendColor), center);
+          margin-top: 0.2rem;
+          user-select: none;
+        }
+        &:hover {
+          --legendColor: $color;
+        }
+      }
+    }
+  }
+
+  @include media-query($media-md) {
+    @include display-flex(column);
+    background-image: url("/background/second-background-675x900.svg");
+    margin-top: -3px;
+    .resume {
+      p {
+        font-size: 1rem;
+        max-width: 85dvw;
+      }
+    }
+    .skills {
+      width: 95dvw;
+      .icons {
+        animation: mobileIconAnimation 10s linear infinite;
+        animation-direction: alternate;
+      }
+    }
+  }
+}

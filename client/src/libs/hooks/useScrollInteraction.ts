@@ -9,9 +9,7 @@ export default function useScrollInteraction() {
 		let lastScrollY = window.scrollY;
 		const htmlDocument = document.firstElementChild as HTMLElement;
 		const navbar = document.getElementById('navbar');
-		const navbarHeight = navbar?.offsetHeight;
 		htmlDocument.style.overflowY = 'auto';
-		htmlDocument.style.scrollPadding = navbar && navbarHeight ? navbarHeight + 'px' : '0px';
 
 		const handleScroll = debounce(() => {
 			if (htmlDocument.style.overflowY === 'hidden') return;

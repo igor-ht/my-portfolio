@@ -1,14 +1,13 @@
-import './style.scss';
-import { montserrat, poiret_one } from '@/libs/fonts';
+import './ContactMe.scss';
 import Image from 'next/image';
 import Link from 'next/link';
 
 export default function ContactMe() {
 	return (
 		<div id="contact-me">
-			<h1 className={`title ${poiret_one.className}`}>Contact Me</h1>
+			<h1 className="title">Contact Me</h1>
 			<div className="resume">
-				<p className={montserrat.className}>
+				<p>
 					I appreciate any contact or inquiries you may have! Whether you&apos;re interested in connecting, exploring new opportunities, or
 					engaging in conversations about full-stack development, I&apos;m thrilled to hear from you.
 					<br />
@@ -61,11 +60,11 @@ export default function ContactMe() {
 						width={40}
 						alt="pdf icon"
 					/>
-					<p className={montserrat.className}>DOWNLOAD CV</p>
+					<p>DOWNLOAD CV</p>
 				</Link>
 			</div>
 			<div className="footer">
-				<p className={montserrat.className}>Ⓒiht 2023</p>
+				<p>Ⓒiht 2023</p>
 			</div>
 		</div>
 	);

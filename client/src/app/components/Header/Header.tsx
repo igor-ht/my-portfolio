@@ -1,8 +1,7 @@
 'use client';
 
-import './style.scss';
+import './Header.scss';
 import Image from 'next/image';
-import { poiret_one } from '@/libs/fonts';
 import useScrollInteraction from '@/libs/hooks/useScrollInteraction';
 
 export default function Header() {
@@ -11,7 +10,7 @@ export default function Header() {
 	return (
 		<header
 			id="navbar"
-			style={{ top: scrollDirection === 'down' ? '-25dvh' : '0' }}>
+			style={{ transform: `translateY(${scrollDirection === 'down' ? '-25dvh' : '0'})` }}>
 			<div className="line top-line" />
 			<nav>
 				<div className="logo">
@@ -24,7 +23,7 @@ export default function Header() {
 						quality={1}
 					/>
 				</div>
-				<div className={`links ${poiret_one.className}`}>
+				<div className="links">
 					<a href="#home">
 						<p>Home</p>
 					</a>

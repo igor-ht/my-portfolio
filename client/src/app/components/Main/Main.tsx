@@ -1,4 +1,4 @@
-import './style.scss';
+import './Main.scss';
 import Home from './components/Home/Home';
 import AboutMe from './components/AboutMe/AboutMe';
 import Projects from './components/Projects/Projects';

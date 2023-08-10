@@ -1,45 +1,40 @@
-html,
-body {
-  all: unset;
-}
+@use "@/style/main" as *;
 
 #root {
-  width: 100dvw;
-  background-color: var(--background-color);
+  @include general-properties(100dvw, auto, $backgroundColor);
   overflow: hidden;
   scroll-behavior: smooth;
   scroll-snap-type: y proximity;
   scroll-padding: 0;
+  position: relative;
 
   &::-webkit-scrollbar {
-    border: 0;
-    width: 0.063rem;
-    background-color: var(--accent);
+    @include general-properties(0.063rem, auto, $accent);
 
     &:hover {
-      width: 0.6rem;
-      background-color: #888;
+      @include general-properties(0.6rem, auto, #888);
     }
   }
   &::-webkit-scrollbar-thumb {
-    background-color: var(--accent);
+    background-color: $accent;
   }
 }
 
 .on-scrollbar {
   overflow-y: auto;
   &::-webkit-scrollbar {
-    width: 0.6rem !important;
-    background-color: #888 !important;
+    @include general-properties(0.6rem !important, auto, #888 !important);
   }
   &::-webkit-scrollbar-thumb {
-    background-color: var(--accent) !important;
+    background-color: $accent !important;
   }
 }
 
 #app {
-  width: 100dvw;
-  display: flex;
-  flex-direction: column;
+  @include general-properties(
+    100dvw,
+    calc(100dvh * 4)
+  ); // 100dvh * n => where n is the number of main sections (home, aboutme, projects, contactme)
+  @include display-flex(column);
   position: relative;
 }

@@ -1,0 +1,8 @@
+@use "@/style/main" as *;
+
+#main {
+  @include display-flex(column);
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+}

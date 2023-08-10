@@ -1,8 +1,7 @@
 'use client';
 
-import './style.scss';
+import './Project.scss';
 import { MutableRefObject, useEffect, useLayoutEffect, useRef, useState } from 'react';
-import { inconsolata, karla, poiret_one } from '@/libs/fonts';
 import VideoPlayer from './components/VideoPlayer';
 import TechTag from './components/TechTag';
 import Description from './components/Description';
@@ -26,18 +25,12 @@ export default function Project({ props }: { props: ProjectPropsType }) {
 	const dialogRef = useRef<HTMLDialogElement | null>(null);
 
 	const setModalClosed = () => {
-		dialogRef.current!.style.animation = 'ExitScreen 0.7s linear';
-		setTimeout(() => setShowDialog(false), 700);
+		dialogRef.current!.style.animation = 'ExitScreen 0.5s linear';
+		setTimeout(() => setShowDialog(false), 500);
 		const htmlDocument = document.firstElementChild as HTMLElement;
 		const navbar = document.getElementById('navbar') as HTMLElement;
 		htmlDocument.style.overflowY = 'auto';
-		navbar.style.top = '0';
-		const projectsSection = document.getElementById('projects') as HTMLDivElement;
-		const offset = projectsSection.getBoundingClientRect().top + window.scrollY;
-		window.scrollTo({
-			top: offset - navbar.offsetHeight,
-			behavior: 'smooth',
-		});
+		navbar.style.transform = 'translateY(0)';
 	};
 
 	const handleReadMore = () => {
@@ -51,7 +44,7 @@ export default function Project({ props }: { props: ProjectPropsType }) {
 		});
 
 		setShowDialog(true);
-		dialogRef.current!.style.animation = 'FillScreen 0.7s linear';
+		dialogRef.current!.style.animation = 'FillScreen 0.5s linear';
 	};
 
 	useLayoutEffect(() => {
@@ -75,7 +68,7 @@ export default function Project({ props }: { props: ProjectPropsType }) {
 
 		const setModalOpened = () => {
 			htmlDocument.style.overflowY = 'hidden';
-			navbar.style.top = '-25dvh';
+			navbar.style.transform = 'translateY(-25dvh)';
 		};
 
 		if (showDialog) return setModalOpened();
@@ -94,8 +87,8 @@ export default function Project({ props }: { props: ProjectPropsType }) {
 					width={400}
 				/>
 				<div className="card-intro">
-					<h1 className={karla.className}>{props.name}</h1>
-					<p className={inconsolata.className}>
+					<h1>{props.name}</h1>
+					<p>
 						{props.cardText}
 						<a
 							className="read-more"
@@ -108,20 +101,23 @@ export default function Project({ props }: { props: ProjectPropsType }) {
 			<dialog
 				ref={dialogRef}
 				open={showDialog}>
-				<button
-					type="button"
-					className="close-modal"
-					onClick={setModalClosed}>
-					<Image
-						src={'/double-arrow-left.svg'}
-						alt="return"
-						height={50}
-						width={50}
-					/>
-				</button>
+				<div className="dialog-header">
+					<button
+						type="button"
+						className="close-modal"
+						onClick={setModalClosed}>
+						<Image
+							src={'/double-arrow-left.svg'}
+							alt="return"
+							height={50}
+							width={50}
+							quality={1}
+						/>
+					</button>
+					<h1 className="project-title">{props.name}</h1>
+				</div>
 				<div className="project-display">
-					<h1 className={`${poiret_one.className} project-title`}>{props.name}</h1>
-					<div className="content">
+					<div className="project-wrapper">
 						<div className="video-stack">
 							<VideoPlayer
 								videoUrl={props.videoUrl}

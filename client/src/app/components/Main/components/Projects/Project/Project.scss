@@ -1,0 +1,278 @@
+@use "@/style/main" as *;
+
+@keyframes FadeIn {
+  from {
+    opacity: 0;
+    display: none;
+  }
+  to {
+    opacity: 1;
+    display: flex;
+  }
+}
+@keyframes FillScreen {
+  from {
+    @include general-properties(0%, 100dvh, rgba(230, 230, 230, 0.276));
+    transform: translateX(100dvw);
+    opacity: 0;
+  }
+  to {
+    @include general-properties(100%, 100dvh, rgb(230 230 230));
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes ExitScreen {
+  from {
+    @include general-properties(100%, 100dvh, rgb(230 230 230));
+    transform: translateX(0);
+    opacity: 1;
+  }
+  to {
+    @include general-properties(0%, 100dvh, rgba(230, 230, 230, 0.276));
+    transform: translateX(100dvw);
+    opacity: 0;
+  }
+}
+
+.project {
+  @include general-properties(auto, 60dvh);
+  max-height: 60dvh;
+  background:
+    linear-gradient(rgb(69 69 69), rgb(136 136 136)) padding-box,
+    linear-gradient(to left, rgb(83 69 69), rgb(49 45 45)) border-box;
+  border-radius: 15px;
+  border: 2px solid transparent;
+  box-shadow: 0px 0px 15px 0px gray;
+  display: none;
+
+  &:first-child {
+    display: flex;
+  }
+
+  .project-card {
+    @include display-flex(column);
+    align-items: center;
+    img {
+      @include image(98%, 70%, cover);
+      border-radius: 10px;
+      margin: 0.2rem;
+      box-shadow: 0px 5px 5px 0px #393939;
+
+      @include media-query($media-md) {
+        height: 60%;
+      }
+    }
+    .card-intro {
+      @include display-flex(column);
+      align-items: center;
+      justify-content: center;
+      gap: 0.1rem;
+
+      h1 {
+        @include font($fontKarla, 2rem, $color, center);
+        margin-top: 0.1rem;
+        margin-bottom: 0;
+      }
+
+      p {
+        @include font($fontInconsolata, 1rem, $color, justify);
+        margin: 0 0.5rem 0.5rem 0.5rem;
+        .read-more {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+
+  dialog[open] {
+    @include general-properties(100dvw, 100dvh, rgb(230 230 230));
+    @include display-flex(column);
+    align-items: center;
+    position: absolute;
+    top: 0;
+    z-index: 9999;
+    overflow: hidden;
+
+    .dialog-header {
+      @include general-properties(100%, auto);
+      @include display-flex(row);
+      align-items: center;
+      button.close-modal {
+        @include general-properties(auto, auto);
+        margin: 0.5rem;
+        img {
+          @include image(3rem, 3rem, cover);
+        }
+      }
+      .project-title {
+        @include font($fontPoiretOne, 3.5rem, $color, center);
+        width: 100%;
+
+        @include media-query($media-md) {
+          font-size: 2.8rem;
+          margin-right: 2.5rem;
+        }
+      }
+    }
+
+    .project-display {
+      @include general-properties(100%, 98%);
+      @include display-flex(row);
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      position: relative;
+
+      @include media-query($media-md) {
+        overflow-y: auto;
+      }
+
+      &::-webkit-scrollbar {
+        @include general-properties(0.5rem, auto, #888);
+        border: 0;
+
+        &:hover {
+          width: 0.6rem;
+        }
+      }
+      &::-webkit-scrollbar-thumb {
+        background-color: $accent;
+      }
+
+      .project-wrapper {
+        @include general-properties(100%, 98%);
+        @include display-flex(row);
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+
+        @include media-query($media-md) {
+          @include display-flex(column-reverse);
+          height: auto;
+          position: absolute;
+          top: 1%;
+        }
+      }
+
+      .video-stack {
+        @include general-properties(40%, 100%);
+        @include display-flex(column);
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+        margin: 0.2rem;
+        overflow-y: auto;
+
+        @include media-query($media-md) {
+          @include general-properties(95%, auto);
+          overflow: hidden;
+          margin-bottom: 1rem;
+        }
+
+        .videoplayer {
+          @include general-properties(95%, 50%);
+
+          .react-player {
+            .thumbnail {
+              @include image(100%, 100%, cover);
+              aspect-ratio: 1366/728;
+            }
+          }
+        }
+        .tech-tags {
+          @include general-properties(95%, auto);
+          @include display-flex(row);
+          flex-wrap: wrap;
+          align-content: space-around;
+          justify-content: space-evenly;
+          .tag {
+            border: 0;
+            border-radius: 10px;
+            background-color: rgb(194, 193, 192);
+            min-width: 90px;
+            min-height: 20px;
+            margin-top: 0.6rem;
+            margin-right: 0.3rem;
+            box-shadow: 0px 0px 5px 0px #6d6c6c;
+
+            p {
+              @include font($fontMontserrat, 1rem, $color, center);
+              font-weight: 600;
+              margin: 0 0.3rem 0 0.3rem;
+            }
+          }
+        }
+      }
+      .description-links {
+        @include general-properties(60%, 100%);
+        @include display-flex(column);
+        align-items: center;
+        justify-content: center;
+        margin: 0.2rem;
+        overflow-y: auto;
+
+        &::-webkit-scrollbar {
+          @include general-properties(0.5rem, auto, #888);
+          border: 0;
+
+          &:hover {
+            width: 0.6rem;
+          }
+        }
+        &::-webkit-scrollbar-thumb {
+          background-color: $accent;
+        }
+
+        @include media-query($media-md) {
+          @include general-properties(95%, auto);
+          overflow: hidden;
+        }
+
+        .description {
+          margin: 0.2rem;
+          p {
+            @include font($fontMontserrat, 1rem, $color, justify);
+            margin: 0 0.4rem 0 0;
+          }
+        }
+        .links {
+          @include display-flex(row);
+          align-items: center;
+          justify-content: center;
+          gap: 4rem;
+          margin: 1rem;
+
+          @include media-query($media-md) {
+            gap: 2rem;
+          }
+
+          .urls {
+            height: auto;
+            button {
+              @include general-properties(9rem, 2.5rem, rgb(186, 186, 186));
+              @include display-flex(row);
+              gap: 0.5rem;
+              border: 1px solid gray;
+              border-radius: 5px;
+              align-items: center;
+              justify-content: center;
+              box-shadow: 0px 0px 4px 1px black;
+              p {
+                @include font($fontMontserrat, 1.1rem, $color, center);
+              }
+              &:hover {
+                background-color: rgb(146, 146, 146);
+                box-shadow: 0px 0px 6px 1px black;
+              }
+              &:active {
+                background-color: rgb(127, 127, 127);
+                box-shadow: 0px 0px 9px 1px black;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

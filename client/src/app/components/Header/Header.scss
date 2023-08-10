@@ -1,0 +1,81 @@
+@use "@/style/main" as *;
+
+#navbar {
+  @include general-properties(100%, auto);
+  @include display-flex(column);
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  transition: transform 0.5s;
+  backdrop-filter: blur(15px);
+
+  .line {
+    @include general-properties(90dvw, 0.4rem, $accent);
+    border-radius: 0 50% 50% 0;
+  }
+  .top-line {
+    margin-right: 10dvw;
+  }
+  .bottom-line {
+    margin-left: 10dvw;
+    transform: rotateY(180deg);
+  }
+  nav {
+    @include general-properties(100%, 14dvh);
+    @include display-flex(row);
+    align-items: center;
+
+    .logo {
+      @include general-properties(11dvw, 90%);
+      @include display-flex();
+      justify-content: center;
+
+      img {
+        @include image(6rem, 100%, contain);
+      }
+    }
+    .links {
+      @include general-properties(90%, 100%);
+      @include display-flex(row);
+      align-items: center;
+      justify-content: space-around;
+      margin-right: 10dvw;
+
+      a {
+        p {
+          @include font($fontPoiretOne, 1.8rem, $color, center);
+          font-weight: 500;
+
+          &:hover,
+          :active {
+            font-weight: 600;
+          }
+        }
+      }
+    }
+
+    @include media-query($media-md) {
+      flex-direction: column;
+      justify-content: center;
+      margin: 0.2rem 0 0.2rem 0;
+
+      .logo {
+        width: auto;
+        margin: 0;
+        img {
+          @include image(5rem, 100%, contain);
+          margin: 0.2rem 0 0.2rem 0;
+        }
+      }
+      .links {
+        margin: 0;
+        a {
+          margin: 0.1rem;
+          p {
+            @include font($fontPoiretOne, 1.2rem, $color, center);
+          }
+        }
+      }
+    }
+  }
+}
