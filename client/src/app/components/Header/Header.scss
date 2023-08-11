@@ -1,27 +1,30 @@
 @use "@/style/main" as *;
 
 #navbar {
-  @include general-properties(100%, auto);
+  @include general-properties(100%, 15dvh);
   @include display-flex(column);
   position: sticky;
   top: 0;
   z-index: 1;
   transition: transform 0.5s;
   backdrop-filter: blur(15px);
+  overflow-x: hidden;
 
   .line {
-    @include general-properties(90dvw, 0.4rem, $accent);
+    @include general-properties(90dvw, 0.25rem, $accent);
     border-radius: 0 50% 50% 0;
   }
   .top-line {
+    @extend .line;
     margin-right: 10dvw;
   }
   .bottom-line {
+    @extend .line;
     margin-left: 10dvw;
     transform: rotateY(180deg);
   }
   nav {
-    @include general-properties(100%, 14dvh);
+    @include general-properties(100%, 100%);
     @include display-flex(row);
     align-items: center;
 
@@ -57,7 +60,7 @@
     @include media-query($media-md) {
       flex-direction: column;
       justify-content: center;
-      margin: 0.2rem 0 0.2rem 0;
+      margin: 0;
 
       .logo {
         width: auto;

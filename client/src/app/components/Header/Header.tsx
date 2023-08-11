@@ -11,7 +11,7 @@ export default function Header() {
 		<header
 			id="navbar"
 			style={{ transform: `translateY(${scrollDirection === 'down' ? '-25dvh' : '0'})` }}>
-			<div className="line top-line" />
+			<div className="top-line" />
 			<nav>
 				<div className="logo">
 					<Image
@@ -38,7 +38,7 @@ export default function Header() {
 					</a>
 				</div>
 			</nav>
-			<div className="line bottom-line" />
+			<div className="bottom-line" />
 		</header>
 	);
 }
