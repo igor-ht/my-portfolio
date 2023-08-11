@@ -36,7 +36,7 @@
 }
 
 .project {
-  @include general-properties(auto, 60dvh);
+  @include general-properties(100%, 60dvh);
   max-height: 60dvh;
   background:
     linear-gradient(rgb(69 69 69), rgb(136 136 136)) padding-box,
@@ -51,10 +51,13 @@
   }
 
   .project-card {
+    @include general-properties(100%, 100%);
     @include display-flex(column);
     align-items: center;
+    overflow: hidden;
+
     img {
-      @include image(98%, 70%, cover);
+      @include image(98%, 65%, cover);
       border-radius: 10px;
       margin: 0.2rem;
       box-shadow: 0px 5px 5px 0px #393939;
@@ -64,23 +67,27 @@
       }
     }
     .card-intro {
+      @include general-properties(95%, 100%);
       @include display-flex(column);
       align-items: center;
       justify-content: center;
       gap: 0.1rem;
+      overflow: hidden;
+      flex: 1;
 
       h1 {
         @include font($fontKarla, 2rem, $color, center);
-        margin-top: 0.1rem;
-        margin-bottom: 0;
+        margin: auto;
       }
 
       p {
         @include font($fontInconsolata, 1rem, $color, justify);
-        margin: 0 0.5rem 0.5rem 0.5rem;
-        .read-more {
-          text-decoration: underline;
-        }
+        margin: auto;
+        overflow: hidden;
+      }
+      .read-more {
+        @include font($fontInconsolata, 1rem, $color, justify);
+        text-decoration: underline;
       }
     }
   }
@@ -126,6 +133,7 @@
 
       @include media-query($media-md) {
         overflow-y: auto;
+        margin: 0 0 0.5rem 0;
       }
 
       &::-webkit-scrollbar {
@@ -201,6 +209,9 @@
               font-weight: 600;
               margin: 0 0.3rem 0 0.3rem;
             }
+          }
+          @include media-query($media-md) {
+            margin: 0 0 0.3rem 0;
           }
         }
       }

@@ -24,6 +24,7 @@
       @include display-flex();
       align-items: center;
       margin: 0 0rem 0 0.2rem;
+      flex: 1;
     }
 
     .album-button {

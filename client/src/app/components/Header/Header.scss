@@ -13,6 +13,7 @@
   .line {
     @include general-properties(90dvw, 0.25rem, $accent);
     border-radius: 0 50% 50% 0;
+    overflow: hidden;
   }
   .top-line {
     @extend .line;

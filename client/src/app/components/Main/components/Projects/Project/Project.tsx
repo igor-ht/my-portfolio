@@ -88,14 +88,12 @@ export default function Project({ props }: { props: ProjectPropsType }) {
 				/>
 				<div className="card-intro">
 					<h1>{props.name}</h1>
-					<p>
-						{props.cardText}
-						<a
-							className="read-more"
-							onClick={handleReadMore}>
-							Read More...
-						</a>
-					</p>
+					<p>{props.cardText}</p>
+					<a
+						className="read-more"
+						onClick={handleReadMore}>
+						Read More
+					</a>
 				</div>
 			</div>
 			<dialog
