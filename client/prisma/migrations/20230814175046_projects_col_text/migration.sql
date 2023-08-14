@@ -1,2 +1,0 @@
--- AlterTable
-ALTER TABLE "Projects" ALTER COLUMN "text" SET DATA TYPE TEXT;
