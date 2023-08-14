@@ -127,9 +127,9 @@
       @include general-properties(100%, 98%);
       @include display-flex(row);
       align-items: center;
-      justify-content: center;
       overflow: hidden;
       position: relative;
+      margin: 0.5rem 0 0 0;
 
       @include media-query($media-md) {
         overflow-y: auto;
@@ -152,7 +152,6 @@
         @include general-properties(100%, 98%);
         @include display-flex(row);
         align-items: center;
-        justify-content: center;
         overflow: hidden;
 
         @include media-query($media-md) {
@@ -167,7 +166,6 @@
         @include general-properties(40%, 100%);
         @include display-flex(column);
         align-items: center;
-        justify-content: center;
         gap: 1rem;
         margin: 0.2rem;
         overflow-y: auto;
@@ -219,8 +217,6 @@
         @include general-properties(60%, 100%);
         @include display-flex(column);
         align-items: center;
-        justify-content: center;
-        margin: 0.2rem;
         overflow-y: auto;
 
         &::-webkit-scrollbar {
@@ -241,7 +237,6 @@
         }
 
         .description {
-          margin: 0.2rem;
           p {
             @include font($fontMontserrat, 1rem, $color, justify);
             margin: 0 0.4rem 0 0;

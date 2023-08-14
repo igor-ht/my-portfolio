@@ -13,18 +13,18 @@ model Skills {
   src   String @unique
   alt   String @unique
   title String @unique
-  name  String @unique
+  name  String @unique @db.VarChar(15)
 }
 
 model Projects {
   id       Int      @id @default(autoincrement())
-  name     String   @unique
+  name     String   @unique @db.VarChar(15)
   cardUrl  String   @unique
-  cardText String   @unique
+  cardText String   @unique @db.VarChar(105)
   videoUrl String   @unique
   picUrl   String   @unique
-  techTags String[]
-  text     String   @unique
+  techTags String[] 
+  text     String   @unique @db.VarChar(1000)
   liveUrl  String   @unique
   repoUrl  String   @unique
 }
