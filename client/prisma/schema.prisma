@@ -23,8 +23,8 @@ model Projects {
   cardText String   @unique @db.VarChar(105)
   videoUrl String   @unique
   picUrl   String   @unique
-  techTags String[] 
-  text     String   @unique @db.VarChar(1000)
+  techTags String[]
+  text     String   @unique
   liveUrl  String   @unique
   repoUrl  String   @unique
 }
