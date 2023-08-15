@@ -67,9 +67,9 @@
     margin-top: -3px;
     .resume {
       p {
-        max-width: clamp(min(94dvw, 35rem), 65dvw, 95dvw);
+        max-width: clamp(min(90dvw, 35rem), 65dvw, 95dvw);
         font-size: 1.05rem;
-        line-height: 1.2;
+        line-height: 1.15;
       }
     }
     .skills {

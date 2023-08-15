@@ -181,7 +181,7 @@
           }
         }
         .tech-tags {
-          @include general-properties(90%, auto);
+          @include general-properties(85%, auto);
           @include display-flex(row);
           flex-wrap: wrap;
           align-content: space-around;
