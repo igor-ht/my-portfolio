@@ -1,11 +1,13 @@
 'use client';
 
-import { useRef } from 'react';
+import { useLayoutEffect, useRef, useState } from 'react';
 import { Projects } from '@prisma/client';
 import Project from '../Project/Project';
 
 export default function ProjectsAlbum({ projects }: { projects: Projects[] }) {
 	const currentProjectRef = useRef<HTMLDivElement | null>(null);
+	const [showDialog, setShowDialog] = useState(false);
+	
 	const handleChangeProject = (direction: 'left' | 'right') => {
 		if (!currentProjectRef || !currentProjectRef.current) {
 			currentProjectRef.current = document.querySelector('.project') as HTMLDivElement;
@@ -27,6 +29,23 @@ export default function ProjectsAlbum({ projects }: { projects: Projects[] }) {
 		currentProjectRef.current.style.display = 'none';
 		currentProjectRef.current = nextProject;
 	};
+	
+	useLayoutEffect(() => {
+		const handleWindowResizeToFixDialogDisplay = () => {
+			if (!showDialog) return;
+			const projectsSection = document.getElementById('projects') as HTMLDivElement;
+			const offset = projectsSection.getBoundingClientRect().top + window.scrollY;
+			window.scrollTo({
+				top: offset,
+				behavior: 'smooth',
+			});
+		};
+
+		window.addEventListener('resize', handleWindowResizeToFixDialogDisplay);
+		return () => window.removeEventListener('resize', handleWindowResizeToFixDialogDisplay);
+	}, [showDialog]);
+
+	
 	return (
 		<div className="projects-album">
 			<button
@@ -41,6 +60,8 @@ export default function ProjectsAlbum({ projects }: { projects: Projects[] }) {
 						<Project
 							key={i}
 							props={{
+								showDialog: showDialog,
+								setShowDialog: setShowDialog,
 								name: project.name,
 								ref: i === 0 ? currentProjectRef : null,
 								cardUrl: project.cardUrl,

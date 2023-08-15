@@ -1,7 +1,7 @@
 'use client';
 
 import './Project.scss';
-import { MutableRefObject, useEffect, useLayoutEffect, useRef, useState } from 'react';
+import { Dispatch, MutableRefObject, SetStateAction, useRef } from 'react';
 import VideoPlayer from './components/VideoPlayer';
 import TechTag from './components/TechTag';
 import Description from './components/Description';
@@ -9,6 +9,8 @@ import Links from './components/Links';
 import Image from 'next/image';
 
 export type ProjectPropsType = {
+	showDialog: boolean;
+	setShowDialog: Dispatch<SetStateAction<boolean>>;
 	name: string;
 	ref?: MutableRefObject<HTMLDivElement | null> | null;
 	cardUrl: string;
@@ -21,20 +23,22 @@ export type ProjectPropsType = {
 };
 
 export default function Project({ props }: { props: ProjectPropsType }) {
-	const [showDialog, setShowDialog] = useState(false);
 	const dialogRef = useRef<HTMLDialogElement | null>(null);
 
 	const setModalClosed = () => {
+		if (!props.showDialog) return;
+
 		dialogRef.current!.style.animation = 'ExitScreen 0.5s linear reverse';
-		setTimeout(() => setShowDialog(false), 500);
-		const htmlDocument = document.firstElementChild as HTMLElement;
-		const navbar = document.getElementById('navbar') as HTMLElement;
+		setTimeout(() => props.setShowDialog(false), 450);
+
+		const htmlDocument = document?.firstElementChild as HTMLElement;
 		htmlDocument.style.overflowY = 'auto';
+		const navbar = document?.getElementById('navbar') as HTMLElement;
 		navbar.style.transform = 'translateY(0)';
 	};
 
-	const handleReadMore = () => {
-		if (showDialog) return;
+	const setModalOpened = () => {
+		if (props.showDialog) return;
 
 		const projectsSection = document.getElementById('projects') as HTMLDivElement;
 		const offset = projectsSection.getBoundingClientRect().top + window.scrollY;
@@ -43,36 +47,13 @@ export default function Project({ props }: { props: ProjectPropsType }) {
 			behavior: 'smooth',
 		});
 
-		setShowDialog(true);
+		props.setShowDialog(true);
 		dialogRef.current!.style.animation = 'FillScreen 0.5s linear';
+		const htmlDocument = document?.firstElementChild as HTMLElement;
+		htmlDocument.style.overflowY = 'hidden';
+		const navbar = document?.getElementById('navbar') as HTMLElement;
+		navbar.style.transform = 'translateY(-25dvh)';
 	};
-
-	useLayoutEffect(() => {
-		const handleWindowResizeToFixDialogDisplay = () => {
-			if (!showDialog) return;
-			const projectsSection = document.getElementById('projects') as HTMLDivElement;
-			const offset = projectsSection.getBoundingClientRect().top + window.scrollY;
-			window.scrollTo({
-				top: offset,
-				behavior: 'smooth',
-			});
-		};
-
-		window.addEventListener('resize', handleWindowResizeToFixDialogDisplay);
-		return () => window.removeEventListener('resize', handleWindowResizeToFixDialogDisplay);
-	}, [showDialog]);
-
-	useEffect(() => {
-		const htmlDocument = document.firstElementChild as HTMLElement;
-		const navbar = document.getElementById('navbar') as HTMLElement;
-
-		const setModalOpened = () => {
-			htmlDocument.style.overflowY = 'hidden';
-			navbar.style.transform = 'translateY(-25dvh)';
-		};
-
-		if (showDialog) return setModalOpened();
-	}, [showDialog]);
 
 	return (
 		<div
@@ -92,7 +73,7 @@ export default function Project({ props }: { props: ProjectPropsType }) {
 						{props.cardText}{' '}
 						<a
 							className="read-more"
-							onClick={handleReadMore}>
+							onClick={setModalOpened}>
 							Read More
 						</a>
 					</p>
@@ -100,7 +81,7 @@ export default function Project({ props }: { props: ProjectPropsType }) {
 			</div>
 			<dialog
 				ref={dialogRef}
-				open={showDialog}>
+				open={props.showDialog}>
 				<div className="dialog-header">
 					<button
 						type="button"
