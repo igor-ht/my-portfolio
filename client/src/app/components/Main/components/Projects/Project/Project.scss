@@ -10,30 +10,24 @@
     display: flex;
   }
 }
-@keyframes FillScreen {
-  from {
-    @include general-properties(0%, 100dvh, rgba(230, 230, 230, 0.276));
-    transform: translateX(100dvw);
-    opacity: 0;
-  }
-  to {
-    @include general-properties(100%, 100dvh, rgb(230 230 230));
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
-@keyframes ExitScreen {
-  from {
-    @include general-properties(100%, 100dvh, rgb(230 230 230));
-    transform: translateX(0);
-    opacity: 1;
-  }
-  to {
-    @include general-properties(0%, 100dvh, rgba(230, 230, 230, 0.276));
-    transform: translateX(100dvw);
-    opacity: 0;
+
+@mixin generate-dialog-keyframes($name) {
+  @keyframes #{$name} {
+    from {
+      @include general-properties(0%, 100dvh, rgba(230, 230, 230, 0.276));
+      transform: translateX(100dvw);
+      opacity: 0;
+    }
+    to {
+      @include general-properties(100%, 100dvh, rgb(230 230 230));
+      transform: translateX(0);
+      opacity: 1;
+    }
   }
 }
+
+@include generate-dialog-keyframes(FillScreen);
+@include generate-dialog-keyframes(ExitScreen);
 
 .project {
   @include general-properties(100%, 60dvh);
@@ -92,7 +86,6 @@
       }
     }
   }
-
   dialog[open] {
     @include general-properties(100dvw, 100dvh, rgb(230 230 230));
     @include display-flex(column, center);

@@ -25,7 +25,7 @@ export default function Project({ props }: { props: ProjectPropsType }) {
 	const dialogRef = useRef<HTMLDialogElement | null>(null);
 
 	const setModalClosed = () => {
-		dialogRef.current!.style.animation = 'ExitScreen 0.5s linear';
+		dialogRef.current!.style.animation = 'ExitScreen 0.5s linear reverse';
 		setTimeout(() => setShowDialog(false), 500);
 		const htmlDocument = document.firstElementChild as HTMLElement;
 		const navbar = document.getElementById('navbar') as HTMLElement;
