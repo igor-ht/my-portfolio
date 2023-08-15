@@ -27,8 +27,7 @@
     .icons {
       @include display-flex(row, center);
       height: 100%;
-      animation: iconAnimation 10s linear infinite;
-      animation-direction: alternate;
+      animation: iconAnimation 10s linear infinite alternate;
       &:hover {
         animation-play-state: paused;
       }

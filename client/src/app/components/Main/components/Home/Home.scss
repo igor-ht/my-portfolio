@@ -27,7 +27,6 @@
       }
       p {
         @include font($fontMontserrat, 1.2rem, $color);
-        font-weight: 500;
 
         mark {
           color: $color;

@@ -30,8 +30,7 @@
 
     .logo {
       @include general-properties(11dvw, 90%);
-      @include display-flex();
-      justify-content: center;
+      @include display-flex($justify-content: center);
 
       img {
         @include image(6rem, 100%, contain);
@@ -39,8 +38,7 @@
     }
     .links {
       @include general-properties(90%, 100%);
-      @include display-flex(row);
-      justify-content: space-around;
+      @include display-flex(row, center, space-around);
 
       a {
         p {
