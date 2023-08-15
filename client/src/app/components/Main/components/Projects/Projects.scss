@@ -9,8 +9,7 @@
 
   .projects-album {
     @include general-properties(42rem, 100%, transparent);
-    @include display-flex(row, center);
-    justify-content: center;
+    @include display-flex(row, center, center);
 
     span {
       @include display-flex(row, center);

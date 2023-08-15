@@ -2,44 +2,32 @@
 
 #contact-me {
   @include container-section($background, "/background/fourth-background-900x450.svg", column);
-  .resume {
-    @include display-flex(row, center);
-    width: 100dvw;
-    justify-content: center;
-
-    p {
-      @include font($fontMontserrat, 1.2rem, $color, justify);
-      max-width: 55dvw;
-    }
-  }
   .links {
-    @include display-flex(row, center);
+    @include display-flex(row, center, center);
     width: 100dvw;
     margin: 1rem;
-    justify-content: center;
     a {
       img {
         @include image(3rem, 3rem, cover);
         margin: 1rem;
         border-radius: 50%;
-        box-shadow: 0px 0px 5px 1px white;
+        box-shadow: 0px 0px 10px 5px white;
         transition: box-shadow 0.5s;
         background:
           linear-gradient(white, white) padding-box,
           linear-gradient(to left, rgb(187, 187, 187), rgb(223, 223, 223)) border-box;
         &:hover {
-          box-shadow: 0px 0px 10px 3px white;
+          box-shadow: 0px 0px 15px 10px white;
+          transform: scale(1.1);
         }
       }
     }
   }
   .download-cv {
-    @include display-flex();
-    justify-content: center;
+    @include display-flex(row, center, center);
 
     a {
-      @include display-flex(row, center);
-      justify-content: center;
+      @include display-flex(row, center, center);
       gap: 1rem;
 
       p {
@@ -47,16 +35,13 @@
         text-decoration: underline;
       }
       &:hover {
-        p {
-          font-size: 1.6rem;
-        }
+        transform: scale(1.15);
       }
     }
   }
   .footer {
     @include general-properties(100dvw, 100%);
-    @include display-flex(row, flex-end);
-    justify-content: center;
+    @include display-flex(row, flex-end, center);
 
     p {
       @include font($fontMontserrat, 1rem, $color);
@@ -67,11 +52,5 @@
   @include media-query($media-md) {
     background-image: url("/background/fourth-background-675x900.svg");
     margin-top: -3px;
-    .resume {
-      P {
-        font-size: 1.1rem;
-        max-width: 80dvw;
-      }
-    }
   }
 }

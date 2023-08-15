@@ -6,7 +6,7 @@ export default function ContactMe() {
 	return (
 		<div id="contact-me">
 			<h1 className="title">Contact Me</h1>
-			<div className="resume">
+			<div className="content-summary-box">
 				<p>
 					I appreciate any contact or inquiries you may have! Whether you&apos;re interested in connecting, exploring new opportunities, or
 					engaging in conversations about full-stack development, I&apos;m thrilled to hear from you.

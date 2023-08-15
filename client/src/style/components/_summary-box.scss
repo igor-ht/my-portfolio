@@ -1,0 +1,24 @@
+@use "../abstract/index" as *;
+
+.content-summary-box {
+  p {
+    @include font($fontMontserrat, 1.2rem, $color, justify);
+    max-width: clamp(min(95dvw, 45rem), 70dvw, 95dvw);
+    text-indent: 1.5rem;
+    strong {
+      font-weight: 600;
+      font-size: 1.15rem;
+    }
+  }
+  @include media-query($media-md) {
+    p {
+      max-width: clamp(min(90dvw, 35rem), 65dvw, 95dvw);
+      font-size: 1rem;
+      line-height: 1.2;
+      text-indent: 1rem;
+      strong {
+        font-size: 0.95rem;
+      }
+    }
+  }
+}

@@ -20,12 +20,6 @@
 #about-me {
   @include container-section($reversedBackground, "/background/second-background-900x450.svg", column);
 
-  .resume {
-    p {
-      @include font($fontMontserrat, 1.2rem, $color, justify);
-      max-width: clamp(min(95dvw, 45rem), 65dvw, 95dvw);
-    }
-  }
   .skills {
     @include general-properties(70dvw, 100%);
     overflow: hidden;
@@ -40,9 +34,8 @@
       }
 
       span {
-        @include display-flex(column, center);
+        @include display-flex(column, center, center);
         min-width: 4rem;
-        justify-content: center;
         --legendColor: transparent;
 
         img {
@@ -64,13 +57,6 @@
     @include display-flex(column);
     background-image: url("/background/second-background-675x900.svg");
     margin-top: -3px;
-    .resume {
-      p {
-        max-width: clamp(min(90dvw, 35rem), 65dvw, 95dvw);
-        font-size: 1.05rem;
-        line-height: 1.15;
-      }
-    }
     .skills {
       width: 95dvw;
       .icons {

@@ -66,8 +66,7 @@
     }
     .card-intro {
       @include general-properties(100%, 100%);
-      @include display-flex(column, center);
-      justify-content: space-evenly;
+      @include display-flex(column, center, space-evenly);
       overflow: hidden;
       flex: 1;
 
@@ -161,8 +160,7 @@
 
       .video-stack {
         @include general-properties(40%, 80%);
-        @include display-flex(column, center);
-        justify-content: space-evenly;
+        @include display-flex(column, center, space-evenly);
         overflow-y: auto;
 
         @include media-query($media-md) {
@@ -182,10 +180,8 @@
         }
         .tech-tags {
           @include general-properties(85%, auto);
-          @include display-flex(row);
+          @include display-flex(row, center, space-evenly);
           flex-wrap: wrap;
-          align-content: space-around;
-          justify-content: space-evenly;
           gap: 0.5rem;
           .tag {
             border-radius: 10px;
@@ -231,8 +227,7 @@
           }
         }
         .links {
-          @include display-flex(row, center);
-          justify-content: center;
+          @include display-flex(row, center, center);
           gap: 4rem;
           margin: 1rem;
 
@@ -244,11 +239,10 @@
             height: auto;
             button {
               @include general-properties(9rem, 2.5rem, rgb(186, 186, 186));
-              @include display-flex(row, center);
+              @include display-flex(row, center, center);
               gap: 0.5rem;
               border: 1px solid gray;
               border-radius: 5px;
-              justify-content: center;
               box-shadow: 0px 0px 4px 1px black;
               p {
                 @include font($fontMontserrat, 1.1rem, $color, center);
