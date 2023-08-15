@@ -23,7 +23,7 @@
   .resume {
     p {
       @include font($fontMontserrat, 1.2rem, $color, justify);
-      max-width: 55dvw;
+      max-width: clamp(min(95dvw, 45rem), 65dvw, 95dvw);
     }
   }
   .skills {
@@ -67,9 +67,9 @@
     margin-top: -3px;
     .resume {
       p {
-        font-size: 1rem;
+        max-width: clamp(min(94dvw, 35rem), 65dvw, 95dvw);
+        font-size: 1.05rem;
         line-height: 1.2;
-        max-width: 90dvw;
       }
     }
     .skills {

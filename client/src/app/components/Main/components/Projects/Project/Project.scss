@@ -97,7 +97,6 @@
   dialog[open] {
     @include general-properties(100dvw, 100dvh, rgb(230 230 230));
     @include display-flex(column, center);
-    position: absolute;
     top: 0;
     z-index: 9999;
     overflow: hidden;
@@ -108,7 +107,7 @@
 
       button.close-modal {
         @include general-properties(auto, auto);
-        margin: 0.5rem;
+        margin: 0 0.5rem;
         img {
           @include image(3rem, 3rem, cover);
         }
@@ -125,11 +124,10 @@
     }
 
     .project-display {
-      @include general-properties(100%, 98%);
+      @include general-properties(100%, 100%);
       @include display-flex(row, center);
       overflow: hidden;
       position: relative;
-      margin: 0.5rem 0 0 0;
 
       @include media-query($media-md) {
         overflow-y: auto;
@@ -150,7 +148,7 @@
 
       .project-wrapper {
         @include general-properties(100%, 98%);
-        @include display-flex(row, center);
+        @include display-flex(row, flex-start);
         overflow: hidden;
 
         @include media-query($media-md) {
@@ -162,16 +160,14 @@
       }
 
       .video-stack {
-        @include general-properties(40%, 100%);
+        @include general-properties(40%, 80%);
         @include display-flex(column, center);
-        gap: 1rem;
-        margin: 0.2rem;
+        justify-content: space-evenly;
         overflow-y: auto;
 
         @include media-query($media-md) {
-          @include general-properties(95%, auto);
+          @include general-properties(95%, 100%);
           overflow: hidden;
-          margin-bottom: 1rem;
         }
 
         .videoplayer {
@@ -185,29 +181,29 @@
           }
         }
         .tech-tags {
-          @include general-properties(95%, auto);
+          @include general-properties(90%, auto);
           @include display-flex(row);
           flex-wrap: wrap;
           align-content: space-around;
           justify-content: space-evenly;
+          gap: 0.5rem;
           .tag {
-            border: 0;
             border-radius: 10px;
             background-color: rgb(194, 193, 192);
-            min-width: 90px;
-            min-height: 20px;
-            margin-top: 0.6rem;
-            margin-right: 0.3rem;
+            min-width: 60px;
+            min-height: 25px;
             box-shadow: 0px 0px 5px 0px #6d6c6c;
 
             p {
               @include font($fontMontserrat, 1rem, $color, center);
               font-weight: 600;
-              margin: 0 0.3rem 0 0.3rem;
+              width: max-content;
+              margin: auto;
+              padding: 0 0.5rem 0;
             }
           }
           @include media-query($media-md) {
-            margin: 0 0 0.3rem 0;
+            margin: 0.5rem 0 0.3rem 0;
           }
         }
       }
@@ -218,11 +214,6 @@
 
         &::-webkit-scrollbar {
           @include general-properties(0.5rem, auto, #888);
-          border: 0;
-
-          &:hover {
-            width: 0.6rem;
-          }
         }
         &::-webkit-scrollbar-thumb {
           background-color: $accent;
@@ -234,9 +225,9 @@
         }
 
         .description {
+          max-width: 98%;
           p {
             @include font($fontMontserrat, 1rem, $color, justify);
-            margin: 0 0.4rem 0 0;
           }
         }
         .links {

@@ -2,7 +2,6 @@
 
 #contact-me {
   @include container-section($background, "/background/fourth-background-900x450.svg", column);
-
   .resume {
     @include display-flex(row, center);
     width: 100dvw;
