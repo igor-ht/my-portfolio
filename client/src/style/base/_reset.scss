@@ -13,13 +13,8 @@ html,
 body,
 div,
 span,
-iframe,
 h1,
 h2,
-h3,
-h4,
-h5,
-h6,
 p,
 a,
 img,
@@ -27,24 +22,12 @@ strong,
 b,
 u,
 i,
-ol,
-ul,
-li,
 form,
 label,
-table,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td,
-article,
 abbr,
 footer,
 header,
 main,
-menu,
 nav,
 section,
 mark,
@@ -60,11 +43,9 @@ dialog {
   vertical-align: baseline;
 }
 
-article,
 footer,
 header,
 main,
-menu,
 nav,
 section {
   display: block;
@@ -95,30 +76,14 @@ svg {
 
 input,
 button,
-textarea,
 select {
   font: inherit;
 }
 
 p,
 h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h2 {
   overflow-wrap: break-word;
-}
-
-menu,
-ol,
-ul {
-  list-style: none;
-}
-
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
 }
 
 #root {
