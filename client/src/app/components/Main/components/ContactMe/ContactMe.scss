@@ -1,13 +1,12 @@
 @use "@/style/main" as *;
 
 #contact-me {
-  @include container-section($background, "/background/fourth-background-900x450.svg");
-  flex-direction: column;
+  @include container-section($background, "/background/fourth-background-900x450.svg", column);
   position: relative;
 
   .title {
     @include font($fontPoiretOne, 3.5rem, $color, center);
-    margin: 0.5rem;
+    margin: 15dvh 0 1rem 0;
   }
   .resume {
     width: 100dvw;
@@ -79,9 +78,9 @@
     background-image: url("/background/fourth-background-675x900.svg");
     margin-top: -3px;
 
-    .title {
-      margin-top: 7dvh;
-    }
+    // .title {
+    //   margin-top: 7dvh;
+    // }
     .resume {
       P {
         font-size: 1.1rem;

@@ -10,9 +10,10 @@
   flex-direction: $direction;
 }
 
-@mixin container-section($background, $url) {
+@mixin container-section($background, $url, $flex-direction: row) {
   @include general-properties(100dvw, 100dvh);
-  @include display-flex();
+  @include display-flex($flex-direction);
+  align-items: center;
   background: $background;
   background-image: url($url);
   background-position: center;
@@ -21,8 +22,6 @@
   aspect-ratio: 2/1;
   scroll-snap-stop: always;
   scroll-snap-align: start;
-  align-items: center;
-  justify-content: center;
 }
 
 // image

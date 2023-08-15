@@ -8,12 +8,24 @@ export default function AboutMe({ skills }: { skills: Skills[] }) {
 			<h1 className="title">About Me:</h1>
 			<div className="resume">
 				<p>
-					I&apos;m a very motivated Software Engineer with nearly a year of hands-on experience in Full-Stack Development. My skill set
+					I am a very motivated Junior SW Developer with nearly a year of hands-on experience as a Full-Stack Developer focused on Web
+					Development.
+					<br />
+					My skills and tech set vary and include Python, JavaScript, TypeScript, Node.js, HTML, CSS/SCSS, React.js, Next.js, Express.js,
+					PostgreSQL, MongoDB, Prisma ORM, Jest, Cypress, and many more.
+					<br />
+					<br />
+					I love creating applications from end to end. Designing and developing them is extremely exciting, and coding is definitely the
+					best part for me.
+					<br />
+					My previous experience includes creating everything from simple SPAs to robust and scalable E2E projects, with my main focus on
+					delivering high-quality results prioritizing clean code, and adhering to industry and community best practices.
+					{/* I&apos;m a very motivated Software Engineer with nearly a year of hands-on experience in Full-Stack Development. My skill set
 					includes Python, Node.js, JavaScript, TypeScript, HTML5, CSS/SCSS, React.js, Next.js, Postgres, MongoDB, Prisma, Jest, Cypress,
 					and more.
 					<br />
 					<br />I create from simple SPA to robust and scalable E2E Applications. Prioritizing responsible design, secure authentication,
-					and adhering to industry best practices, with the best focus on delivering high-quality results.
+					and adhering to industry best practices, with the best focus on delivering high-quality results. */}
 				</p>
 			</div>
 			<div className="skills">

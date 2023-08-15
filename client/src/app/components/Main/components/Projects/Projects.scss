@@ -1,24 +1,19 @@
 @use "@/style/main" as *;
 
 #projects {
-  @include container-section($reversedBackground, "/background/third-background-900x450.svg");
-  @include display-flex(column);
-  align-items: center;
-  scroll-snap-stop: always;
-  scroll-snap-align: center;
+  @include container-section($reversedBackground, "/background/third-background-900x450.svg", column);
   position: relative;
 
   .title {
     @include font($fontPoiretOne, 3.5rem, $color, center);
-    margin: 17dvh 0 0 0;
+    margin: 15dvh 0 1rem 0;
   }
 
   .projects-album {
-    @include general-properties(42rem, 100%, transparent);
+    @include general-properties(42rem, auto, transparent);
     @include display-flex(row);
     align-items: center;
     justify-content: center;
-    margin: 0 0.5rem 0.5rem;
 
     span {
       @include display-flex();

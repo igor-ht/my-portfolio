@@ -2,11 +2,10 @@
 
 #home {
   @include container-section($background, "/background/first-background-900x450.svg");
-  align-items: center;
   justify-content: center;
 
   .intro {
-    margin: 14dvh 0 0 0;
+    margin: 15dvh 0 0 0;
     @include display-flex(column);
     align-items: center;
 
