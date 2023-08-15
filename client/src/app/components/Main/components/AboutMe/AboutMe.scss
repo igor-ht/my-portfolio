@@ -51,7 +51,6 @@
         p {
           @include font($fontMontserrat, 0.7rem, var(--legendColor), center);
           width: max-content;
-          margin-top: 0.2rem;
           user-select: none;
         }
         &:hover {
