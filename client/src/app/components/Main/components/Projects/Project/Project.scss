@@ -47,19 +47,17 @@
   display: none;
 
   &:first-child {
-    display: flex;
+    @include display-flex();
   }
 
   .project-card {
     @include general-properties(100%, 100%);
-    @include display-flex(column);
-    align-items: center;
-    overflow: hidden;
+    @include display-flex(column, center);
 
     img {
       @include image(98%, 65%, cover);
       border-radius: 10px;
-      margin: 0.2rem;
+      margin: 0.2rem 0.2rem 0;
       box-shadow: 0px 5px 5px 0px #393939;
 
       @include media-query($media-md) {
@@ -67,35 +65,38 @@
       }
     }
     .card-intro {
-      @include general-properties(95%, 100%);
-      @include display-flex(column);
-      align-items: center;
-      justify-content: center;
-      gap: 0.1rem;
+      @include general-properties(100%, 100%);
+      @include display-flex(column, center);
+      justify-content: space-evenly;
       overflow: hidden;
       flex: 1;
 
       h1 {
         @include font($fontKarla, 2rem, $color, center);
-        margin: auto;
       }
 
       p {
         @include font($fontInconsolata, 1rem, $color, justify);
-        margin: auto;
-        overflow: hidden;
+        max-width: 95%;
+        text-overflow: ellipsis;
       }
       .read-more {
         @include font($fontInconsolata, 1rem, $color, justify);
         text-decoration: underline;
+      }
+
+      @include media-query($media-md) {
+        justify-content: center;
+        p {
+          line-height: 1.2;
+        }
       }
     }
   }
 
   dialog[open] {
     @include general-properties(100dvw, 100dvh, rgb(230 230 230));
-    @include display-flex(column);
-    align-items: center;
+    @include display-flex(column, center);
     position: absolute;
     top: 0;
     z-index: 9999;
@@ -103,8 +104,8 @@
 
     .dialog-header {
       @include general-properties(100%, auto);
-      @include display-flex(row);
-      align-items: center;
+      @include display-flex(row, center);
+
       button.close-modal {
         @include general-properties(auto, auto);
         margin: 0.5rem;
@@ -125,8 +126,7 @@
 
     .project-display {
       @include general-properties(100%, 98%);
-      @include display-flex(row);
-      align-items: center;
+      @include display-flex(row, center);
       overflow: hidden;
       position: relative;
       margin: 0.5rem 0 0 0;
@@ -150,8 +150,7 @@
 
       .project-wrapper {
         @include general-properties(100%, 98%);
-        @include display-flex(row);
-        align-items: center;
+        @include display-flex(row, center);
         overflow: hidden;
 
         @include media-query($media-md) {
@@ -164,8 +163,7 @@
 
       .video-stack {
         @include general-properties(40%, 100%);
-        @include display-flex(column);
-        align-items: center;
+        @include display-flex(column, center);
         gap: 1rem;
         margin: 0.2rem;
         overflow-y: auto;
@@ -215,8 +213,7 @@
       }
       .description-links {
         @include general-properties(60%, 100%);
-        @include display-flex(column);
-        align-items: center;
+        @include display-flex(column, center);
         overflow-y: auto;
 
         &::-webkit-scrollbar {
@@ -243,8 +240,7 @@
           }
         }
         .links {
-          @include display-flex(row);
-          align-items: center;
+          @include display-flex(row, center);
           justify-content: center;
           gap: 4rem;
           margin: 1rem;
@@ -257,11 +253,10 @@
             height: auto;
             button {
               @include general-properties(9rem, 2.5rem, rgb(186, 186, 186));
-              @include display-flex(row);
+              @include display-flex(row, center);
               gap: 0.5rem;
               border: 1px solid gray;
               border-radius: 5px;
-              align-items: center;
               justify-content: center;
               box-shadow: 0px 0px 4px 1px black;
               p {

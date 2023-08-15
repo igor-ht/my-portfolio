@@ -2,16 +2,10 @@
 
 #contact-me {
   @include container-section($background, "/background/fourth-background-900x450.svg", column);
-  position: relative;
 
-  .title {
-    @include font($fontPoiretOne, 3.5rem, $color, center);
-    margin: 15dvh 0 1rem 0;
-  }
   .resume {
+    @include display-flex(row, center);
     width: 100dvw;
-    @include display-flex();
-    align-items: center;
     justify-content: center;
 
     p {
@@ -20,10 +14,9 @@
     }
   }
   .links {
+    @include display-flex(row, center);
     width: 100dvw;
     margin: 1rem;
-    @include display-flex();
-    align-items: center;
     justify-content: center;
     a {
       img {
@@ -46,9 +39,8 @@
     justify-content: center;
 
     a {
-      @include display-flex();
+      @include display-flex(row, center);
       justify-content: center;
-      align-items: center;
       gap: 1rem;
 
       p {
@@ -63,24 +55,19 @@
     }
   }
   .footer {
-    @include display-flex();
-    width: 100dvw;
-    position: absolute;
-    top: 95%;
+    @include general-properties(100dvw, 100%);
+    @include display-flex(row, flex-end);
+    justify-content: center;
 
     p {
-      @include font($fontMontserrat, 1rem, $color, center);
-      margin: auto;
+      @include font($fontMontserrat, 1rem, $color);
+      margin: 0.3rem;
     }
   }
 
   @include media-query($media-md) {
     background-image: url("/background/fourth-background-675x900.svg");
     margin-top: -3px;
-
-    // .title {
-    //   margin-top: 7dvh;
-    // }
     .resume {
       P {
         font-size: 1.1rem;

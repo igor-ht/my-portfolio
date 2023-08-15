@@ -40,6 +40,7 @@ tr,
 th,
 td,
 article,
+abbr,
 footer,
 header,
 main,
@@ -77,6 +78,10 @@ section {
 body {
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
+}
+
+abbr {
+  text-decoration: underline;
 }
 
 img,

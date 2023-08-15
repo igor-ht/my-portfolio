@@ -1,0 +1,10 @@
+@use "../abstract/index" as *;
+
+.title {
+  @include font($fontPoiretOne, 3.5rem, $color, center);
+  margin: 15dvh 0 1rem 0;
+
+  @include media-query($media-md) {
+    margin-bottom: 0;
+  }
+}

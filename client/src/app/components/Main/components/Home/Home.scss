@@ -7,23 +7,23 @@
   .intro {
     margin: 15dvh 0 0 0;
     @include display-flex(column);
-    align-items: center;
 
     .greet {
-      @include display-flex(row);
+      @include display-flex(row, flex-end);
       width: 100%;
-      align-items: flex-end;
 
       span {
-        @include display-flex(column);
+        @include display-flex(column, flex-start);
+        flex: 1;
 
         h1 {
           @include font($fontPoiretOne, 2.8rem, $color);
-          align-self: flex-end;
+          text-wrap: nowrap;
         }
       }
       img {
-        @include image(25dvw, auto, cover);
+        @include image(20rem, auto, cover);
+        flex: 1;
       }
       p {
         @include font($fontMontserrat, 1.2rem, $color);
@@ -40,18 +40,18 @@
   @include media-query($media-md) {
     background-image: url("/background/first-background-675x900.svg");
     margin-bottom: -2px;
-    align-items: center;
+
     .intro {
       .greet {
         max-width: 90dvw;
         span {
           h1 {
             font-size: 1.8rem;
+            text-wrap: balance;
           }
         }
         img {
-          width: 50dvw;
-          margin-left: 0.5rem;
+          width: 13rem;
         }
         p {
           font-size: 1rem;

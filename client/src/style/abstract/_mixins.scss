@@ -5,11 +5,13 @@
   background-color: $backgroundColor;
 }
 
-@mixin display-flex($direction: row) {
+@mixin display-flex($direction: row, $align-items: center) {
   display: flex;
   flex-direction: $direction;
+  align-items: $align-items;
 }
 
+// main's sections [home, aboutme, projects, contactme]
 @mixin container-section($background, $url, $flex-direction: row) {
   @include general-properties(100dvw, 100dvh);
   @include display-flex($flex-direction);
@@ -22,6 +24,7 @@
   aspect-ratio: 2/1;
   scroll-snap-stop: always;
   scroll-snap-align: start;
+  position: relative;
 }
 
 // image

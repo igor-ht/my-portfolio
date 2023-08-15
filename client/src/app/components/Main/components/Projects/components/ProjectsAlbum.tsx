@@ -30,12 +30,11 @@ export default function ProjectsAlbum({ projects }: { projects: Projects[] }) {
 	return (
 		<div className="projects-album">
 			<button
-				className="album-button"
+				className="album-button left"
 				type="button"
 				onClick={() => handleChangeProject('left')}>
-				<p>&lt;</p>
+				&lt;
 			</button>
-
 			<span>
 				{projects.map((project, i) => {
 					return (
@@ -59,12 +58,10 @@ export default function ProjectsAlbum({ projects }: { projects: Projects[] }) {
 					);
 				})}
 			</span>
-
 			<button
-				className="album-button"
-				type="button"
+				className="album-button right"
 				onClick={() => handleChangeProject('right')}>
-				<p>&gt;</p>
+				&gt;
 			</button>
 		</div>
 	);

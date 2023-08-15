@@ -2,44 +2,37 @@
 
 @keyframes iconAnimation {
   0% {
-    transform: translateX(50%);
+    transform: translateX(70%);
   }
   100% {
-    transform: translateX(-100%);
+    transform: translateX(-70%);
   }
 }
 @keyframes mobileIconAnimation {
   0% {
-    transform: translateX(50%);
+    transform: translateX(70%);
   }
   100% {
-    transform: translateX(-350%);
+    transform: translateX(-270%);
   }
 }
 
 #about-me {
   @include container-section($reversedBackground, "/background/second-background-900x450.svg", column);
 
-  .title {
-    @include font($fontPoiretOne, 3.5rem, $color, center);
-    margin: 15dvh 0 1rem 0;
-  }
-
   .resume {
     p {
       @include font($fontMontserrat, 1.2rem, $color, justify);
-      font-weight: 500;
       max-width: 55dvw;
     }
   }
   .skills {
-    width: 70dvw;
-    margin-top: 1.5rem;
+    @include general-properties(70dvw, 100%);
     overflow: hidden;
 
     .icons {
-      @include display-flex();
-      align-items: baseline;
+      @include display-flex(row, center);
+      height: 100%;
       animation: iconAnimation 10s linear infinite;
       animation-direction: alternate;
       &:hover {
@@ -47,11 +40,8 @@
       }
 
       span {
-        @include display-flex(column);
+        @include display-flex(column, center);
         min-width: 4rem;
-        max-width: 4rem;
-        margin-left: 1rem;
-        align-items: center;
         justify-content: center;
         --legendColor: transparent;
 
@@ -60,6 +50,7 @@
         }
         p {
           @include font($fontMontserrat, 0.7rem, var(--legendColor), center);
+          width: max-content;
           margin-top: 0.2rem;
           user-select: none;
         }
@@ -74,20 +65,17 @@
     @include display-flex(column);
     background-image: url("/background/second-background-675x900.svg");
     margin-top: -3px;
-    .title {
-      margin-bottom: 0;
-    }
     .resume {
       p {
         font-size: 1rem;
-        max-width: 85dvw;
+        line-height: 1.2;
+        max-width: 90dvw;
       }
     }
     .skills {
       width: 95dvw;
       .icons {
-        animation: mobileIconAnimation 10s linear infinite;
-        animation-direction: alternate;
+        animation-name: mobileIconAnimation;
       }
     }
   }
