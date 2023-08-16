@@ -1,45 +1,26 @@
 # My Portfolio
 
-Introducing My Portfolio, a captivating personal portfolio project that highlights the power of modern web technologies in creating visually appealing and user-friendly experiences. This project is designed as a frontend-only single-page application (SPA), utilizing TypeScript, React.js, Next.js, and SCSS to showcase skills and projects on the web.
+Introducing "My Portfolio", a captivating personal portfolio web app built with **TypeScript**, **React.js**, **Next.js App Router**, **Prisma ORM**, and **SCSS**.
 
-![screenshot](https://img.icons8.com/?size=48&id=nCj4PvnCO0tZ&format=png)
-![screenshot](https://img.icons8.com/?size=48&id=123603&format=png)
-![screenshot](https://cdn1.iconfinder.com/data/icons/akar-vol-1/24/nextjs-fill-48.png)
-![screenshot](https://cdn4.iconfinder.com/data/icons/logos-and-brands/512/288_Sass_logo-48.png)
+[![My Skills](https://skillicons.dev/icons?i=ts,react,scss,nextjs,prisma,supabase&perline=3)](https://skillicons.dev)
 
-## Features and Technologies:
+## Tech Stack
 
-**TypeScript:** My Portfolio benefits from static typing and enhanced code quality, resulting in a robust and maintainable codebase.
+**Next.js** is a framework that works on top of **React.js** and offers _SSG_ *(Static Site Generation)* - which contributes to _SEO_ *(Search Engine Optimization)*, performance, and _UX_ *(User Experience)* -, and many other tools that optimize the project's development. Next.js also possibilities an easy way of dealing with *Static Rendering Data*, and together with **Prisma ORM**, it's possible to access the Database (in our case, hosted in **Supabase**) and retrieve data at build time.
+This approach also creates a flexible and clean way to manipulate the data we want to display since it's not hardcoded, making the project more scalable and clean.\
+For styling, I worked with **SCSS** and a *"7-1"* personalized architecture that consists of only three folders: *_base, _abstracts, and _components*, which is called by myself _'ABC' Architecture_. (This pattern might have different names but refers to the same thing: a _7-1ish SCSS architecture for smaller projects_.)
 
-**React.js:** The project utilizes the React.js library, offering a component-based architecture for reusable and modular code, enhancing development efficiency.
+## Development Goals
 
-**Next.js:** Next.js, a feature-rich framework built on top of React.js, brings server-side rendering and optimized performance to the project. This ensures swift page loading times and superior search engine optimization (SEO) capabilities.
-
-**SCSS:** Styling is implemented using SCSS, allowing for efficient and scalable stylesheets.
-
-## Development Goals:
-
-The primary development goals for My Portfolio were as follows:
-
-- Create a visually appealing and user-friendly personal web portfolio app.
-- Utilize Next.js for server-side rendering, optimized performance, and SEO capabilities.
-- Employ TypeScript for enhanced code quality and maintainability.
-- Showcase skills and projects effectively on the web.
-- Build the application as a single-page application (SPA).
+- Create a responsible, visually appealing design and user-friendly SPA.
+- Utilize Next.js for SSG, static-data rendering, optimized performance, and SEO capabilities.
+- Use Prisma together with Supabase (SaS) for Database hosting and interaction.
 - Stay up-to-date with modern web technologies and best practices.
+  
+## Features
 
-## App Commands
-
-To run the application locally, you can use the following command:
-
-|             | `/client`       |
-| ----------- | --------------- |
-| Development | `npm run dev`   |
-| Build       | `npm run build` |
-| Production  | `npm run start` |
+*In construction.*
 
 ## Live App
 
 You can try the live app [here](https://iht-me.vercel.app/).
-
-Enjoy exploring My Portfolio and its captivating design and functionality!
