@@ -1,5 +1,16 @@
 @use "@/style/main" as *;
 
+@keyframes FadeIn {
+  from {
+    opacity: 0;
+    display: none;
+  }
+  to {
+    opacity: 1;
+    display: flex;
+  }
+}
+
 #projects {
   @include container-section($reversedBackground, "/background/third-background-900x450.svg", column);
 

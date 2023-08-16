@@ -7,29 +7,25 @@ import Project from '../Project/Project';
 export default function ProjectsAlbum({ projects }: { projects: Projects[] }) {
 	const currentProjectRef = useRef<HTMLDivElement | null>(null);
 	const [showDialog, setShowDialog] = useState(false);
-	
+
 	const handleChangeProject = (direction: 'left' | 'right') => {
-		if (!currentProjectRef || !currentProjectRef.current) {
-			currentProjectRef.current = document.querySelector('.project') as HTMLDivElement;
-		}
+		if (!currentProjectRef || !currentProjectRef.current) currentProjectRef.current = document.querySelector('.project') as HTMLDivElement;
+
 		let nextProject;
 		if (direction === 'right') {
 			nextProject = currentProjectRef.current?.nextElementSibling as HTMLDivElement;
-			if (!nextProject) {
-				nextProject = currentProjectRef.current.parentElement?.firstElementChild as HTMLDivElement;
-			}
+			if (!nextProject) nextProject = currentProjectRef.current.parentElement?.firstElementChild as HTMLDivElement;
 		} else {
 			nextProject = currentProjectRef.current?.previousElementSibling as HTMLDivElement;
-			if (!nextProject) {
-				nextProject = currentProjectRef.current.parentElement?.lastElementChild as HTMLDivElement;
-			}
+			if (!nextProject) nextProject = currentProjectRef.current.parentElement?.lastElementChild as HTMLDivElement;
 		}
-		nextProject.style.animation = 'FadeIn 0.7s linear';
-		nextProject.style.display = 'flex';
+
+		nextProject.style.animation = 'FadeIn 0.6s linear';
 		currentProjectRef.current.style.display = 'none';
+		nextProject.style.display = 'flex';
 		currentProjectRef.current = nextProject;
 	};
-	
+
 	useLayoutEffect(() => {
 		const handleWindowResizeToFixDialogDisplay = () => {
 			if (!showDialog) return;
@@ -45,7 +41,6 @@ export default function ProjectsAlbum({ projects }: { projects: Projects[] }) {
 		return () => window.removeEventListener('resize', handleWindowResizeToFixDialogDisplay);
 	}, [showDialog]);
 
-	
 	return (
 		<div className="projects-album">
 			<button

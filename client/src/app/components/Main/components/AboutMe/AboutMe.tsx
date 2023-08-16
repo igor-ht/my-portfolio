@@ -1,15 +1,17 @@
 import './AboutMe.scss';
 import Image from 'next/image';
-import { Skills } from '@prisma/client';
+import { getSkills } from '@/libs/getData';
+import { use } from 'react';
 
-export default function AboutMe({ skills }: { skills: Skills[] }) {
+export default function AboutMe() {
+	const { skills } = use(getSkills());
+
 	return (
 		<div id="about-me">
 			<h1 className="title">About Me:</h1>
 			<div className="content-summary-box">
 				<p>
-					I am a very motivated <em>Junior Software Developer</em> with nearly a year of hands-on experience as a Full-Stack Developer
-					focused on Web Development.
+					I am a very motivated <em>Junior Software Developer</em> with nearly a year of hands-on experience in Full-Stack development.
 					<br />
 					My skills and tech stack vary and include{' '}
 					<strong>
