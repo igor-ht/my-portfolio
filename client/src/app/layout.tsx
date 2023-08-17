@@ -9,6 +9,15 @@ export const metadata = {
 	icons: {
 		icon: '/logo-icon.svg',
 	},
+	robots: {
+		index: true,
+		googleBot: {
+			index: true,
+		},
+	},
+	other: {
+		'google-site-verification': 'p1kZTRj_nmjo6kW7s9gBlfhd-siCNinlJh4hkhrpCio',
+	},
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
