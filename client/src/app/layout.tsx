@@ -6,6 +6,15 @@ import { poiret_one, montserrat, inconsolata, karla } from '@/libs/fonts';
 export const metadata = {
 	title: `IHT's Portfolio`,
 	description: 'My FullStack Developer Portfolio',
+	keywords: [
+		'Full Stack Developer Portfolio',
+		'Web Developer Portfolio',
+		'Developer Portfolio',
+		'Developer Personal Portfolio',
+		'iht',
+		'iht portfolio',
+		'iht developer',
+	],
 	icons: {
 		icon: '/logo-icon.svg',
 	},
