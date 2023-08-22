@@ -31,7 +31,9 @@ export default function AboutMe() {
 				</p>
 			</div>
 			<div className="skills">
-				<section className="icons">
+				<section
+					className="icons"
+					style={{ width: `calc(4rem * ${skills.length})` }}>
 					{skills?.map((skill, i) => {
 						return (
 							<span key={i}>

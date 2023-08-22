@@ -2,18 +2,10 @@
 
 @keyframes iconAnimation {
   0% {
-    transform: translateX(70%);
+    transform: translateX(35%);
   }
   100% {
-    transform: translateX(-70%);
-  }
-}
-@keyframes mobileIconAnimation {
-  0% {
-    transform: translateX(70%);
-  }
-  100% {
-    transform: translateX(-270%);
+    transform: translateX(-35%);
   }
 }
 
@@ -22,12 +14,12 @@
 
   .skills {
     @include general-properties(70dvw, 100%);
+    @include display-flex(row, center, center);
     overflow: hidden;
 
     .icons {
       @include display-flex(row, center);
-      height: 100%;
-      animation: iconAnimation 10s linear infinite alternate;
+      animation: iconAnimation 7s linear infinite alternate;
       &:hover {
         animation-play-state: paused;
       }
@@ -58,9 +50,6 @@
     margin-top: -3px;
     .skills {
       width: 95dvw;
-      .icons {
-        animation-name: mobileIconAnimation;
-      }
     }
   }
 }
