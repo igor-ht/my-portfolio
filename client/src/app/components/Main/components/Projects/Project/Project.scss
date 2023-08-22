@@ -88,25 +88,29 @@
 
       button.close-modal {
         @include general-properties(auto, auto);
-        margin: 0 0.5rem;
+        position: absolute;
+        top: 1%;
+        left: 0.5%;
+
         img {
           @include image(3rem, 3rem, cover);
         }
       }
       .project-title {
-        @include font($fontPoiretOne, 3.5rem, $color, center);
+        @include font($fontPoiretOne, 4rem, $color, center);
         width: 100%;
+        margin: 1.5rem 0 1rem 0;
 
         @include media-query($media-md) {
-          font-size: 2.8rem;
-          margin-right: 2.5rem;
+          font-size: 3rem;
+          margin: 0;
         }
       }
     }
 
     .project-display {
-      @include general-properties(100%, 100%);
-      @include display-flex(row, center);
+      @include general-properties(100%, auto);
+      @include display-flex(row, flex-start);
       overflow: hidden;
       position: relative;
 
@@ -128,30 +132,37 @@
       }
 
       .project-wrapper {
-        @include general-properties(100%, 98%);
-        @include display-flex(row, flex-start);
+        @include general-properties(100%, auto);
+        @include display-flex(row, stretch);
         overflow: hidden;
 
         @include media-query($media-md) {
           @include display-flex(column-reverse);
           height: auto;
-          position: absolute;
-          top: 1%;
         }
       }
 
       .video-stack {
-        @include general-properties(40%, 80%);
-        @include display-flex(column, center, space-evenly);
-        overflow-y: auto;
+        @include general-properties(45%, auto);
+        @include display-flex(column, center);
+        flex: 1;
+        max-width: 45%;
+        gap: 0.5rem;
+        margin: 0.3rem;
 
         @include media-query($media-md) {
           @include general-properties(95%, 100%);
+          max-width: 95%;
+          margin: 0;
           overflow: hidden;
         }
 
         .videoplayer {
-          @include general-properties(95%, 50%);
+          @include general-properties(95%, auto);
+
+          @include media-query($media-md) {
+            width: 100%;
+          }
 
           .react-player {
             .thumbnail {
@@ -165,6 +176,8 @@
           @include display-flex(row, center, space-evenly);
           flex-wrap: wrap;
           gap: 0.5rem;
+          margin: 0.5rem;
+
           .tag {
             border-radius: 10px;
             background-color: rgb(194, 193, 192);
@@ -181,14 +194,16 @@
             }
           }
           @include media-query($media-md) {
+            width: 100%;
             margin: 0.5rem 0 0.3rem 0;
           }
         }
       }
       .description-links {
-        @include general-properties(60%, 100%);
-        @include display-flex(column, center);
-        overflow-y: auto;
+        @include general-properties(55%, auto);
+        @include display-flex(column, center, space-between);
+        flex: 1;
+        margin: 0.2rem;
 
         &::-webkit-scrollbar {
           @include general-properties(0.5rem, auto, #888);
@@ -199,11 +214,13 @@
 
         @include media-query($media-md) {
           @include general-properties(95%, auto);
+          margin: 0;
           overflow: hidden;
         }
 
         .description {
-          max-width: 98%;
+          max-width: 100%;
+          align-self: flex-start;
           p {
             @include font($fontMontserrat, 1rem, $color, justify);
           }

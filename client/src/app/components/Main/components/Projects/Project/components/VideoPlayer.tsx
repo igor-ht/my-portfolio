@@ -20,7 +20,6 @@ export default function VideoPlayer(props: { videoUrl: string; picUrl: string })
 						height={700}
 						width={700}
 						alt={'thumbnail'}
-						quality={1}
 					/>
 				}
 			/>
