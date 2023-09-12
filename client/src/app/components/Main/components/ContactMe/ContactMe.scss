@@ -11,13 +11,17 @@
         @include image(3rem, 3rem, cover);
         margin: 1rem;
         border-radius: 50%;
-        box-shadow: 0px 0px 10px 5px white;
+        box-shadow:
+          inset 0px 0px 20px 20px white,
+          0px 0px 10px 5px white;
         transition: box-shadow 0.5s;
-        background:
-          linear-gradient(white, white) padding-box,
-          linear-gradient(to left, rgb(187, 187, 187), rgb(223, 223, 223)) border-box;
+        // background:
+        //   linear-gradient(white, white) padding-box,
+        //   linear-gradient(to left, rgb(187, 187, 187), rgb(223, 223, 223)) border-box;
         &:hover {
-          box-shadow: 0px 0px 15px 10px white;
+          box-shadow:
+            inset 0px 0px 20px 20px white,
+            0px 0px 15px 10px white;
           transform: scale(1.1);
         }
       }

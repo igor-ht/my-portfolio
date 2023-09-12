@@ -40,7 +40,7 @@
     img {
       @include image(98%, 65%, cover);
       border-radius: 10px;
-      margin: 0.2rem 0.2rem 0;
+      margin: 0.3rem 0 0 0;
       box-shadow: 0px 5px 5px 0px #393939;
 
       @include media-query($media-md) {
