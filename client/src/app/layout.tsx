@@ -14,6 +14,8 @@ export const metadata = {
 		'iht',
 		'iht portfolio',
 		'iht developer',
+		'igor-ht',
+		'igor ht',
 	],
 	icons: {
 		icon: '/logo-icon.svg',
