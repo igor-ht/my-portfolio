@@ -1,11 +1,11 @@
 'use client';
 
 import { Projects } from '@prisma/client';
-import Project from '../Project/Project';
+import ProjectCard from '../ProjectCard/ProjectCard';
 import useProjectsAlbum from '@/libs/projects/useProjectsAlbum';
 
 export default function ProjectsAlbum({ projects }: { projects: Projects[] }) {
-	const { showDialog, setShowDialog, currentProjectRef, handleChangeProject } = useProjectsAlbum();
+	const { currentProjectRef, handleChangeProject } = useProjectsAlbum();
 
 	return (
 		<div className="projects-album">
@@ -18,11 +18,9 @@ export default function ProjectsAlbum({ projects }: { projects: Projects[] }) {
 			<span>
 				{projects.map((project, i) => {
 					return (
-						<Project
+						<ProjectCard
 							key={i}
 							props={{
-								showDialog: showDialog,
-								setShowDialog: setShowDialog,
 								ref: i === 0 ? currentProjectRef : null,
 								linksUrl: {
 									live: project.liveUrl,

@@ -1,6 +1,6 @@
 import './Projects.scss';
 import { use } from 'react';
-import ProjectsAlbum from './components/ProjectsAlbum';
+import ProjectsAlbum from './components/ProjectsAlbum/ProjectsAlbum';
 import { getProjects } from '@/libs/getData';
 
 export default function Projects() {
