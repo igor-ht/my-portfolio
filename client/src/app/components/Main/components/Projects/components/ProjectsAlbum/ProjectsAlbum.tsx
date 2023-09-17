@@ -1,5 +1,6 @@
 'use client';
 
+import './ProjectsAlbum.scss';
 import { Projects } from '@prisma/client';
 import ProjectCard from '../ProjectCard/ProjectCard';
 import useProjectsAlbum from '@/libs/projects/useProjectsAlbum';

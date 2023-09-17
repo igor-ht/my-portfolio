@@ -1,3 +1,4 @@
+import './ProjectModal.scss';
 import Image from 'next/image';
 import Description from './components/Description';
 import Links from './components/Links';

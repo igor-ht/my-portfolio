@@ -2,9 +2,9 @@
 
 import './ProjectCard.scss';
 import { MutableRefObject, useState } from 'react';
-import Image from 'next/image';
 import useDialogModal from '@/libs/projects/useDialogModal';
 import ProjectModal from './components/ProjectModal/ProjectModal';
+import ProjectIntro from './components/ProjectIntro/ProjectIntro';
 
 export type ApiProjectPropsType = {
 	name: string;
@@ -30,26 +30,10 @@ export default function ProjectCard({ props }: { props: ProjectCardPropsType }) 
 			className="project"
 			ref={props.ref}
 			onAnimationEnd={(event) => (event.currentTarget.style.animation = '')}>
-			<div className="project-card">
-				<Image
-					src={props.cardUrl}
-					alt="project"
-					height={400}
-					width={400}
-					priority
-				/>
-				<div className="card-intro">
-					<h1>{props.name}</h1>
-					<p>
-						{props.cardText}{' '}
-						<a
-							className="read-more"
-							onClick={setModalOpened}>
-							Read More
-						</a>
-					</p>
-				</div>
-			</div>
+			<ProjectIntro
+				props={props}
+				setModalOpened={setModalOpened}
+			/>
 			<ProjectModal
 				dialogRef={dialogRef}
 				showDialog={showDialog}

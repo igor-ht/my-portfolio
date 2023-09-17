@@ -1,0 +1,45 @@
+@use "@/style/main" as *;
+
+.project-card {
+  @include general-properties(100%, 100%);
+  @include display-flex(column, center);
+
+  img {
+    @include image(98%, 65%, cover);
+    border-radius: 10px;
+    margin: 0.3rem 0 0 0;
+    box-shadow: 0px 5px 5px 0px #393939;
+
+    @include media-query($media-md) {
+      height: 60%;
+      margin-top: 0.15rem;
+    }
+  }
+  .card-intro {
+    @include general-properties(100%, 100%);
+    @include display-flex(column, center, space-evenly);
+    overflow: hidden;
+    flex: 1;
+
+    h1 {
+      @include font($fontKarla, 2rem, $color, center);
+    }
+
+    p {
+      @include font($fontInconsolata, 1rem, $color, justify);
+      max-width: 95%;
+      text-overflow: ellipsis;
+    }
+    .read-more {
+      @include font($fontInconsolata, 1rem, $color, justify);
+      text-decoration: underline;
+    }
+
+    @include media-query($media-md) {
+      justify-content: center;
+      p {
+        line-height: 1.2;
+      }
+    }
+  }
+}
