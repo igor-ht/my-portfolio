@@ -8,7 +8,9 @@ export default function Home() {
 				<section className="greet">
 					<span>
 						<p>Nice to meet you,</p>
-						<h1>I&apos;m Igor Hamburger,</h1>
+						<h1>
+							I&apos;m Igor <i title="yep, that's my last name 🍔">Hamburger</i>,
+						</h1>
 					</span>
 					<Image
 						src={'/avatar.svg'}
@@ -21,7 +23,7 @@ export default function Home() {
 				</section>
 				<section className="greet">
 					<p>
-						A <mark>Full-Stack Developer</mark> with a passion for <mark>Web Development</mark>.
+						A <mark>Software Engineer</mark> with a passion for <mark>Web Development</mark>.
 					</p>
 				</section>
 			</div>

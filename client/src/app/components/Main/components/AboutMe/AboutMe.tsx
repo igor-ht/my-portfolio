@@ -11,7 +11,7 @@ export default function AboutMe() {
 			<h1 className="title">About Me:</h1>
 			<div className="content-summary-box">
 				<p>
-					I am a very motivated <em>Junior Software Developer</em> with nearly a year of hands-on experience in Full-Stack development.
+					I am a very motivated <em>Junior Software Developer</em> with a year of hands-on experience in Full-Stack development.
 					<br />
 					My skills and tech stack vary and include{' '}
 					<strong>
