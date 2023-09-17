@@ -45,6 +45,7 @@
 
       @include media-query($media-md) {
         height: 60%;
+        margin-top: 0.15rem;
       }
     }
     .card-intro {
