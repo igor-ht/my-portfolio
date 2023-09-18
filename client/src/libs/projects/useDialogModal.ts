@@ -1,6 +1,7 @@
-import { Dispatch, SetStateAction, useRef } from 'react';
+import { useRef, useState } from 'react';
 
-export default function useDialogModal(showDialog: boolean, setShowDialog: Dispatch<SetStateAction<boolean>>) {
+export default function useDialogModal() {
+	const [showDialog, setShowDialog] = useState(false);
 	const dialogRef = useRef<HTMLDialogElement | null>(null);
 
 	const setModalClosed = () => {
@@ -8,6 +9,9 @@ export default function useDialogModal(showDialog: boolean, setShowDialog: Dispa
 
 		dialogRef.current!.style.animation = 'ExitScreen 0.5s linear reverse';
 		setTimeout(() => setShowDialog(false), 450);
+
+		const videoPlayer = dialogRef.current?.querySelector('video');
+		videoPlayer?.pause();
 
 		const htmlDocument = document?.firstElementChild as HTMLElement;
 		htmlDocument.style.overflowY = 'auto';
@@ -33,5 +37,5 @@ export default function useDialogModal(showDialog: boolean, setShowDialog: Dispa
 		navbar.style.transform = 'translateY(-25dvh)';
 	};
 
-	return { dialogRef, setModalClosed, setModalOpened };
+	return { showDialog, dialogRef, setModalClosed, setModalOpened };
 }

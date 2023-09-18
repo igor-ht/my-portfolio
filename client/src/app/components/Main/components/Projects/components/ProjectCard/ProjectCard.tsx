@@ -1,7 +1,7 @@
 'use client';
 
 import './ProjectCard.scss';
-import { MutableRefObject, useState } from 'react';
+import { MutableRefObject } from 'react';
 import useDialogModal from '@/libs/projects/useDialogModal';
 import ProjectModal from './components/ProjectModal/ProjectModal';
 import ProjectIntro from './components/ProjectIntro/ProjectIntro';
@@ -22,8 +22,7 @@ type ProjectCardPropsType = ApiProjectPropsType & {
 };
 
 export default function ProjectCard({ props }: { props: ProjectCardPropsType }) {
-	const [showDialog, setShowDialog] = useState(false);
-	const { dialogRef, setModalClosed, setModalOpened } = useDialogModal(showDialog, setShowDialog);
+	const { showDialog, dialogRef, setModalClosed, setModalOpened } = useDialogModal();
 
 	return (
 		<div
