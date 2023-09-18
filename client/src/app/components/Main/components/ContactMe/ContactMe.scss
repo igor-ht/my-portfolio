@@ -2,7 +2,7 @@
 
 #contact-me {
   @include container-section($background, "/background/fourth-background-900x450.svg", column);
-  .links {
+  .contact-links {
     @include display-flex(row, center, center);
     width: 100dvw;
     margin: 1rem;

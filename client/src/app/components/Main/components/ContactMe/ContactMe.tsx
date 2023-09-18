@@ -14,7 +14,7 @@ export default function ContactMe() {
 					Don&apos;t hesitate to reach out, as I&apos;m eager to connect and discuss potential collaborations.
 				</p>
 			</div>
-			<div className="links">
+			<div className="contact-links">
 				<Link
 					href="mailto: idht07@gmail.com"
 					rel="nofollow"
