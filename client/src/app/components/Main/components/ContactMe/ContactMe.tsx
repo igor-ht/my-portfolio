@@ -78,7 +78,7 @@ export default function ContactMe() {
 				</Link>
 			</div>
 			<div className="footer">
-				<p>Ⓒiht 2023</p>
+				<p>All rights reserved Ⓒ igor-ht {new Date().getFullYear()}</p>
 			</div>
 		</div>
 	);
