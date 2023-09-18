@@ -1,0 +1,13 @@
+@use "@/style/main" as *;
+
+.description {
+  max-width: 98%;
+  align-self: flex-start;
+
+  @include media-query($media-md) {
+    max-width: 100%;
+  }
+  p {
+    @include font($fontMontserrat, 1rem, $color, justify);
+  }
+}

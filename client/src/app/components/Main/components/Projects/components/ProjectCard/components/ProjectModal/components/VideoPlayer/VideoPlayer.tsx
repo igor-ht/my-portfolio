@@ -1,3 +1,4 @@
+import './VideoPlayer.scss';
 import dynamic from 'next/dynamic';
 import Image from 'next/image';
 

@@ -1,3 +1,5 @@
+import './TechTag.scss';
+
 export default function TechTag(props: { tags: string[] }) {
 	const techTags = props.tags;
 	return (

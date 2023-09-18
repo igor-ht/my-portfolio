@@ -1,3 +1,4 @@
+import './Description.scss';
 import { Fragment } from 'react';
 
 export default function Description(props: { text: string }) {

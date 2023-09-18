@@ -1,0 +1,16 @@
+@use "@/style/main" as *;
+
+.videoplayer {
+  @include general-properties(95%, auto);
+
+  @include media-query($media-md) {
+    width: 100%;
+  }
+
+  .react-player {
+    .thumbnail {
+      @include image(100%, 100%, cover);
+      aspect-ratio: 1366/728;
+    }
+  }
+}

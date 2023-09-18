@@ -1,9 +1,10 @@
+import './Links.scss';
 import Image from 'next/image';
 import Link from 'next/link';
 
 export default function Links(props: { urls: { live: string; repo: string } }) {
 	return (
-		<div className="links">
+		<div className="project-links">
 			<Link
 				className="urls"
 				href={props.urls.live}

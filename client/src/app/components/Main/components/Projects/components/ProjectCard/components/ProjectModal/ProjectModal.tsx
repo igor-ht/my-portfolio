@@ -1,9 +1,9 @@
 import './ProjectModal.scss';
 import Image from 'next/image';
-import Description from './components/Description';
-import Links from './components/Links';
-import TechTag from './components/TechTag';
-import VideoPlayer from './components/VideoPlayer';
+import Description from './components/Description/Description';
+import Links from './components/Links/Links';
+import TechTag from './components/TechTag/TechTag';
+import VideoPlayer from './components/VideoPlayer/VideoPlayer';
 import { MutableRefObject, useLayoutEffect } from 'react';
 import { ApiProjectPropsType } from '../../ProjectCard';
 
