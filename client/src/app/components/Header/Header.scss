@@ -1,8 +1,9 @@
 @use "@/style/main" as *;
 
 #navbar {
-  @include general-properties(100%, 15dvh);
+  @include general-properties(100%, auto);
   @include display-flex(column);
+  min-height: 15dvh;
   position: sticky;
   top: 0;
   z-index: 1;
