@@ -1,10 +1,11 @@
 'use client';
 
 import './ProjectCard.scss';
-import { MutableRefObject } from 'react';
+import { MutableRefObject, lazy } from 'react';
 import useDialogModal from '@/libs/projects/useDialogModal';
-import ProjectModal from './components/ProjectModal/ProjectModal';
 import ProjectIntro from './components/ProjectIntro/ProjectIntro';
+
+const ProjectModal = lazy(() => import('./components/ProjectModal/ProjectModal'));
 
 export type ApiProjectPropsType = {
 	name: string;
