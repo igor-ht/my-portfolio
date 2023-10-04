@@ -1,7 +1,6 @@
 import './AboutMe.scss';
 import AboutMeSumarry from './components/AboutMeSummary/AboutMeSummary';
 import Scroller from './components/Scroller/Scroller';
-
 import { getSkills } from '@/libs/getData';
 import { use } from 'react';
 

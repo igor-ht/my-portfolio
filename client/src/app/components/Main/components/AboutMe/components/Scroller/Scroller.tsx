@@ -1,8 +1,8 @@
 'use client';
 
 import './Scroller.scss';
+import useSkillsScroller from '@/libs/hooks/useSkillsScroller';
 import Image from 'next/image';
-import { useEffect } from 'react';
 
 type Props = {
 	skills: {
@@ -15,24 +15,7 @@ type Props = {
 };
 
 export default function Scroller({ skills }: Props) {
-	useEffect(() => {
-		function addAnimation() {
-			const scroller = document.querySelector('.skills');
-			scroller?.setAttribute('data-animated', 'true');
-			const scrollerInner = scroller?.querySelector('.icons');
-			const scrollerContent = Array.from(scrollerInner?.children || []);
-
-			scrollerContent.forEach((item) => {
-				const duplicatedItem = item.cloneNode(true) as HTMLElement;
-				duplicatedItem.setAttribute('aria-hidden', 'true');
-				scrollerInner?.appendChild(duplicatedItem);
-			});
-		}
-
-		if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-			addAnimation();
-		}
-	}, []);
+	useSkillsScroller();
 
 	return (
 		<div className="skills">
