@@ -1,55 +1,11 @@
 @use "@/style/main" as *;
 
-@keyframes iconAnimation {
-  0% {
-    transform: translateX(35%);
-  }
-  100% {
-    transform: translateX(-35%);
-  }
-}
-
 #about-me {
   @include container-section($reversedBackground, "/background/second-background-900x450.svg", column);
-
-  // .skills {
-  //   @include general-properties(70dvw, 100%);
-  //   @include display-flex(row, center, center);
-  //   overflow: hidden;
-
-  //   .icons {
-  //     @include display-flex(row, center);
-  //     animation: iconAnimation 7s linear infinite alternate;
-  //     &:hover {
-  //       animation-play-state: paused;
-  //     }
-
-  //     span {
-  //       @include display-flex(column, center, center);
-  //       min-width: 4rem;
-  //       --legendColor: transparent;
-
-  //       img {
-  //         @include image(2.5rem, 2.5rem, contain);
-  //       }
-  //       p {
-  //         @include font($fontMontserrat, 0.7rem, var(--legendColor), center);
-  //         width: max-content;
-  //         user-select: none;
-  //       }
-  //       &:hover {
-  //         --legendColor: $color;
-  //       }
-  //     }
-  //   }
-  // }
 
   @include media-query($media-md) {
     @include display-flex(column);
     background-image: url("/background/second-background-675x900.svg");
     margin-top: -3px;
-    .skills {
-      width: 95dvw;
-    }
   }
 }

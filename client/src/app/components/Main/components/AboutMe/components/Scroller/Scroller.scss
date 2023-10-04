@@ -2,7 +2,7 @@
 
 @keyframes scroll {
   to {
-    transform: translate(calc(-50%));
+    transform: translate(-50%);
   }
 }
 
@@ -49,15 +49,10 @@
     padding-block: 1rem;
     width: max-content;
     flex-wrap: nowrap;
-    animation: scroll 35s forwards linear infinite;
+    animation: scroll 15s forwards linear infinite;
 
     span {
       padding: 0.5rem;
     }
   }
-}
-
-span[aria-hidden="true"] {
-  outline: green !important;
-  border: 1px solid green !important;
 }
