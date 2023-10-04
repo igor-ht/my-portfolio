@@ -1,7 +1,7 @@
 import './AboutMe.scss';
-import Image from 'next/image';
 import { getSkills } from '@/libs/getData';
 import { use } from 'react';
+import Scroller from './components/Scroller/Scroller';
 
 export default function AboutMe() {
 	const { skills } = use(getSkills());
@@ -30,28 +30,7 @@ export default function AboutMe() {
 					<em>clean code</em>, and adhering to <em>industry and community best practices</em>.
 				</p>
 			</div>
-			<div className="skills">
-				<section
-					className="icons"
-					style={{ width: `calc(4rem * ${skills.length})` }}>
-					{skills?.map((skill, i) => {
-						return (
-							<span key={i}>
-								<Image
-									src={skill.src}
-									alt={skill.alt}
-									title={skill.title}
-									height="40"
-									width="40"
-									priority
-									quality={1}
-								/>
-								<p>{skill.name}</p>
-							</span>
-						);
-					})}
-				</section>
-			</div>
+			<Scroller skills={skills} />
 		</div>
 	);
 }
