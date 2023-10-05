@@ -2,7 +2,7 @@
 
 import './Header.scss';
 import Image from 'next/image';
-import useScrollInteraction from '@/libs/hooks/useScrollInteraction';
+import useScrollInteraction from '@/libs/header/useScrollInteraction';
 
 export default function Header() {
 	const [scrollDirection] = useScrollInteraction();

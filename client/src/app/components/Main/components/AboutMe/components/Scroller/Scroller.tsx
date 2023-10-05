@@ -1,7 +1,7 @@
 'use client';
 
 import './Scroller.scss';
-import useSkillsScroller from '@/libs/hooks/useSkillsScroller';
+import useSkillsScroller from '@/libs/aboutme/useSkillsScroller';
 import Image from 'next/image';
 
 type Props = {
