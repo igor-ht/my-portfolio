@@ -2,8 +2,9 @@ import './layout.scss';
 import Header from './components/Header/Header';
 import { Analytics } from '@vercel/analytics/react';
 import { poiret_one, montserrat, inconsolata, karla } from '@/libs/fonts';
+import { Metadata } from 'next';
 
-export const metadata = {
+export const metadata: Metadata = {
 	title: `IHT's Portfolio`,
 	description: 'My FullStack Developer Portfolio',
 	keywords: [
@@ -26,6 +27,7 @@ export const metadata = {
 			index: true,
 		},
 	},
+
 	other: {
 		'google-site-verification': 'p1kZTRj_nmjo6kW7s9gBlfhd-siCNinlJh4hkhrpCio',
 	},
