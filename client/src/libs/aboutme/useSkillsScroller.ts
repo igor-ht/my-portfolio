@@ -2,12 +2,12 @@ import { useEffect } from 'react';
 
 export default function useSkillsScroller() {
 	useEffect(() => {
-		const scroller = document.querySelector('.skills');
-		const scrollerInner = scroller?.querySelector('.icons');
-		const scrollerContent = Array.from(scrollerInner?.children || []);
-
 		function addAnimation() {
+			const scroller = document.querySelector('.skills');
 			scroller?.setAttribute('data-animated', 'true');
+			
+			const scrollerInner = scroller?.querySelector('.icons');
+			const scrollerContent = Array.from(scrollerInner?.children || []);
 
 			scrollerContent.forEach((item) => {
 				const duplicatedItem = item.cloneNode(true) as HTMLElement;
