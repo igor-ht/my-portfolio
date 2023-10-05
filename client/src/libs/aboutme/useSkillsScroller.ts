@@ -10,8 +10,6 @@ export default function useSkillsScroller() {
 			scroller?.setAttribute('data-animated', 'true');
 
 			scrollerContent.forEach((item) => {
-				const computedStyle = getComputedStyle(item);
-				console.log(computedStyle);
 				const duplicatedItem = item.cloneNode(true) as HTMLElement;
 				duplicatedItem.setAttribute('aria-hidden', 'true');
 				scrollerInner?.appendChild(duplicatedItem);
