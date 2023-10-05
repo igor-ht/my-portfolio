@@ -7,6 +7,7 @@ import { Metadata } from 'next';
 export const metadata: Metadata = {
 	title: `IHT's Portfolio`,
 	description: 'My FullStack Developer Portfolio',
+	metadataBase: new URL('https://iht-me.vercel.app/'),
 	keywords: [
 		'Full Stack Developer Portfolio',
 		'Web Developer Portfolio',
@@ -27,9 +28,17 @@ export const metadata: Metadata = {
 			index: true,
 		},
 	},
-
 	other: {
 		'google-site-verification': 'p1kZTRj_nmjo6kW7s9gBlfhd-siCNinlJh4hkhrpCio',
+	},
+	referrer: 'origin-when-cross-origin',
+	authors: [{ name: 'igor' }],
+	colorScheme: 'dark',
+	creator: 'i h t',
+	formatDetection: {
+		email: false,
+		address: false,
+		telephone: false,
 	},
 };
 
