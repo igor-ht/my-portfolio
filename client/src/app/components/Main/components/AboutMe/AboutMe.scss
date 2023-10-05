@@ -3,10 +3,6 @@
 #about-me {
   @include container-section($reversedBackground, "/background/second-background-900x450.svg", column);
 
-  .title {
-    margin: 14dvh 0 0.1rem;
-  }
-
   @include media-query($media-md) {
     @include display-flex(column);
     background-image: url("/background/second-background-675x900.svg");

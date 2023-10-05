@@ -1,11 +1,13 @@
 import { useEffect } from 'react';
 
 export default function useSkillsScroller() {
+	
 	useEffect(() => {
+		
 		function addAnimation() {
 			const scroller = document.querySelector('.skills');
 			scroller?.setAttribute('data-animated', 'true');
-			
+
 			const scrollerInner = scroller?.querySelector('.icons');
 			const scrollerContent = Array.from(scrollerInner?.children || []);
 

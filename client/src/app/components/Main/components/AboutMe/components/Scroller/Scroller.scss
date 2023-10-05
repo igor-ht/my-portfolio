@@ -2,18 +2,17 @@
 
 @keyframes scroll {
   to {
-    transform: translate(-50%);
+    transform: translate(calc(-50% - 0.5rem));
   }
 }
 
 .skills {
-  @include display-flex(row, center, center);
+  @include display-flex(row, center);
   max-width: 90dvw;
   height: 100%;
   overflow: hidden;
   .icons {
     @include display-flex();
-    padding-block: 1rem;
     flex-wrap: wrap;
     gap: 0.5rem;
 
@@ -44,12 +43,11 @@
 }
 
 .skills[data-animated="true"] {
-  overflow: hidden;
+  max-width: 75dvw;
   -webkit-mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
   mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
 
   .icons {
-    padding-block: 1rem;
     width: max-content;
     flex-wrap: nowrap;
     animation: scroll 15s forwards linear infinite;
