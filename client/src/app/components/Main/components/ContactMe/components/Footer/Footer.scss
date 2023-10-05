@@ -1,0 +1,11 @@
+@use "@/style/main" as *;
+
+.footer {
+  @include general-properties(100dvw, 100%);
+  @include display-flex(row, flex-end, center);
+
+  p {
+    @include font($fontMontserrat, 1rem, $color);
+    margin: 0.3rem;
+  }
+}

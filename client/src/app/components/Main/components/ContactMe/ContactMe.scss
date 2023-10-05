@@ -2,54 +2,6 @@
 
 #contact-me {
   @include container-section($background, "/background/fourth-background-900x450.svg", column);
-  .contact-links {
-    @include display-flex(row, center, center);
-    width: 100dvw;
-    margin: 1rem;
-    a {
-      img {
-        @include image(3rem, 3rem, cover);
-        margin: 1rem;
-        border-radius: 50%;
-        box-shadow:
-          inset 0px 0px 20px 20px white,
-          0px 0px 10px 5px white;
-        transition: box-shadow 0.5s;
-
-        &:hover {
-          box-shadow:
-            inset 0px 0px 20px 20px white,
-            0px 0px 15px 10px white;
-          transform: scale(1.1);
-        }
-      }
-    }
-  }
-  .download-cv {
-    @include display-flex(row, center, center);
-
-    a {
-      @include display-flex(row, center, center);
-      gap: 1rem;
-
-      p {
-        @include font($fontMontserrat, 1.4rem, $color, center);
-        text-decoration: underline;
-      }
-      &:hover {
-        transform: scale(1.15);
-      }
-    }
-  }
-  .footer {
-    @include general-properties(100dvw, 100%);
-    @include display-flex(row, flex-end, center);
-
-    p {
-      @include font($fontMontserrat, 1rem, $color);
-      margin: 0.3rem;
-    }
-  }
 
   @include media-query($media-md) {
     background-image: url("/background/fourth-background-675x900.svg");

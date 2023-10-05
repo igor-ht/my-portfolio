@@ -1,0 +1,42 @@
+@use "@/style/main" as *;
+
+.contact-links {
+  @include display-flex(row, center, center);
+  width: 100dvw;
+  margin: 1rem;
+  a {
+    img {
+      @include image(3rem, 3rem, cover);
+      margin: 1rem;
+      border-radius: 50%;
+      box-shadow:
+        inset 0px 0px 20px 20px white,
+        0px 0px 10px 5px white;
+      transition: box-shadow 0.5s;
+
+      &:hover {
+        box-shadow:
+          inset 0px 0px 20px 20px white,
+          0px 0px 15px 10px white;
+        transform: scale(1.1);
+      }
+    }
+  }
+}
+
+.download-cv {
+  @include display-flex(row, center, center);
+
+  a {
+    @include display-flex(row, center, center);
+    gap: 1rem;
+
+    p {
+      @include font($fontMontserrat, 1.4rem, $color, center);
+      text-decoration: underline;
+    }
+    &:hover {
+      transform: scale(1.15);
+    }
+  }
+}
