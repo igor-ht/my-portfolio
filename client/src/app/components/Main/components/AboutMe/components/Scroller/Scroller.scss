@@ -8,19 +8,21 @@
 
 .skills {
   @include display-flex(row, center);
-  max-width: 90dvw;
+  max-width: 95dvw;
   height: 100%;
   overflow: hidden;
+
   .icons {
     @include display-flex();
     flex-wrap: wrap;
-    gap: 0.5rem;
+    gap: 0 0.2rem;
+    margin: 0 1rem;
 
     span {
       @include display-flex(column, center, center);
       min-width: 3rem;
       flex: 1;
-      margin: 0 0.5rem;
+
       --legendColor: transparent;
 
       img {
@@ -33,6 +35,14 @@
       }
       &:hover {
         --legendColor: $color;
+      }
+
+      @include media-query($media-md) {
+        min-width: 2rem;
+
+        img {
+          @include image(2rem, 2rem, contain);
+        }
       }
     }
   }
@@ -55,7 +65,8 @@
   .icons {
     width: max-content;
     flex-wrap: nowrap;
-    animation: scroll 25s forwards linear infinite;
+    animation: scroll 30s forwards linear infinite;
+    gap: 0.5rem;
 
     &:hover {
       animation-play-state: paused;
