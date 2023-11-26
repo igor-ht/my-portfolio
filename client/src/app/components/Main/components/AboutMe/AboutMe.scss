@@ -6,5 +6,6 @@
   @include media-query($media-md) {
     @include display-flex(column);
     background-image: url("/background/second-background-675x900.svg");
+    margin-top: -5px;
   }
 }
