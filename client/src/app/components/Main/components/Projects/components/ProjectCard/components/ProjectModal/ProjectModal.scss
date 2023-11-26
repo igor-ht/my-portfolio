@@ -1,7 +1,7 @@
 @use "@/style/main" as *;
 
 dialog[open] {
-  @include general-properties(100dvw, 100svh, rgb(230 230 230));
+  @include general-properties(100dvw, 100dvh, rgb(230 230 230));
   @include display-flex(column, center);
   top: 0;
   z-index: 9999;
