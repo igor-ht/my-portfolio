@@ -9,6 +9,7 @@
 
   @include media-query($media-md) {
     background-image: url("/background/third-background-675x900.svg");
+    // margin-bottom: -2px;
     .projects-album {
       @include general-properties(98dvw, 70svh);
 

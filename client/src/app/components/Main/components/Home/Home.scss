@@ -40,7 +40,7 @@
 
   @include media-query($media-md) {
     background-image: url("/background/first-background-675x900.svg");
-    margin-bottom: -2px;
+    // margin-bottom: -1px;
 
     .intro {
       .greet {
