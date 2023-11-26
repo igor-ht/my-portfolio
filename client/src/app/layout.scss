@@ -33,8 +33,11 @@
 #app {
   @include general-properties(
     100dvw,
-    calc(100dvh * 4)
-  ); // 100dvh * n => where n is the number of main sections (home, aboutme, projects, contactme)
+    calc(100svh * 4)
+  ); // 100vh * n => where n is the number of main sections (home, aboutme, projects, contactme)
   @include display-flex(column);
   position: relative;
+  // @include media-query($media-sm) {
+  //   height: calc(100svh * 4);
+  // }
 }
