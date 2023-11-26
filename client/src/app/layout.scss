@@ -34,7 +34,7 @@
   @include general-properties(
     100dvw,
     calc(100svh * 4)
-  ); // 100vh * n => where n is the number of main sections (home, aboutme, projects, contactme)
+  ); // 100svh * n => where n is the number of main sections (home, aboutme, projects, contactme)
   @include display-flex(column);
   position: relative;
 }
