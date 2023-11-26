@@ -14,7 +14,7 @@
 
 // main's sections [home, aboutme, projects, contactme]
 @mixin container-section($background, $url, $flex-direction: row) {
-  @include general-properties(100dvw, 100dvh);
+  @include general-properties(100dvw, 100svh);
   @include display-flex($flex-direction, center);
   background: $background;
   background-image: url($url);
