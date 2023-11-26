@@ -1,5 +1,9 @@
 @use "@/style/main" as *;
 
+dialog {
+  height: 100dvh;
+}
+
 dialog[open] {
   @include general-properties(100dvw, 100dvh, rgb(230 230 230));
   @include display-flex(column, center);
