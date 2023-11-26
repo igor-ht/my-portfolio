@@ -34,7 +34,7 @@ export default function useDialogModal() {
 		const htmlDocument = document?.firstElementChild as HTMLElement;
 		htmlDocument.style.overflowY = 'hidden';
 		const navbar = document?.getElementById('navbar') as HTMLElement;
-		navbar.style.transform = 'translateY(-25dvh)';
+		navbar.style.transform = 'translateY(-25svh)';
 	};
 
 	return { showDialog, dialogRef, setModalClosed, setModalOpened };

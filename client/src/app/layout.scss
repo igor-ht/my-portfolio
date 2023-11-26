@@ -37,7 +37,4 @@
   ); // 100vh * n => where n is the number of main sections (home, aboutme, projects, contactme)
   @include display-flex(column);
   position: relative;
-  // @include media-query($media-sm) {
-  //   height: calc(100svh * 4);
-  // }
 }

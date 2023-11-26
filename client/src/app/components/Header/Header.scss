@@ -3,7 +3,7 @@
 #navbar {
   @include general-properties(100%, auto);
   @include display-flex(column);
-  min-height: 15dvh;
+  min-height: 15svh;
   position: sticky;
   top: 0;
   z-index: 1;

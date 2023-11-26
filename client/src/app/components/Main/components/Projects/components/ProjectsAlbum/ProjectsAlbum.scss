@@ -40,7 +40,7 @@
   }
 
   @include media-query($media-md) {
-    @include general-properties(98dvw, 70dvh);
+    @include general-properties(98dvw, 70svh);
 
     .album-button {
       &.right {

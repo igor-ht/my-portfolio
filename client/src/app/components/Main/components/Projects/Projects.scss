@@ -10,7 +10,7 @@
   @include media-query($media-md) {
     background-image: url("/background/third-background-675x900.svg");
     .projects-album {
-      @include general-properties(98dvw, 70dvh);
+      @include general-properties(98dvw, 70svh);
 
       .album-button {
         &.right {

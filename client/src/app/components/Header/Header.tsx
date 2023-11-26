@@ -10,7 +10,7 @@ export default function Header() {
 	return (
 		<header
 			id="navbar"
-			style={{ transform: `translateY(${scrollDirection === 'down' ? '-25dvh' : '0'})` }}>
+			style={{ transform: `translateY(${scrollDirection === 'down' ? '-25svh' : '0'})` }}>
 			<div className="top-line" />
 			<nav>
 				<div className="logo">
