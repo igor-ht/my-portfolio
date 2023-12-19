@@ -1,11 +1,13 @@
 @use "@/style/main" as *;
 
 .footer {
-  @include general-properties(100dvw, 100%);
+  @include general-properties(100dvw, auto);
   @include display-flex(row, flex-end, center);
 
   p {
-    @include font($fontMontserrat, 1rem, $color);
+    @include font($fontMontserrat, clamp(1.1rem, 1.1rem, 1.5dvw), $color);
     margin: 0.3rem;
+    position: absolute;
+    top: 94%;
   }
 }

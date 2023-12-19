@@ -9,7 +9,6 @@
 .skills {
   @include display-flex(row, center);
   max-width: 95dvw;
-  height: 100%;
   overflow: hidden;
 
   .icons {

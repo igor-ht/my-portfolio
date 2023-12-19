@@ -43,7 +43,7 @@
 
       a {
         p {
-          @include font($fontPoiretOne, 1.8rem, $color, center);
+          @include font($fontPoiretOne, calc(1rem + 1dvw), $color, center);
           font-weight: 600;
 
           &:hover,

@@ -3,10 +3,10 @@
 .contact-links {
   @include display-flex(row, center, center);
   width: 100dvw;
-  margin: 1rem;
+  margin-bottom: 0.5rem;
   a {
     img {
-      @include image(3rem, 3rem, cover);
+      @include image(clamp(3rem, 3rem, 4.5dvw), clamp(3rem, 3rem, 4.5dvw), cover);
       margin: 1rem;
       border-radius: 50%;
       box-shadow:
@@ -30,6 +30,9 @@
   a {
     @include display-flex(row, center, center);
     gap: 1rem;
+    img {
+      @include image(clamp(2.5rem, 2.5rem, 3dvw), clamp(2.5rem, 2.5rem, 3dvw), cover);
+    }
 
     p {
       @include font($fontMontserrat, 1.4rem, $color, center);

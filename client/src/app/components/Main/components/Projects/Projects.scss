@@ -2,10 +2,7 @@
 
 #projects {
   @include container-section($reversedBackground, "/background/third-background-900x450.svg", column);
-
-  .title {
-    margin-bottom: 0;
-  }
+  justify-content: space-evenly;
 
   @include media-query($media-md) {
     background-image: url("/background/third-background-675x900.svg");

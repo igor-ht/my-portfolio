@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 export default function ContactMeLinks() {
 	return (
-		<>
+		<div>
 			<div className="contact-links">
 				<Link
 					href="mailto: idht07@gmail.com"
@@ -68,6 +68,6 @@ export default function ContactMeLinks() {
 					<p>DOWNLOAD CV</p>
 				</Link>
 			</div>
-		</>
+		</div>
 	);
 }

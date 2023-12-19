@@ -14,7 +14,7 @@
 }
 
 .projects-album {
-  @include general-properties(42rem, 100%, transparent);
+  @include general-properties(55%, auto, transparent);
   @include display-flex(row, center, center);
 
   span {
@@ -42,7 +42,7 @@
   }
 
   @include media-query($media-md) {
-    width: 98%;
+    width: min(98%, 42rem);
 
     .album-button {
       &.right {

@@ -2,7 +2,7 @@
 
 .content-summary-box {
   p {
-    @include font($fontMontserrat, 1.2rem, $color, justify);
+    @include font($fontMontserrat, clamp(1.2rem, 1.2rem, 1.5dvw), $color, justify);
     max-width: clamp(min(95dvw, 45rem), 70dvw, 95dvw);
     text-indent: 1.5rem;
     strong {
@@ -13,11 +13,11 @@
   @include media-query($media-md) {
     p {
       max-width: clamp(min(90dvw, 35rem), 65dvw, 95dvw);
-      font-size: 1rem;
+      font-size: calc(1rem + 0.1dvw);
       line-height: 1.2;
       text-indent: 1rem;
       strong {
-        font-size: 0.95rem;
+        font-size: calc(0.95rem + 0.1dvw);
       }
     }
   }

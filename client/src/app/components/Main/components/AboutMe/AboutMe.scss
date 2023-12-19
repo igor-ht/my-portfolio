@@ -2,9 +2,10 @@
 
 #about-me {
   @include container-section($reversedBackground, "/background/second-background-900x450.svg", column);
+  justify-content: space-evenly;
 
   @include media-query($media-md) {
-    @include display-flex(column);
+    flex-direction: column;
     background-image: url("/background/second-background-675x900.svg");
     margin-top: -5px;
   }

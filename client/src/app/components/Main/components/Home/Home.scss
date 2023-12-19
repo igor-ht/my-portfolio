@@ -17,7 +17,7 @@
         flex: 1;
 
         h1 {
-          @include font($fontPoiretOne, 2.8rem, $color);
+          @include font($fontPoiretOne, 4dvw, $color);
           text-wrap: nowrap;
         }
       }
@@ -26,7 +26,7 @@
         flex: 1;
       }
       p {
-        @include font($fontMontserrat, 1.2rem, $color);
+        @include font($fontMontserrat, 1.5dvw, $color);
 
         mark {
           color: $color;
@@ -49,12 +49,15 @@
             font-size: 1.8rem;
             text-wrap: balance;
           }
+          p {
+            text-wrap: nowrap;
+          }
         }
         img {
           width: 13rem;
         }
         p {
-          font-size: 1rem;
+          font-size: calc(1rem + 0.1dvw);
           max-width: 99dvw;
         }
       }

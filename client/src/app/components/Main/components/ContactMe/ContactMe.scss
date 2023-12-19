@@ -2,9 +2,11 @@
 
 #contact-me {
   @include container-section($background, "/background/fourth-background-900x450.svg", column);
+  justify-content: space-around;
 
   @include media-query($media-md) {
     background-image: url("/background/fourth-background-675x900.svg");
     margin-top: -3px;
+    justify-content: space-evenly;
   }
 }
