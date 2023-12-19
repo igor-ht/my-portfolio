@@ -3,11 +3,10 @@ import Image from 'next/image';
 import { ApiProjectPropsType } from '../../ProjectCard';
 
 type ProjectIntroPropsType = {
-	setModalOpened: () => void;
 	props: ApiProjectPropsType;
 };
 
-export default function ProjectIntro({ setModalOpened, props }: ProjectIntroPropsType) {
+export default function ProjectIntro({ props }: ProjectIntroPropsType) {
 	return (
 		<div className="project-card">
 			<Image
@@ -20,12 +19,7 @@ export default function ProjectIntro({ setModalOpened, props }: ProjectIntroProp
 			<div className="card-intro">
 				<h1>{props.name}</h1>
 				<p>
-					{props.cardText}{' '}
-					<a
-						className="read-more"
-						onClick={setModalOpened}>
-						Read More
-					</a>
+					{props.cardText} <a className="read-more">Read More</a>
 				</p>
 			</div>
 		</div>

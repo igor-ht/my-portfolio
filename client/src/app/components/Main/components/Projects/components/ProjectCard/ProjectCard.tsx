@@ -29,11 +29,9 @@ export default function ProjectCard({ props }: { props: ProjectCardPropsType }) 
 		<div
 			className="project"
 			ref={props.ref}
+			onClick={() => setModalOpened()}
 			onAnimationEnd={(event) => (event.currentTarget.style.animation = '')}>
-			<ProjectIntro
-				props={props}
-				setModalOpened={setModalOpened}
-			/>
+			<ProjectIntro props={props} />
 			<ProjectModal
 				dialogRef={dialogRef}
 				showDialog={showDialog}
