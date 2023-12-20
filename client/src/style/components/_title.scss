@@ -2,5 +2,5 @@
 
 .title {
   @include font($fontPoiretOne, clamp(3.5rem, 3.5rem, 5dvw), $color, center);
-  margin: 12dvh 0 0 0;
+  margin: 12svh 0 0 0;
 }
