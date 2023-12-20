@@ -5,6 +5,8 @@
     @include font($fontMontserrat, clamp(1.2rem, 1.2rem, 1.5dvw), $color, justify);
     max-width: clamp(min(95dvw, 45rem), 70dvw, 95dvw);
     text-indent: 1.5rem;
+    word-spacing: -1.5px;
+    letter-spacing: 0.5px;
     strong {
       font-weight: 600;
       font-size: 1.15rem;

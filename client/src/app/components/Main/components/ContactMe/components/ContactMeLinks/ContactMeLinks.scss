@@ -35,7 +35,7 @@
     }
 
     p {
-      @include font($fontMontserrat, 1.4rem, $color, center);
+      @include font($fontMontserrat, 1.2rem, $color, center);
       text-decoration: underline;
     }
     &:hover {
