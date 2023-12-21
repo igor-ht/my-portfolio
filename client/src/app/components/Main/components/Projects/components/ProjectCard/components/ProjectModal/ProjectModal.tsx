@@ -45,7 +45,6 @@ export default function ProjectModal({ dialogRef, showDialog, setModalClosed, pr
 						height={50}
 						width={50}
 						quality={1}
-						priority
 					/>
 				</button>
 				<h1 className="project-title">{props.name}</h1>

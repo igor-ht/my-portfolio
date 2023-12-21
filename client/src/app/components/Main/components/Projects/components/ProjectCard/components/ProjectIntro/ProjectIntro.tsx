@@ -14,7 +14,6 @@ export default function ProjectIntro({ props }: ProjectIntroPropsType) {
 				alt="project"
 				height={400}
 				width={400}
-				priority
 			/>
 			<div className="card-intro">
 				<h1>{props.name}</h1>
