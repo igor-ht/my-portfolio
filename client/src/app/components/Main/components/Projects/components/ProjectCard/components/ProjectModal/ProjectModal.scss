@@ -10,6 +10,7 @@ dialog[open] {
   top: 0;
   z-index: 9999;
   overflow: hidden;
+  cursor: default;
 
   .dialog-header {
     @include general-properties(100%, auto);
@@ -78,6 +79,7 @@ dialog[open] {
       max-width: 45%;
       gap: 0.5rem;
       margin: 0.3rem;
+
 
       @include media-query($media-md) {
         @include general-properties(95%, 100%);
