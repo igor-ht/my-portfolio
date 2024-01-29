@@ -18,7 +18,7 @@ export default function ProjectIntro({ props }: ProjectIntroPropsType) {
 			<div className="card-intro">
 				<h1>{props.name}</h1>
 				<p>
-					{props.cardText} <a className="read-more">Read More</a>
+					{props.cardText} <b className="read-more">Read More</b>
 				</p>
 			</div>
 		</div>
