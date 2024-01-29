@@ -31,8 +31,8 @@ export default function Scroller({ skills }: Props) {
 								title={skill.title}
 								height="40"
 								width="40"
-								priority
 								quality={1}
+								priority={false}
 							/>
 							<p>{skill.name}</p>
 						</span>
