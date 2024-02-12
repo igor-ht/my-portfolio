@@ -1,4 +1,4 @@
-import { Skills, Projects as Project } from '@prisma/client';
+import { Skills as Skill, Projects as Project } from '@prisma/client';
 import { cache } from 'react';
 import prisma from './prisma';
 
@@ -10,7 +10,7 @@ export const getSkills = cache(async () => {
 		},
 	});
 	await prisma.$disconnect();
-	return { skills } as { skills: Skills[] };
+	return { skills } as { skills: Skill[] };
 });
 
 export const getProjects = cache(async () => {
