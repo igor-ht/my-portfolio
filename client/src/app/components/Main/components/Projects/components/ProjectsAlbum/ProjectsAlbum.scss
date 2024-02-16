@@ -2,12 +2,10 @@
 
 @keyframes FadeIn {
   from {
-    height: 100svh;
     opacity: 0;
     display: none;
   }
   to {
-    height: 100svh;
     opacity: 1;
     display: flex;
   }
@@ -20,6 +18,10 @@
   span {
     @include display-flex(row, center);
     flex: 1;
+    height: 60svh;
+    flex-wrap: wrap;
+    overflow: hidden;
+    border-radius: 15px;
   }
 
   .album-button {

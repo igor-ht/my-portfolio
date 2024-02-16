@@ -15,8 +15,8 @@ export default function useProjectsAlbum() {
 			if (!nextProject) nextProject = currentProjectRef.current.parentElement?.lastElementChild as HTMLDivElement;
 		}
 
-		nextProject.style.animation = 'FadeIn 0.6s linear';
 		currentProjectRef.current.style.display = 'none';
+		nextProject.style.animation = 'FadeIn 0.6s linear';
 		nextProject.style.display = 'flex';
 		currentProjectRef.current = nextProject;
 	};
